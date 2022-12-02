@@ -472,3 +472,14 @@ let eventSlide = new Swiper(".event_sheet", {
     prevEl: ".event_control_box .angle_left",
   },
 });
+
+
+// -------- map --------
+var naverMap = null;
+
+function initMap() {
+    naverMap = new naver.maps.Map('map_api', {
+        center: new naver.maps.LatLng(37.3595704, 127.105399),
+        zoom: 10
+    });
+}

@@ -1309,14 +1309,31 @@
   margin-bottom: 40px;
 }
 
-.map .map_api {
+.map .map_api_box {
   width: 100%;
+  display: flex;
+  position: relative;
+  background-color: rgba(238, 238, 238, 0.3);
 }
 
-.map .map_api img {
+.map .map_api_box::before {
+  display: block;
+  content: '';
+  padding-top: 45%;
+}
+
+.map .map_api_box .map_api {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* .map .map_api img {
   display: block;
   width: 100%;
-}
+} */
 
 .map .lab_way_to_come {
   width: 100%;
