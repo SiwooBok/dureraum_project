@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+    // 클래스 이름 설정/변경
+    function setClassName() {
+      // document.getElementById('ex').className = 'foo';
+      // alert(document.getElementById('ex').className);
+
+      // getElementById를 통해서만 .className 메서드를 이용할 수 있는듯?
+      document.getElementsByClassName('ani').className = 'why';
+      alert(document.getElementsByClassName('why').className);
+    }
+
+    // 클래스 추가
+    function addClassName() {
+      document.getElementById('ex').className += ' bar';
+      alert(document.getElementById('ex').className);
+    }
+  </script>
+</head>
+<body>
+
+  <div id='ex' class="ani"></div>
+  <input 
+         type='button' 
+         value='클래스 이름 설정/변경' 
+         onclick='setClassName()'/>
+  <input 
+         type='button' 
+         value='클래스 이름 추가' 
+         onclick='addClassName()'/>
+  
+</body>
+</html>

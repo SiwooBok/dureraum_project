@@ -1,0 +1,253 @@
+/*-------- footer --------*/
+.footer {
+  width: 100%;
+}
+
+.footer .news_letter {
+  height: 45px;
+  padding: 0 4%;
+  box-sizing: border-box;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .news_letter .footer_unit_title {font-size: 0.813rem;}
+
+.footer .news_letter button {
+  display: block;
+  font-size: 0.688rem;
+  border: none;
+  padding: 4px 12px;
+  color: #fff;
+  background-color: #2E3192;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.footer .additional_info {
+  display: flex;
+  height: 45px;
+  padding: 0 4%;
+  box-sizing: border-box;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.footer .additional_info .footer_unit_title {font-size: 0.813rem;}
+
+.footer .additional_info .footer_unit_icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  transition: all .3s;
+}
+
+.footer .additional_info_sheet {
+  width: 100%;
+  max-height: 0;
+  padding: 0 4%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  transition: all .3s;
+  overflow: hidden;
+}
+
+.footer .additional_info_sheet li {
+  width: 50%;
+}
+
+.footer .additional_info_sheet li a {
+  display: block;
+  height: 32px;
+  font-size: 0.75rem;
+  text-indent: 10%;
+  line-height: 32px;
+}
+
+.footer .additional_info_sheet li:nth-child(1) a,
+.footer .additional_info_sheet li:nth-child(2) a {margin-top: 12px;}
+
+.footer .additional_info_sheet li:nth-child(7) a {margin-bottom: 12px;}
+
+.footer .related_institution {
+  display: flex;
+  height: 45px;
+  padding: 0 4%;
+  box-sizing: border-box;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .related_institution .footer_unit_title {font-size: 0.813rem; width: 110px;}
+
+.footer .related_institution .related_institution_sheet {
+  width: 5%;
+  max-width: 281px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer .related_institution .related_institution_sheet>div {
+  width: 36%;
+  max-width: 94px;
+}
+
+.footer .related_institution .related_institution_sheet>div img {
+  display: block;
+  width: 100%;
+}
+
+.footer .related_institution .related_institution_sheet .related_institution_sheet_03 {display: none;}
+
+.footer .mecenat {
+  display: flex;
+  height: 45px;
+  padding: 0 4%;
+  box-sizing: border-box;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .mecenat .footer_unit_title {font-size: 0.813rem; width: 110px;}
+
+.footer .mecenat .mecenat_sheet {
+  width: 5%;
+  max-width: 281px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer .mecenat .mecenat_sheet>div {
+  width: 36%;
+  max-width: 94px;
+}
+
+.footer .mecenat .mecenat_sheet>div img {
+  display: block;
+  width: 100%;
+}
+
+#chk_additional_info {display: none;}
+
+#chk_additional_info:checked ~ .additional_info_sheet {max-height: 200px;}
+#chk_additional_info:checked ~ .additional_info .footer_unit_icon {transform: rotate(180deg);}
+
+/*-------- footer_info & footer_logo_box --------*/
+.footer .footer_info {
+  padding: 25px 4%;
+  box-sizing: border-box;
+  font-size: 0.688rem;
+}
+
+.footer .footer_logo_box {
+  width: 100%;
+  padding: 0 4%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer .footer_logo_box .footer_logo {
+  width: 47.5%;
+  max-width: 211px;
+}
+
+.footer .footer_logo_box .footer_logo img {
+  display: block;
+  width: 100%;
+}
+
+.footer .footer_logo_box .footer_logo_space_between {width: 5%;}
+
+.footer .footer_logo_box .footer_other_logos {
+  width: 47.5%;
+  max-width: 211px;
+}
+
+.footer .footer_logo_box .footer_other_logos img {
+  display: block;
+  width: 100%;
+}
+
+/*-------- quick_menu --------*/
+.quick_menu {
+  display: block;
+  position: fixed;
+  top: 71%;
+  right: 5px;
+  z-index: 10;
+}
+
+.quick_menu .btn_fast_reserve {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 0.625rem;
+  color: #fff;
+  background-color: #2E3192;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.quick_menu .btn_to_top {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+  color: #222;
+  text-align: center;
+  line-height: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+
+.quick_menu .btn_to_bottom {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+  color: #222;
+  text-align: center;
+  line-height: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+/*-------- media_query (footer) --------*/
+@media all and (min-width:601px) {
+  .footer .related_institution .related_institution_sheet {max-width: 444px;}
+  .footer .related_institution .related_institution_sheet .related_institution_sheet_03 {display: block;}
+
+  .footer .mecenat {padding-right: 5.5%;}
+
+  .footer .footer_info {font-size: 0.813rem; text-align: center;}
+}
+
+@media all and (min-width:769px) {
+  .quick_menu {display: none;}
+}

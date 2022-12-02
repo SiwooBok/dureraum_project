@@ -1,0 +1,2829 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <!---------- css ( header & footer & main ) ---------->
+  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+
+  <!---------- favicon ---------->
+  <link rel="icon" href="./images/square-gitlab.svg" />
+
+  <!---------- nanum_gothic_font ---------->
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet" />
+
+  <!-- font_awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+  <!-- Swiper JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!---------- jQuery ---------->
+  <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
+  <script src="./js/jquery-3.6.1.min.js"></script>
+
+  <!---------- jQuery_scroll_to_plugin ---------->
+  <script src="./js/jquery.scrollTo.min.js"></script>
+
+  <!---------- jQuery_throttle_debounce_plugin ---------->
+  <script src="./js/jquery.ba-throttle-debounce.min.js"></script>
+
+  <!---------- jQuery_mousewheel_plugin ---------->
+  <script src="./js/jquery.mousewheel.min.js"></script>
+
+  <!---------- jQuery_easing_plugin ---------->
+  <script src="./js/jquery.easing.min.js"></script>
+
+  <!---------- js ( header & footer & main ) ---------->
+  <script src="./js/header.js" defer ></script>
+  <script src="./js/main.js" defer ></script>
+  <script src="./js/footer.js" defer ></script>
+
+</head>
+<body>
+
+  <div class="header_box">
+    <input type="checkbox" id="chk_ham" />
+    <header class="header">
+      <nav class="gnb">
+        <a href="./index.html" class="logo"></a>
+        <ul class="gnb_menu">
+          <li><a href="#!"><i class="fa-regular fa-user"></i></a></li>
+          <li><a href="#!"><i class="fa-regular fa-heart"></i></a></li>
+          <li><a href="#!"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+          <li><label for="chk_ham"><i class="fa-solid fa-bars"></i></label></li>
+        </ul>
+        <ul class="pc_gnb_menu">
+          <li><a href="#!">로그인</a></li>
+          <li><a href="#!">회원가입</a></li>
+          <li><a href="#!">고객센터</a></li>
+          <li><a href="#!">English</a></li>
+          <li class="pc_gnb_search">
+            <div class="search_margin_box"></div>
+            <div class="search_input_box">
+              <input type="text" />
+            </div>
+            <button class="search_icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </li>
+        </ul>
+        <!--pc_gnb_menu-->
+      </nav>
+      <!--gnb-->
+      <div class="ham_menu">
+        <div class="ham_menu_top">
+          <a href="#!" class="normal_menu">로그인</a>
+          <a href="#!" class="normal_menu">알림마당</a>
+          <a href="#!" class="normal_menu">고객센터</a>
+          <a href="#!" class="normal_menu menu_english">ENGLISH</a>
+          <a href="#!" class="screen_table">
+            <span>상영시간표</span>
+            <i class="fa-solid fa-calendar"></i>
+          </a>
+          <div class="ham_menu_sns">
+            <a href="#!"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#!"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#!"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div><!--ham_menu_top-->
+        <div class="ham_menu_bottom">
+          <input type="checkbox" id="chk_ham_bottom_movie" />
+          <input type="checkbox" id="chk_ham_bottom_concert" />
+          <input type="checkbox" id="chk_ham_bottom_edu" />
+          <input type="checkbox" id="chk_ham_bottom_library" />
+          <input type="checkbox" id="chk_ham_bottom_event" />
+          <input type="checkbox" id="chk_ham_bottom_partnership" />
+          <input type="checkbox" id="chk_ham_bottom_dureraum" />
+  
+          <label for="chk_ham_bottom_movie" class="lab_ham_bottom_movie">
+            <div class="ham_bottom_title">영화</div>
+            <div class="ham_bottom_angle"><i class="fa-solid fa-angle-down"></i></div>
+          </label>
+          <ul class="ham_bottom_sheet_movie ham_bottom_sheet">
+            <li><a href="#!">상영시간표</a></li>
+            <li><a href="#!">현재상영프로그램</a></li>
+            <li><a href="#!">상영예정프로그램</a></li>
+            <li><a href="#!">지난 프로그램</a></li>
+            <li><a href="#!">영화 + 비평</a></li>
+            <li><a href="#!">영화와 소통</a></li>
+            <li><a href="#!">시네마데크 소개</a></li>
+          </ul>
+          <label for="chk_ham_bottom_concert" class="lab_ham_bottom_concert">
+            <div class="ham_bottom_title">공연</div>
+            <div class="ham_bottom_angle"><i class="fa-solid fa-angle-down"></i></div>
+          </label>
+          <ul class="ham_bottom_sheet_concert ham_bottom_sheet">
+            <li><a href="#!">공연가이드</a></li>
+            <li><a href="#!">공연일정</a></li>
+            <li><a href="#!">예매안내</a></li>
+            <li><a href="#!">지난공연</a></li>
+            <li><a href="#!">객석나눔</a></li>
+          </ul>
+          <label for="chk_ham_bottom_edu" class="lab_ham_bottom_edu">
+            <div class="ham_bottom_title">영화·예술·교육</div>
+            <div class="ham_bottom_angle"><i class="fa-solid fa-angle-down"></i></div>
+          </label>
+          <ul class="ham_bottom_sheet_edu ham_bottom_sheet">
+            <li><a href="#!">아카데미 일정</a></li>
+            <li><a href="#!">영화 아카데미</a></li>
+            <li><a href="#!">예술 아카데미</a></li>
+            <li><a href="#!">어린이청소년</a></li>
+            <li><a href="#!">아카데미</a></li>
+            <li><a href="#!">시설/기자재</a></li>
+            <li><a href="#!">사용신청</a></li>
+          </ul>
+          <label for="chk_ham_bottom_library" class="lab_ham_bottom_library">
+            <div class="ham_bottom_title">영화 도서관</div>
+            <div class="ham_bottom_angle"><i class="fa-solid fa-angle-down"></i></div>
+          </label>
+          <ul class="ham_bottom_sheet_library ham_bottom_sheet">
+            <li><a href="#!">이용안내</a></li>
+            <li><a href="#!">자료검색</a></li>
+            <li><a href="#!">공지사항</a></li>
+            <li><a href="#!">행사안내</a></li>
+            <li><a href="#!">필름아카이브</a></li>
+          </ul>
+          <label for="chk_ham_bottom_event" class="lab_ham_bottom_event">
+            <div class="ham_bottom_title">전시 행사</div>
+            <div class="ham_bottom_angle"><i class="fa-solid fa-angle-down"></i></div>
+          </label>
+          <ul class="ham_bottom_sheet_event ham_bottom_sheet">
+            <li><a href="#!">전시·행사가이드</a></li>
+            <li><a href="#!">전시·행사일정</a></li>
+            <li><a href="#!">지난 전시·행사</a></li>
+            <li><a href="#!">행사장 배치도</a></li>
+          </ul>
+          <label for="chk_ham_bottom_partnership" class="lab_ham_bottom_partnership">
+            <div class="ham_bottom_title">이벤트 제휴</div>
+            <div class="ham_bottom_angle"><i class="fa-solid fa-angle-down"></i></div>
+          </label>
+          <ul class="ham_bottom_sheet_partnership ham_bottom_sheet">
+            <li><a href="#!">제휴</a></li>
+            <li><a href="#!">회원제안내</a></li>
+            <li><a href="#!">메세나 기업 모집</a></li>
+            <li><a href="#!">광고신청</a></li>
+            <li><a href="#!">촬영신청</a></li>
+          </ul>
+          <label for="chk_ham_bottom_dureraum" class="lab_ham_bottom_dureraum">
+            <div class="ham_bottom_title">영화의 전당</div>
+            <div class="ham_bottom_angle"><i class="fa-solid fa-angle-down"></i></div>
+          </label>
+          <ul class="ham_bottom_sheet_dureraum ham_bottom_sheet">
+            <li><a href="#!">영화의 전당 소개</a></li>
+            <li><a href="#!">대관 및 배치도</a></li>
+            <li><a href="#!">시설소개</a></li>
+            <li><a href="#!">오시는 길</a></li>
+            <li><a href="#!">주차 안내</a></li>
+          </ul>
+        </div><!--ham_menu_bottom-->
+      </div><!--ham_menu-->
+    </header><!--header-->
+  </div>
+  <!--header_box-->
+
+  <div class="lnb_outer_box_non_fixed lnb_outer_box">
+    <div class="lnb_inner_box">
+      <nav class="lnb">
+        <ul class="lnb_menu">
+          <li class="lnb_movie"><a href="#!" class="lnb_main_menu">영화</a>
+            <ul>
+              <li><a href="#!">상영시간표</a></li>
+              <li><a href="#!">현재상영프로그램</a></li>
+              <li><a href="#!">상영예정프로그램</a></li>
+              <li><a href="#!">지난프로그램</a></li>
+              <li><a href="#!">영화 + 비평</a></li>
+              <li><a href="#!">영화와 소통</a></li>
+              <li><a href="#!">시네마데크 소개</a></li>
+            </ul>
+          </li>
+          <li class="lnb_concert"><a href="#!" class="lnb_main_menu">공연</a>
+            <ul>
+              <li><a href="#!">공연가이드</a></li>
+              <li><a href="#!">공연일정</a></li>
+              <li><a href="#!">예매안내</a></li>
+              <li><a href="#!">지난공연</a></li>
+              <li><a href="#!">객석나눔</a></li>
+            </ul>
+          </li>
+          <li class="lnb_edu"><a href="#!" class="lnb_main_menu">영화·예술·교육</a>
+            <ul>
+              <li><a href="#!">아카데미 일정</a></li>
+              <li><a href="#!">영화 아카데미</a></li>
+              <li><a href="#!">예술 아카데미</a></li>
+              <li><a href="#!">어린이청소년</a></li>
+              <li><a href="#!">아카데미</a></li>
+              <li><a href="#!">시설/기자재</a></li>
+              <li><a href="#!">사용신청</a></li>
+            </ul>
+          </li>
+          <li class="lnb_library"><a href="#!" class="lnb_main_menu">영화 도서관</a>
+            <ul>
+              <li><a href="#!">이용안내</a></li>
+              <li><a href="#!">자료검색</a></li>
+              <li><a href="#!">공지사항</a></li>
+              <li><a href="#!">행사안내</a></li>
+              <li><a href="#!">필름아카이브</a></li>
+            </ul>
+          </li>
+          <li class="lnb_event"><a href="#!" class="lnb_main_menu">전시 행사</a>
+            <ul>
+              <li><a href="#!">전시·행사가이드</a></li>
+              <li><a href="#!">전시·행사일정</a></li>
+              <li><a href="#!">지난 전시·행사</a></li>
+              <li><a href="#!">행사장 배치도</a></li>
+            </ul>
+          </li>
+          <li class="lnb_partnership"><a href="#!" class="lnb_main_menu">이벤트 제휴</a>
+            <ul>
+              <li><a href="#!">제휴</a></li>
+              <li><a href="#!">회원제안내</a></li>
+              <li><a href="#!">메세나 기업 모집</a></li>
+              <li><a href="#!">광고신청</a></li>
+              <li><a href="#!">촬영신청</a></li>
+            </ul>
+          </li>
+          <li class="lnb_dureraum"><a href="#!" class="lnb_main_menu">영화의 전당</a>
+            <ul>
+              <li><a href="#!">영화의 전당 소개</a></li>
+              <li><a href="#!">대관 및 배치도</a></li>
+              <li><a href="#!">시설소개</a></li>
+              <li><a href="#!">오시는 길</a></li>
+              <li><a href="#!">주차 안내</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!--lnb-->
+    </div>
+   <!--lnb_inner_box-->
+  </div>
+  <!--lnb_outer_box-->
+
+  <div class="lnb_outer_box_fixed lnb_outer_box">
+    <div class="lnb_inner_box">
+      <nav class="lnb">
+        <a href="./index.html" class="lnb_logo"></a>
+        <ul class="lnb_menu">
+          <li class="lnb_movie"><a href="#!" class="lnb_main_menu">영화</a>
+            <ul>
+              <li><a href="#!">상영시간표</a></li>
+              <li><a href="#!">현재상영프로그램</a></li>
+              <li><a href="#!">상영예정프로그램</a></li>
+              <li><a href="#!">지난프로그램</a></li>
+              <li><a href="#!">영화 + 비평</a></li>
+              <li><a href="#!">영화와 소통</a></li>
+              <li><a href="#!">시네마데크 소개</a></li>
+            </ul>
+          </li>
+          <li class="lnb_concert"><a href="#!" class="lnb_main_menu">공연</a>
+            <ul>
+              <li><a href="#!">공연가이드</a></li>
+              <li><a href="#!">공연일정</a></li>
+              <li><a href="#!">예매안내</a></li>
+              <li><a href="#!">지난공연</a></li>
+              <li><a href="#!">객석나눔</a></li>
+            </ul>
+          </li>
+          <li class="lnb_edu"><a href="#!" class="lnb_main_menu">영화·예술·교육</a>
+            <ul>
+              <li><a href="#!">아카데미 일정</a></li>
+              <li><a href="#!">영화 아카데미</a></li>
+              <li><a href="#!">예술 아카데미</a></li>
+              <li><a href="#!">어린이청소년</a></li>
+              <li><a href="#!">아카데미</a></li>
+              <li><a href="#!">시설/기자재</a></li>
+              <li><a href="#!">사용신청</a></li>
+            </ul>
+          </li>
+          <li class="lnb_library"><a href="#!" class="lnb_main_menu">영화 도서관</a>
+            <ul>
+              <li><a href="#!">이용안내</a></li>
+              <li><a href="#!">자료검색</a></li>
+              <li><a href="#!">공지사항</a></li>
+              <li><a href="#!">행사안내</a></li>
+              <li><a href="#!">필름아카이브</a></li>
+            </ul>
+          </li>
+          <li class="lnb_event"><a href="#!" class="lnb_main_menu">전시 행사</a>
+            <ul>
+              <li><a href="#!">전시·행사가이드</a></li>
+              <li><a href="#!">전시·행사일정</a></li>
+              <li><a href="#!">지난 전시·행사</a></li>
+              <li><a href="#!">행사장 배치도</a></li>
+            </ul>
+          </li>
+          <li class="lnb_partnership"><a href="#!" class="lnb_main_menu">이벤트 제휴</a>
+            <ul>
+              <li><a href="#!">제휴</a></li>
+              <li><a href="#!">회원제안내</a></li>
+              <li><a href="#!">메세나 기업 모집</a></li>
+              <li><a href="#!">광고신청</a></li>
+              <li><a href="#!">촬영신청</a></li>
+            </ul>
+          </li>
+          <li class="lnb_dureraum"><a href="#!" class="lnb_main_menu">영화의 전당</a>
+            <ul>
+              <li><a href="#!">영화의 전당 소개</a></li>
+              <li><a href="#!">대관 및 배치도</a></li>
+              <li><a href="#!">시설소개</a></li>
+              <li><a href="#!">오시는 길</a></li>
+              <li><a href="#!">주차 안내</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!--lnb-->
+    </div>
+   <!--lnb_inner_box-->
+  </div>
+  <!--lnb_outer_box_fixed-->
+
+  <section id="to_the_top_anchor_point"></section>
+
+  <section class="main_visual_box">
+    <div class="main_visual">
+      <div class="main_visual_sheet">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#">
+              <picture>
+                <source media="(min-width:769px)" srcset="./images/visual_main_img01_pc.jpg" />
+                <source media="(min-width:601px)" srcset="./images/visual_main_img01_tablet.jpg" />
+                <source media="(min-width:320px)" srcset="./images/visual_main_img01_mobile.jpg" />
+                <img src="./images/visual_main_img01_original.jpg" alt="이미지01_모든장치이미지사용" style="width: 100%" />
+              </picture>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <picture>
+                <source media="(min-width:769px)" srcset="./images/visual_main_img02_pc.jpg" />
+                <source media="(min-width:601px)" srcset="./images/visual_main_img02_tablet.jpg" />
+                <source media="(min-width:320px)" srcset="./images/visual_main_img02_mobile.jpg" />
+                <img src="./images/visual_main_img02_original.jpg" alt="이미지02_모든장치이미지사용" style="width: 100%" />
+              </picture>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <picture>
+                <source media="(min-width:769px)" srcset="./images/visual_main_img03_pc.jpg" />
+                <source media="(min-width:601px)" srcset="./images/visual_main_img03_tablet.jpg" />
+                <source media="(min-width:320px)" srcset="./images/visual_main_img03_mobile.jpg" />
+                <img src="./images/visual_main_img01_original.jpg" alt="이미지01_모든장치이미지사용" style="width: 100%" />
+              </picture>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <picture>
+                <source media="(min-width:769px)" srcset="./images/visual_main_img04_pc.jpg" />
+                <source media="(min-width:601px)" srcset="./images/visual_main_img04_tablet.jpg" />
+                <source media="(min-width:320px)" srcset="./images/visual_main_img04_mobile.jpg" />
+                <img src="./images/visual_main_img02_original.jpg" alt="이미지02_모든장치이미지사용" style="width: 100%" />
+              </picture>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--main_visual_sheet-->
+      <div class="thumbnail_outerbox">
+        <div thumbsSlider="" class="thumbnail_innerbox">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" id="redefine_thumbnail_unit01">
+              <img src="./images/visual_main_img01_mobile.jpg" alt="메인비주얼_썸네일이미지_01">
+            </div>
+            <div class="swiper-slide" id="redefine_thumbnail_unit02">
+              <img src="./images/visual_main_img02_mobile.jpg" alt="메인비주얼_썸네일이미지_02">
+            </div>
+            <div class="swiper-slide" id="redefine_thumbnail_unit03">
+              <img src="./images/visual_main_img03_mobile.jpg" alt="메인비주얼_썸네일이미지_03">
+            </div>
+            <div class="swiper-slide" id="redefine_thumbnail_unit04">
+              <img src="./images/visual_main_img04_mobile.jpg" alt="메인비주얼_썸네일이미지_04">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--thumbnail_outerbox-->
+      <div class="bar_box">
+        <div class="main_pagination_bar"></div>
+      </div>
+      <div class="fraction_box">
+        <div class="main_pagination_fraction">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">1/4</div>
+            <div class="swiper-slide">2/4</div>
+            <div class="swiper-slide">3/4</div>
+            <div class="swiper-slide">4/4</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--main_visual-->
+    <div class="main_background_color">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide background_first">
+          <img src="./images/visual_main_img01_pc.jpg" alt="메인비주얼이미지">
+        </div>
+        <div class="swiper-slide background_second">
+          <img src="./images/visual_main_img02_pc.jpg" alt="메인비주얼이미지">
+        </div>
+        <div class="swiper-slide background_third">
+          <img src="./images/visual_main_img03_pc.jpg" alt="메인비주얼이미지">
+        </div>
+        <div class="swiper-slide background_fourth">
+          <img src="./images/visual_main_img04_pc.jpg" alt="메인비주얼이미지">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--main_visual_box-->
+
+  <section class="metaphor">
+    <a href="#!" class="metaphor_movie">
+      <div class="metaphor_icon_box">
+        <div class="metaphor_icon"></div>
+      </div>
+      <div class="metaphor_title">영화</div>
+    </a>
+    <a href="#!" class="metaphor_concert">
+      <div class="metaphor_icon_box">
+        <div class="metaphor_icon"></div>
+      </div>
+      <div class="metaphor_title">공연</div>
+    </a>
+    <a href="#!" class="metaphor_current">
+      <div class="metaphor_icon_box">
+        <div class="metaphor_icon"></div>
+      </div>
+      <div class="metaphor_title">현재 상영작</div>
+    </a>
+    <a href="#!" class="metaphor_ticket">
+      <div class="metaphor_icon_box">
+        <div class="metaphor_icon"></div>
+      </div>
+      <div class="metaphor_title">영화 예매권</div>
+    </a>
+    <a href="#!" class="metaphor_package">
+      <div class="metaphor_icon_box">
+        <div class="metaphor_icon"></div>
+      </div>
+      <div class="metaphor_title">공연 패키지</div>
+    </a>
+    <a href="#!" class="metaphor_member">
+      <div class="metaphor_icon_box">
+        <div class="metaphor_icon"></div>
+      </div>
+      <div class="metaphor_title">회원제 안내</div>
+    </a>
+  </section>
+  <!--metaphor-->
+
+  <!---------- schedule ---------->
+  <section class="schedule">
+    <!---------- schedule_monthly ---------->
+    <div class="schedule_monthly">
+      <h2 class="monthly_title">상영리스트</h2>
+      <!---------- schedule_shadow_box ---------->
+      <div class="schedule_shadow_box">
+        <div class="border_right_box"></div>
+        <!---------- schedule_calendar_box ---------->
+        <div class="schedule_calendar_box">
+          <div class="schedule_calendar">
+            <div class="schedule_calendar_title">2022년 11월</div>
+            <div class="schedule_calendar_sheet">
+              <ul class="calendar_sheet_day">
+                <li>월</li><li>화</li><li>수</li><li>목</li><li>금</li><li>토</li><li>일</li>
+              </ul>
+              <ul>
+                <li></li>
+                <li></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221101">1</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221102">2</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221103">3</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221104">4</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221105" class="schedule_sunday">5</a></li>
+              </ul>
+              <ul>
+                <li><a href="javascript:void(0)" id="btn_calendar_221106">6</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221107">7</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221108">8</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221109">9</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221110">10</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221111">11</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221112" class="schedule_sunday">12</a></li>
+              </ul>
+              <ul>
+                <li><a href="javascript:void(0)" id="btn_calendar_221113">13</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221114">14</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221115">15</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221116">16</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221117">17</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221118">18</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221119" class="schedule_sunday">19</a></li>
+              </ul>
+              <ul>
+                <li><a href="javascript:void(0)" id="btn_calendar_221120">20</a></li>
+                <li><a href="javascript:void(0)" class="schedule_today calendar_on" id="btn_calendar_221121">21</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221122">22</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221123">23</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221124">24</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221125">25</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221126" class="schedule_sunday">26</a></li>
+              </ul>
+              <ul>
+                <li><a href="javascript:void(0)" id="btn_calendar_221127">27</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221128">28</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221129">29</a></li>
+                <li><a href="javascript:void(0)" id="btn_calendar_221130">30</a></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div><!--schedule_calendar_sheet-->
+          </div><!--schedule_calendar-->
+        </div><!--schedule_calendar_box-->
+
+        <!---------- schedule_monthly_sheet ---------->
+        <div class="schedule_monthly_sheet">
+            <!---------- schedule_monthly_sheet_unit ( * 7개 : calendar_221120 ~ calendar_221126 ) ---------->
+            <div class="schedule_monthly_sheet_unit calendar_221120">
+              <div class="schedule_cinema_deck">
+                <div class="schedule_subject">시네마데크</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">09:50</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">피가로~피가로~피가로~(테크)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">12:10</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">(제10회 인도영화제)아난디 고팔</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">14:50</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">(제10회 인도영화제)아수란</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">17:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">(제10회 인도영화제)나트얌</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">20:20</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">파이어버드(테크)</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_small_theater">
+                <div class="schedule_subject">소극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">11:00</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">(제24회부산독립영화제)메이드인부산 경쟁 5</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">13:20</div>
+                    <div class="schedule_age_all schedule_age"></div>
+                    <div class="schedule_detail">(제24회부산독립영화제)특별대담[영화를 만드는 일]</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">15:20</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">(제24회부산독립영화제)메이드인부산 경쟁 6</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">18:00</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">(제24회부산독립영화제)로컬투로컬 6</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_indie">
+                <div class="schedule_subject">인디+</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">13:00</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">(제24회부산독립영화제)메이드인부산 경쟁 2</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">15:15</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">(제24회부산독립영화제)로컬투로컬 4</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">18:20</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">(제24회부산독립영화제)스펙트럼부산-리와인드</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_middle_theater">
+                <div class="schedule_subject">중극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">09:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">데시벨</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">11:40</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">폴: 600미터</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">13:50</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">블랙 팬서: 와칸다 포에버</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">17:00</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">데시벨</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">19:10</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">가재가 노래하는 곳</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">20:55</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">폴: 600미터</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_sky_theater">
+                <div class="schedule_subject">하늘연극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">15:00</div>
+                    <div class="schedule_detail">&nbsp;&nbsp;[음악회] 우크라이나 체르니우치 필하모닉 국제교류음악회</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_outdoor_theater">
+                <div class="schedule_subject">야외극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">14:00</div>
+                    <div class="schedule_age_all schedule_age"></div>
+                    <div class="schedule_detail">제17회 부산국제매직페스티벌 - 매직갈라쇼 [AMAZING SHOW]</div>
+                  </a>
+                </div>
+              </div>
+            </div><!--calendar_221120-->
+            <div class="schedule_monthly_sheet_unit calendar_221121 calendar_visible">
+              <div class="schedule_cinema_deck">
+                <div class="schedule_subject">시네마데크</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">10:00</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">(가치봄)공조2:인터네셔널</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">12:40</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">(가치봄)육사오</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">15:00</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">(가치봄)공조2:인터네셔널</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">17:30</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">(리플레이)젊은 남자(테크)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">19:50</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">(리플레이)젊은 남자(테크)</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_small_theater">
+                <div class="schedule_subject">소극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">10:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">어제 뭐 먹었어? - 극장판</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">12:50</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">에브리씽 에브리웨어 올 앳 원스</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">15:00</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">아나이스 인 러브</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">17:30</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">에브리씽 에브리웨어 올 앳 원스</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">19:50</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">그 남자, 좋은 간호사</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_indie">
+                <div class="schedule_subject">인디+</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">11:40</div>
+                    <div class="schedule_age_all schedule_age"></div>
+                    <div class="schedule_detail">물방울을 그리는 남자</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">13:30</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">태안</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">15:30</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">달이 지는 밤</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">17:00</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">낮과 달</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">19:50</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">죽어도 자이언츠</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_middle_theater">
+                <div class="schedule_subject">중극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">09:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">티켓 투 파라다이스</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">11:35</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">자백</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">13:40</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">리멤버</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">16:10</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">블랙 아담</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">18:40</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">자백</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">20:45</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">리멤버</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_sky_theater">
+                <div class="schedule_subject">하늘연극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">10:00</div>
+                    <div class="schedule_detail">&nbsp;&nbsp;[예술교육] 기술과 예술의 합 [위험한 놀이터]</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_outdoor_theater">
+                <div class="schedule_subject">야외극장</div>
+                <div class="schedule_content"></div>
+              </div>
+            </div><!--calendar_221121-->
+            <div class="schedule_monthly_sheet_unit calendar_221122">
+              <div class="schedule_cinema_deck">
+                <div class="schedule_subject">시네마데크</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">09:50</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">파이어버드(테크)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">12:00</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">바르도, 약간의 진실을 섞은 거짓된 연대기(테크)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">15:00</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">꼭대기 방(키친 싱크대의 시대, 영국 뉴웨이브)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">17:40</div>
+                    <div class="schedule_age_eighteen schedule_age"></div>
+                    <div class="schedule_detail">위드네일과 나(키친 싱크대의 시대, 영국 뉴웨이브)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">20:00</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">사랑의 유형(키친 싱크대의 시대, 영국 뉴웨이브)</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_small_theater">
+                <div class="schedule_subject">소극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">17:00</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">수프와 이데올로기(소극장)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">19:30</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">같은 속옷을 입는 두 여자(소극장)</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_indie">
+                <div class="schedule_subject">인디+</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">10:00</div>
+                    <div class="schedule_age_all schedule_age"></div>
+                    <div class="schedule_detail">(2022 시네마차이나 in 부산)완혹청춘</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">13:00</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">죽어도 자이언츠</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">15:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">낮에는 덥고 밤에는 춥고</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">17:30</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">탑</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">19:30</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">김세인 감독전(인디스데이)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">20:45</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">김세인 감독전(인디스데이)</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_middle_theater">
+                <div class="schedule_subject">중극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">09:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">블랙 팬서: 와칸다 포에버</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">12:40</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">데시벨</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">15:00</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">폴: 600미터</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">17:20</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">데시벨</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">19:40</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">폴: 600미터</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_sky_theater">
+                <div class="schedule_subject">하늘연극장</div>
+                <div class="schedule_content">
+                </div>
+              </div>
+              <div class="schedule_outdoor_theater">
+                <div class="schedule_subject">야외극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">14:00</div>
+                    <div class="schedule_age_all schedule_age"></div>
+                    <div class="schedule_detail">제17회 부산국제매직페스티벌 - 매직갈라쇼 [AMAZING SHOW]</div>
+                  </a>
+                </div>
+              </div>
+            </div><!--calendar_221122-->
+            <div class="schedule_monthly_sheet_unit calendar_221123">
+              <div class="schedule_cinema_deck">
+                <div class="schedule_subject">시네마데크</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">12:50</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">파이어버드(테크)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">15:10</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">욕망의 끝(키친 싱크대의 시대, 영국 뉴웨이브)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">18:00</div>
+                    <div class="schedule_age_all schedule_age"></div>
+                    <div class="schedule_detail">비틀즈: 하드 데이즈 나이트(키친 싱크대의 시대, 영국 뉴웨이브)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">20:00</div>
+                    <div class="schedule_age_eighteen schedule_age"></div>
+                    <div class="schedule_detail">네이키드(키친 싱크대의 시대, 영국 뉴웨이브)</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_small_theater">
+                <div class="schedule_subject">소극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">12:10</div>
+                    <div class="schedule_age_all schedule_age"></div>
+                    <div class="schedule_detail">기예르모 델토로의 피노키오</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">14:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">아마겟돈 타임</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">16:50</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">바르도, 약간의 진실을 섞은 거짓된 연대기</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">20:10</div>
+                    <div class="schedule_age_all schedule_age"></div>
+                    <div class="schedule_detail">기예르모 델토로의 피노키오</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_indie">
+                <div class="schedule_subject">인디+</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">11:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">수프와 이데올로기</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">13:50</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">김세인 감독전(인디스데이)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">15:40</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">같은 속옷을 입는 두 여자</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">18:20</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">탑</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">20:20</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">첫번째 아이</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_middle_theater">
+                <div class="schedule_subject">중극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">09:50</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">블랙 팬서: 와칸다 포에버</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">13:00</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">올빼미</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">15:20</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">데시벨</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">17:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">폴: 600미터</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">19:25</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">올빼미</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">20:50</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">가재가 노래하는 곳</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_sky_theater">
+                <div class="schedule_subject">하늘연극장</div>
+                <div class="schedule_content"></div>
+              </div>
+              <div class="schedule_outdoor_theater">
+                <div class="schedule_subject">야외극장</div>
+                <div class="schedule_content"></div>
+              </div>
+            </div><!--calendar_221123-->
+            <div class="schedule_monthly_sheet_unit calendar_221124">
+              <div class="schedule_cinema_deck">
+                <div class="schedule_subject">시네마데크</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">10:40</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">바르도, 약간의 진실을 섞은 거짓된 연대기(테크)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">14:10</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">바르도, 약간의 진실을 섞은 거짓된 연대기(테크)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">16:40</div>
+                    <div class="schedule_age_eighteen schedule_age"></div>
+                    <div class="schedule_detail">페출리아(키친 싱크대의 시대, 영국 뉴웨이브)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">19:00</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">하층민들(키친 싱크대의 시대, 영국 뉴웨이브)</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_small_theater">
+                <div class="schedule_subject">소극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">09:20</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">파이어버드</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">11:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">피가로~피가로~피가로~</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">13:40</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">아마겟돈 타임</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">16:00</div>
+                    <div class="schedule_age_all schedule_age"></div>
+                    <div class="schedule_detail">기예르모 델토로의 피노키오</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">18:20</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">알카라스의 여름</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">20:40</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">아마겟돈 타임</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_indie">
+                <div class="schedule_subject">인디+</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">11:40</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">탑</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">13:50</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">우수</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">15:30</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">세이레</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">17:30</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">픽션들</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">19:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">창밖은 겨울</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_middle_theater">
+                <div class="schedule_subject">중극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">09:30</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">올빼미</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">11:50</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">데시벨</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">14:00</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">블랙 팬서: 와칸다 포에버</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">17:10</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">올빼미</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">19:40</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">폴: 600미터</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_sky_theater">
+                <div class="schedule_subject">하늘연극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">13:30</div>
+                    <div class="schedule_detail">&nbsp;&nbsp;[라운지] 제17회 부산국제매직페스티벌 [매직라운지]</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_outdoor_theater">
+                <div class="schedule_subject">야외극장</div>
+                <div class="schedule_content"></div>
+              </div>
+            </div><!--calendar_221124-->
+            <div class="schedule_monthly_sheet_unit calendar_221125">
+              <div class="schedule_cinema_deck">
+                <div class="schedule_subject">시네마데크</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">10:20</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">바르도, 약간의 진실을 섞은 거짓된 연대기(테크)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">13:40</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">빌리 라이어(키친 싱크대의 시대, 영국 뉴웨이브)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">15:50</div>
+                    <div class="schedule_age_eighteen schedule_age"></div>
+                    <div class="schedule_detail">미드나잇 카우보이(키친 싱크대의 시대, 영국 뉴웨이브)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">18:40</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">이노센츠(키친 싱크대의 시대, 영국 뉴웨이브)</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_small_theater">
+                <div class="schedule_subject">소극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">09:20</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">피가로~피가로~피가로~</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">11:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">알카라스의 여름</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">13:50</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">아마겟돈 타임</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">16:10</div>
+                    <div class="schedule_age_all schedule_age"></div>
+                    <div class="schedule_detail">기예르모 델토로의 피노키오</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">18:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">아마겟돈 타임</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">20:50</div>
+                    <div class="schedule_age_all schedule_age"></div>
+                    <div class="schedule_detail">기예르모 델토로의 피노키오</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_indie">
+                <div class="schedule_subject">인디+</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">11:20</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">첫번째 아이</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">13:10</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">김세인 감독전(인디스데이)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">15:00</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">같은 속옷을 입는 두 여자</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">17:40</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">차별(인디 바이브)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">19:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">장르 가까이(인디 바이브)</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_middle_theater">
+                <div class="schedule_subject">중극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">09:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">폴: 600미터</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">11:50</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">올빼미</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">14:10</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">데시벨</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">16:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">블랙 팬서: 와칸다 포에버</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">19:40</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">올빼미</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_sky_theater">
+                <div class="schedule_subject">하늘연극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">11:00</div>
+                    <div class="schedule_detail">&nbsp;&nbsp;[콘서트] 2022 한낮의 유U:콘서트 11월</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">15:00</div>
+                    <div class="schedule_detail">&nbsp;&nbsp;[라운지] 제17회 부산국제매직페스티벌 [매직라운지]</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_outdoor_theater">
+                <div class="schedule_subject">야외극장</div>
+                <div class="schedule_content"></div>
+              </div>
+            </div><!--calendar_221125-->
+            <div class="schedule_monthly_sheet_unit calendar_221126">
+              <div class="schedule_cinema_deck">
+                <div class="schedule_subject">시네마데크</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">10:20</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">바르도, 약간의 진실을 섞은 거짓된 연대기(테크)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">13:40</div>
+                    <div class="schedule_age_eighteen schedule_age"></div>
+                    <div class="schedule_detail">위드네일과 나(키친 싱크대의 시대, 영국 뉴웨이브)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">16:00</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">하인(키친 싱크대의 시대, 영국 뉴웨이브)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">20:00</div>
+                    <div class="schedule_age_eighteen schedule_age"></div>
+                    <div class="schedule_detail">성난 얼굴로 돌아보라(키친 싱크대의 시대, 영국 뉴웨이브)</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_small_theater">
+                <div class="schedule_subject">소극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">09:20</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">아마겟돈 타임</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">11:40</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">피가로~피가로~피가로~</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">13:50</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">알카라스의 여름</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">16:10</div>
+                    <div class="schedule_age_all schedule_age"></div>
+                    <div class="schedule_detail">기예르모 델토로의 피노키오</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">18:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">아마겟돈 타임</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">20:50</div>
+                    <div class="schedule_age_all schedule_age"></div>
+                    <div class="schedule_detail">기예르모 델토로의 피노키오</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_indie">
+                <div class="schedule_subject">인디+</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">11:30</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">해협(인디 바이브)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">14:00</div>
+                    <div class="schedule_age_all schedule_age"></div>
+                    <div class="schedule_detail">여름날(인디 바이브)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">16:40</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">젊다는 것, 산다는 것(인디 바이브)</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">19:00</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">우수</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">20:40</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">픽션들</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_middle_theater">
+                <div class="schedule_subject">중극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">09:30</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">올빼미</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">11:50</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">데시벨</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">14:10</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">블랙 팬서: 와칸다 포에버</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">17:20</div>
+                    <div class="schedule_age_fifteen schedule_age"></div>
+                    <div class="schedule_detail">올빼미</div>
+                  </a>
+                  <a href="#!">
+                    <div class="schedule_date">19:40</div>
+                    <div class="schedule_age_twelve schedule_age"></div>
+                    <div class="schedule_detail">폴: 600미터</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_sky_theater">
+                <div class="schedule_subject">하늘연극장</div>
+                <div class="schedule_content">
+                  <a href="#!">
+                    <div class="schedule_date">19:00</div>
+                    <div class="schedule_detail">&nbsp;&nbsp;[음악회] 김현철의 유쾌한 오케스트라</div>
+                  </a>
+                </div>
+              </div>
+              <div class="schedule_outdoor_theater">
+                <div class="schedule_subject">야외극장</div>
+                <div class="schedule_content"></div>
+              </div>
+            </div><!--calendar_221126-->
+        </div><!--schedule_monthly_sheet-->
+      </div>
+      <!--schedule_shadow_box-->
+    </div>
+    <!--schedule_monthly-->
+
+    <!---------- schedule_weekly ---------->
+    <div class="schedule_weekly">
+      <input type="checkbox" id="chk_schedule_more" />
+
+      <h3 class="weekly_title">주간 상영리스트</h3>
+      <div class="schedule_shadow_box">
+        <div class="schedule_slide_bar_weekly">
+          <div class="swiper-wrapper">
+            <h5 class="swiper-slide">2022년 11월 첫째주</h5>
+            <h5 class="swiper-slide">2022년 11월 둘째주</h5>
+            <h5 class="swiper-slide">2022년 11월 셋째주</h5>
+            <h5 class="swiper-slide">2022년 11월 넷째주</h5>
+            <h5 class="swiper-slide">2022년 11월 다섯째주</h5>
+          </div>
+          <a href="#!" class="schedule_angle_left"><i class="fa-solid fa-angle-left"></i></a>
+          <a href="#!" class="schedule_angle_right"><i class="fa-solid fa-angle-right"></i></a>
+        </div>
+        <div class="schedule_sheet_outerbox">
+          <div class="swiper-container schedule_sheet_innerbox">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide schedule_sheet">
+                <a href="#!">
+                  <div class="schedule_date">11월 1일 화요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 12:10 리멤버</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 1일 화요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 14:50 자백</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 2일 수요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 09:30 블랙아담</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 2일 수요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 19:40 가재가 노래하는 곳</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 3일 목요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 12:00 아나이스 인 러브</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 3일 목요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 14:50 에브리씽 에브리웨어 올 앳 원스</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 4일 금요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 09:40 알카라스의 여름</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 4일 금요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 14:00 어제 뭐 먹었어? - 극장판</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 4일 금요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 16:20 디셉션</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 4일 금요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 19:40 가재가 노래하는 곳</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 5일 토요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 10:30 그 남자, 좋은 간호사</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 5일 토요일 </div>
+                  <div class="schedule_age_all schedule_age"></div>
+                  <div class="schedule_detail"> 13:20 물방울을 그리는 남자</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 5일 토요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 18:30 알카라스의 여름</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 5일 토요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 20:20 에브리씽 에브리웨어 올 앳 원스</div>
+                </a>
+              </div>
+              <!--schedule_sheet-->
+              <div class="swiper-slide schedule_sheet">
+                <a href="#!">
+                  <div class="schedule_date">11월 6일 일요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 09:30 블랙 아담</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 6일 일요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 12:00 가재가 노래하는 곳</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 7일 월요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 10:30 아나이스 인 러브</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 7일 월요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 17:10 그 남자, 좋은 간호사</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 8일 화요일 </div>
+                  <div class="schedule_age_all schedule_age"></div>
+                  <div class="schedule_detail"> 12:30 물방울을 그리는 남자</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 8일 화요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 19:50 수프와 이데올로기</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 9일 수요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 10:00 블랙 팬서 : 와칸다 포에버</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 9일 수요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 15:00 자백</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 10일 목요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 15:10 피가로~피가로~피가로~</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 10일 목요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 17:20 알카라스의 여름</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 11일 금요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 09:30 블랙 팬서 : 와칸다 포에버</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 11일 금요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 15:00 에브리씽 에브리웨어 올 앳 원스</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 12일 토요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 17:50 (무대인사) 데시벨 - 중극장</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 12일 토요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 20:15 블랙 팬서 : 와칸다 포에버</div>
+                </a>
+              </div>
+              <!--schedule_sheet-->
+              <div class="swiper-slide schedule_sheet">
+                <a href="#!">
+                  <div class="schedule_date">11월 13일 일요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 11:30 같은 속옷을 입는 두 여자</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 13일 일요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 14:10 첫번째 아이</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 14일 월요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 11:40 낮과 달</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 14일 월요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 20:20 죽어도 자이언츠</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 15일 화요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 10:00 (2022 시네마차이나 in 부산)무명지배: 대환장 특수임무기획 12세</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 15일 화요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 15:00 나를 죽여줘</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 16일 수요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 09:30 폴: 600미터</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 16일 수요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 11:50 데시벨</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 17일 목요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 12:05 가재가 노래하는 곳</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 17일 목요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 16:40 블랙 팬서 : 와칸다 포에버</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 18일 금요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 12:00 (제24회부산독립영화제)스펙트럼부산-나우3</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 18일 금요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 14:00 (제24회부산독립영화제)스펙트럼부산-나우4</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 19일 토요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 17:00 (제24회부산독립영화제)메이드인부산 경쟁 3</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 19일 토요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 19:15 (제24회부산독립영화제)스펙트럼부산-나우6</div>
+                </a>
+              </div>
+              <!--schedule_sheet-->
+              <div class="swiper-slide schedule_sheet">
+                <a href="#!">
+                  <div class="schedule_date">11월 20일 일요일 </div>
+                  <div class="schedule_age_all schedule_age"></div>
+                  <div class="schedule_detail"> 13:20 (제24회부산독립영화제)특별대담[영화를 만드는 일]</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 20일 일요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 18:00 (제24회부산독립영화제)로컬투로컬 6</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 21일 월요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 09:30 폴: 600미터</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 21일 월요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 11:40 블랙 팬서 : 와칸다 포에버</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 22일 화요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 12:40 데시벨</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 22일 화요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 17:00 수프와 이데올로기</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 23일 수요일 </div>
+                  <div class="schedule_age_all schedule_age"></div>
+                  <div class="schedule_detail"> 12:10 기예르모 델토로의 피노키오</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 23일 수요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 14:30 아마겟돈 타임</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 24일 목요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 09:20 파이어 버드</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 24일 목요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 11:30 피가로~피가로~피가로~</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 25일 금요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 09:30 폴: 600미터</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 25일 금요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 11:50 올빼미</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 26일 토요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 14:10 블랙팬서 : 와칸다 포에버</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 26일 토요일 </div>
+                  <div class="schedule_age_all schedule_age"></div>
+                  <div class="schedule_detail"> 20:50 기예르모 델토로의 피노키오</div>
+                </a>
+              </div>
+              <!--schedule_sheet-->
+              <div class="swiper-slide schedule_sheet">
+                <a href="#!">
+                  <div class="schedule_date">11월 27일 일요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 11:30 언더그라운드(인디 바이브)</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 27일 일요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 16:20 시간이 지나간 자리(인디 바이브)</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 28일 월요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 10:00 (시니어극장)더티 댄싱</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 28일 월요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 12:10 (가치봄)정직한 후보2</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 28일 월요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 14:30 (가치봄)인생은 아름다워</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 28일 월요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 18:10 김세인 감독전(인디스데이)</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 29일 화요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 10:00 알카라스의 여름</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 29일 화요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 12:20 피가로~피가로~피가로</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 29일 화요일 </div>
+                  <div class="schedule_age_all schedule_age"></div>
+                  <div class="schedule_detail"> 14:30 기예르모 델토로의 피노키오</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 29일 화요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 19:30 2022 유엔평화영화제 <아일라></div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 30일 수요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 11:40 김세인 감독전(인디스데이)</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 30일 수요일 </div>
+                  <div class="schedule_age_fifteen schedule_age"></div>
+                  <div class="schedule_detail"> 13:30 같은 속옷을 입는 두 여자</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 30일 수요일 </div>
+                  <div class="schedule_age_twelve schedule_age"></div>
+                  <div class="schedule_detail"> 18:00 창밖은 겨울</div>
+                </a>
+                <a href="#!">
+                  <div class="schedule_date">11월 30일 수요일 </div>
+                  <div class="schedule_age_all schedule_age"></div>
+                  <div class="schedule_detail"> 20:00 그 겨울, 나는</div>
+                </a>
+              </div>
+              <!--schedule_sheet-->
+            </div><!--swiper--wrapper-->
+          </div><!--schedule_sheet_innerbox-->
+          
+          <div class="schedule_banner">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#!" class="schedule_banner_image">
+                  <img src="./images/schedule_weekly_03.JPG" alt="스케줄배너이미지_03">
+                </a>
+                <div class="schedule_banner_title">[첫번째 아이]</div>
+                <div class="schedule_banner_text">
+                  <div class="banner_catchphrase">심층적 이해관계 형성으로 캐릭터 간의 관계성을 다각화하다<br />
+                    극의 깊이를 더하는 연기파 배우진이 전하는 극적 몰입감</div>
+                  <div class="banner_story">각본을 쓰고 연출을 맡은 허정재 감독은 단편 [잠들지 못하던 어느밤](2016)과 [밝은 미래](2017)를 통해 ‘돌봄’과 ‘비정규직’ 등 우리 사회의 고질적인 갈등과 문제를 심도 깊게 다뤄 부산국제영화제, 서울독립영화제 등에서 연달아 호명되며 일찌감치 주목받은 감독이다. [첫번째 아이]는 허정재 감독의 전작들을 경유해 보다 숙성된 문제의식을 바탕으로, 한 직장 여성의 첫 출산으로 비롯된 개인의 안팎 문제들과 이와 연결된 여러 세대의 고민과 시스템의 구멍이 중첩되어 펼쳐진다. 비혼주의 사회초년생 20대 여성과 일과 육아를 병행하는 30대 여성 그리고 장성한 자식을 둔 중장년과 노년의 여성에게 ‘희생’과 ‘헌신’이라는 이름으로 작동되어 온 ‘육아’ 나아가 ‘돌봄’의 굴레를 세밀하게 들여다본다. 또한 인간의 보편적인 감정을 포착해, 우리 시대의 소셜 딜레마인 ‘돌봄’의 문제를 보다 깊이 파고들어 관객 저마다의 공감의 반향을 불러일으킬 예정이다.</div>
+                </div>
+                <button class="btn_schedule_banner_reserve">예약하기</button>
+                <button class="btn_schedule_banner_heart">찜하기</button>
+              </div><!--swiper-slide-->
+              <div class="swiper-slide">
+                <a href="#!" class="schedule_banner_image">
+                  <img src="./images/schedule_weekly_05.JPG" alt="스케줄배너이미지_05">
+                </a>
+                <div class="schedule_banner_title">[그 겨울, 나는]</div>
+                <div class="schedule_banner_text">
+                  <div class="banner_catchphrase">부산국제영화제 3관왕에 빛나는 사려 깊은 청춘 멜로<br />
+                    한국영화아카데미(KAFA)가 배출한 오성호 감독의 첫 장편영화</div>
+                  <div class="banner_story">스물아홉 살 동갑내기 커플인 공시생 ‘경학’과 그의 여자친구 취준생 ‘혜진’은 넉넉하지 않은 자신들의 형편에 맞춰 잘 살아가지만, ‘경학’이 갑자기 어머니의 빚을 떠안게 되면서 서로가 함께 꿈꾸고 응원했던 목표를 잠시 포기해야 하는 상황에 놓인다. 그러면서 벌어지는 관계의 미세한 균열이 [그 겨울, 나는] 드라마의 단초가 된다. 노력 대비 최단기간에 빚을 갚을 수 있다는 판단으로 시작한 ‘경학’의 오토바이 배달 일은 생각보다 스트레스가 높고, 배달 외 시간에 공부를 병행할 수 없는 고된 노동이다. 빠르게 배달일을 탈출하기 위해 점점 더 욕심을 내는 ‘경학’과 그로 인해 더욱 지쳐가는 ‘혜진’은 점점 더 서로에게 멀어진다. 집안의 반대에도 굳건히 ‘경학’을 향한 강한 믿음과 사랑을 지켜오던 ‘혜진’도 혼란스러운 것은 마찬가지다. 배달 일에 지친 ‘경학’이 너무 애틋하지만, 좀 더 나은 둘의 미래를 위해 아무것도 하지 않고, 게으른 것만 같은 ‘경학’의 태도가 마음에 들지 않는다.</div>
+                </div>
+                <button class="btn_schedule_banner_reserve">예약하기</button>
+                <button class="btn_schedule_banner_heart">찜하기</button>
+              </div><!--swiper-slide-->
+              <div class="swiper-slide">
+                <a href="#!" class="schedule_banner_image">
+                  <img src="./images/schedule_weekly_04.JPG" alt="스케줄배너이미지_04">
+                </a>
+                <div class="schedule_banner_title">[창밖은 겨울]</div>
+                <div class="schedule_banner_text">
+                  <div class="banner_catchphrase">‘케미 장인’ 곽민규 X ‘술도녀’ 한선화<br />
+                    브라운관과 스크린 모두 접수한 대세 배우들의 만남!</div>
+                  <div class="banner_story">바람 부는 겨울의 초입, 아주 보통의 평범한 청춘들을 위한 영화 [창밖은 겨울]은 제22회 전주국제영화제 코리안시네마부문에 초청되어 첫 선을 보였다. “‘잃어버린 마음’과 ‘내다버린 마음’에 관한 이야기”(전주국제영화제 문석 프로그래머)라는 리뷰와 함께 영화가 가진 담담한 울림에 공감과 호평이 이어졌으며, 이를 시작으로 제2회 합천수려한영화제와 제21회 전북독립영화제, 제9회 마리끌레르 영화제에 초청, 합천수려한영화제에서는 우수상을 수상하며 관객들의 호응을 이끌어냈다.</div>
+                </div>
+                <button class="btn_schedule_banner_reserve">예약하기</button>
+                <button class="btn_schedule_banner_heart">찜하기</button>
+              </div><!--swiper-slide-->
+              <div class="swiper-slide">
+                <a href="#!" class="schedule_banner_image">
+                  <img src="./images/schedule_weekly_02.jpg" alt="스케줄배너이미지_02">
+                </a>
+                <div class="schedule_banner_title">[낮과 달]</div>
+                <div class="schedule_banner_text">
+                  <div class="banner_catchphrase">#귀여움 천재 유다인, 요가 천재 조은지, 음악 천재 태경<br />
+                    가을 감성 가득! 제주도 올로케이션</div>
+                  <div class="banner_story">[낮과 달]의 모든 배경은 제주도로, 제주 올로케이션으로 촬영되었다. 민희에겐 낯설고 새로운 공간이지만, 사랑했던 남편 경치의 모든 추억이 담겨있는 곳이기에 푸근한 제2의 고향처럼 느껴지는 곳. 하지만 친하게 지내게 된 이웃집 목하가 경치의 첫사랑이었다는 알게 된 후 제주도는 시리도록 차갑게 혼자 고립되어 버린 공간이 되어버린다. 목하와의 관계를 통해 제주도는 민희에게 가장 설레는 공간이었고, 당장 떠나고 싶은 곳이 되었다가 끝내는 상실의 아픔을 아물게 하는 힐링의 공간으로 변모해간다. 경치에겐 제주도가 20대 초반의 찬란했던 시기가 담긴 장소였겠지만 반대로 목하는 경치가 떠난 이후로 하루하루가 버텨내기 위한 도전과도 같았다며 제주도에서의 삶을 토로한다. 이처럼 제주도는 민희, 목하, 경치의 상황에 따라 관객들에게도 다양한 감정을 이입시키는 공간으로 연출되었다. 제주도 로케이션에 대해 이영아 감독은, 시나리오를 쓸 때부터 공간을 떠올리며 진행했다고 밝혔다.</div>
+                </div>
+                <button class="btn_schedule_banner_reserve">예약하기</button>
+                <button class="btn_schedule_banner_heart">찜하기</button>
+              </div><!--swiper-slide-->
+              <div class="swiper-slide">
+                <a href="#!" class="schedule_banner_image">
+                  <img src="./images/schedule_weekly_01.JPG" alt="스케줄배너이미지_01">
+                </a>
+                <div class="schedule_banner_title">[알카라스의 여름]</div>
+                <div class="schedule_banner_text">
+                  <div class="banner_catchphrase">3살, 9살, 12살의 내가 먹고 뛰어놀던 곳, 알카라스<br />
+                    정서적 가치와 영화적 가치가 모여 아름다운 영화로 탄생하다!</div>
+                  <div class="banner_story">카를라 시몬 감독은 어린 시절 여름과 겨울을 보냈던 알카라스에 애착과 존경을 갖고 있었다. 대가족 사이에서 생활하면서 얻었던 ‘정서적’ 가치와 땀 흘려 일하고 수고하며 함께 나눈 식탁이 선사한 ‘영화적’ 가치는 한 편의 영화로 탄생하기에 충분한 재료가 되었다. 감독은 유년 시절의 기억이 작품의 출발이 되기는 했지만 대부분의 이야기를 창조해야 했기에 각본가 아르노 빌라로에게 공동으로 각본을 집필하기를 제안했다. 아르노 빌라로는 알카라스로부터 20분 정도 떨어져 있는 ‘벨비스’(Bellvís)라는 마을 출신이었고, 그의 친척도 농부였기 때문에 알카라스나 농장 생활에 대해 익숙한 사람이었다. 카를라 시몬은 그와 함께 대화를 나누며 각본을 쓰면 더욱 많은 이야기가 탄생할 거라고 믿었다. 대가족에 대한 구체적인 에피소드는 복숭아 농사를 짓는 감독의 삼촌과 다른 농부들과 대화를 통해 완성되었다. 카를라 시몬과 아르노 빌라로는 삼촌의 농가에서 두 번의 여름을 보내며 [알카라스의 여름]을 써 내려갔다.</div>
+                </div>
+                <button class="btn_schedule_banner_reserve">예약하기</button>
+                <button class="btn_schedule_banner_heart">찜하기</button>
+              </div><!--swiper-slide-->
+            </div><!--swiper-wrapper-->
+          </div>
+          <!--schedule_banner-->
+        </div>
+        <!--schedule_sheet_outerbox-->
+
+        <label for="chk_schedule_more" class="lab_schedule_more">
+          <div>
+            <div class="lab_schedule_more_text">
+              더보기
+            </div>
+            <div class="lab_schedule_more_icon">
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+        </label><!--lab_schedule_more-->
+      </div>
+      <!--schedule_shadow_box-->  
+    </div>
+    <!--schedule_weekly-->
+  </section>
+  <!--schedule-->
+
+  <section class="trailer">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide trailer_nobodys_lover">
+        <div class="trailer_unit">
+          <div>
+            <div class="trailer_movie_box">
+              <div class="trailer_movie">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WNfkuIylkSc?mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div><!--trailer_movie_box-->
+            <div class="trailer_description">
+              <h4 class="trailer_title">
+                <p>누구에게나 처음은 있다!</p>
+                "맨날 내 앞에 나타났으면 좋겠어"
+              </h4>
+              <div class="trailer_text">
+                엄마가 사랑에 빠져 집을 나가고, 열여덟 유진은 스스로 삶을 꾸려나가기로 한다. 피자 가게에서 아르바이트를 시작하며 유진은 새로운 사람들과 관계 맺는 법을 배워나간다. 특히, 그는 사랑 앞에 거침없고 대담하다.
+              </div>
+            </div><!--trailer_description-->
+          </div>
+        </div><!--trailer_unit-->
+      </div><!--swiper-slide-->
+      <div class="swiper-slide trailer_fictions">
+        <div class="trailer_unit">
+          <div>
+            <div class="trailer_movie_box">
+              <div class="trailer_movie">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0j0mJJwU4CE?mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div><!--trailer_movie_box-->
+            <div class="trailer_description">
+              <h4 class="trailer_title">
+                <p>은경, 불안에 머무르다</p>
+                “꼭 채워 넣어야 돼? 그냥 비어 있는 채로 놔두는 건 어때?”
+              </h4>
+              <div class="trailer_text">
+                각자 몫의 불안을 가지고 살아가는 존재들인 윤수(김권후), 은경(이태경), 원(박종환), 주희(구자은)은 얽히고설키는 관계 속에서 위태롭게 살아간다. 불안하게 하지만 그런대로.
+              </div>
+            </div><!--trailer_description-->
+          </div>
+        </div><!--trailer_unit-->
+      </div><!--swiper-slide-->
+      <div class="swiper-slide trailer_hey_genie">
+        <div class="trailer_unit">
+          <div>
+            <div class="trailer_movie_box">
+              <div class="trailer_movie">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/CRFaM38Vb3g?mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div><!--trailer_movie_box-->
+            <div class="trailer_description">
+              <h4 class="trailer_title">
+                <p>우리들의 친구 ‘지니’와 ‘강이’!</p>
+                마법의 세계로 갈 수 있는 비밀의 문이 나타났다!
+              </h4>
+              <div class="trailer_text">
+                그건 바로, 무시무시한 해적의 문! 못된 해적 악당들로부터 마법 열쇠를 지키기 위해 ‘지니’와 ‘강이’가 마녀와 슈퍼 히어로로 변신! ‘지니’와 ‘강이’ 그리고 친구들의 놀라운 환상의 모험이 시작된다!
+              </div>
+            </div><!--trailer_description-->
+          </div>
+        </div><!--trailer_unit-->
+      </div><!--swiper-slide-->
+      <div class="swiper-slide trailer_hunt">
+        <div class="trailer_unit">
+          <div>
+            <div class="trailer_movie_box">
+              <div class="trailer_movie">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/nun4RUz-dYs?mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div><!--trailer_movie_box-->
+            <div class="trailer_description">
+              <h4 class="trailer_title">
+                <p>[헌트] 프리미어 시사회</p>
+                ‘사냥꾼’이 될 것인가, ‘사냥감’이 될 것인가!
+              </h4>
+              <div class="trailer_text">
+                망명을 신청한 북한 고위 관리를 통해 정보를 입수한 안기부 해외팀 ‘박평호’(이정재)와 국내팀 ‘김정도’(정우성)는 조직 내 숨어든 스파이 ‘동림’ 색출 작전을 시작한다.
+              </div>
+            </div><!--trailer_description-->
+          </div>
+        </div><!--trailer_unit-->
+      </div><!--swiper-slide-->
+      <div class="swiper-slide trailer_keumsuna">
+        <div class="trailer_unit">
+          <div>
+            <div class="trailer_movie_box">
+              <div class="trailer_movie">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QCE1fpmyXdY?mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div><!--trailer_movie_box-->
+            <div class="trailer_description">
+              <h4 class="trailer_title">
+                <p>매일매일 365일</p>
+                문화예술의 중심지<br />예술의 전당
+              </h4>
+              <div class="trailer_text">
+                대중영화, 예술영화, 고전영화, 독립영화 등 다양한 프로그램 운영과 이벤트를 통해 관객들의 활발한 참여와 소통을 나누어 더욱 다채롭고 수준 높은 문화 콘텐츠를 제공
+              </div>
+            </div><!--trailer_description-->
+          </div>
+        </div><!--trailer_unit-->
+      </div><!--swiper-slide-->
+    </div><!--swiper-wrapper-->
+  </section>
+  <!--trailer-->
+
+
+
+  <section class="recommend">
+    <input type="radio" name="recommend" id="rad_recommend_movie" checked />
+    <input type="radio" name="recommend" id="rad_recommend_concert" />
+    <input type="radio" name="recommend" id="rad_recommend_exhibition" />
+
+    <h3 class="recommend_title">추천 프로그램</h2>
+    
+    <div class="recommend_control_box">
+      <div class="recommend_tab">
+        <label for="rad_recommend_movie" class="lab_recommend_movie">영화</label>
+        <label for="rad_recommend_concert" class="lab_recommend_concert">공연</label>
+        <label for="rad_recommend_exhibition" class="lab_recommend_exhibition">전시·행사</label>
+      </div><!--recommend_tab-->
+      <div class="recommend_pagination">
+        <div class="movie_pagination pagination_unit">
+          <div class="angle_left">
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <div class="angle_right">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+        <div class="concert_pagination pagination_unit">
+          <div class="angle_left">
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <div class="angle_right">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+        <div class="exhibition_pagination pagination_unit">
+          <div class="angle_left">
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <div class="angle_right">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+      </div><!--recommend_pagination-->
+    </div>
+    <!--recommend_control_box-->
+
+    <div class="recommend_sheet_box">
+
+      <div class="recommend_sheet_movie recommend_sheet">
+        <input type="checkbox" id="chk_heart_turandot" />
+        <input type="checkbox" id="chk_heart_undertheopensky" />
+        <input type="checkbox" id="chk_heart_blackpanther" />
+        <input type="checkbox" id="chk_heart_themenu" />
+        <input type="checkbox" id="chk_heart_carmen" />
+        <input type="checkbox" id="chk_heart_fall" />
+        <input type="checkbox" id="chk_heart_boilingpoint" />
+        <input type="checkbox" id="chk_heart_blackadam" />
+
+        <div class="swiper-wrapper">
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">투란도트 : 어둠의 왕국</h6>
+            <p class="unit_date">2022.11.06 ~ 2022.12.03</p>
+            <div class="unit_image">
+              <img src="./images/recommend_movie_turandot.jpg" alt="추천_영화이미지_투란도트">
+            </div>
+            <label for="chk_heart_turandot" class="lab_heart lab_heart_turandot">
+              <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">멋진 세계</h6>
+            <p class="unit_date">2022.11.02 ~ 2022.12.08</p>
+            <div class="unit_image">
+              <img src="./images/recommend_movie_undertheopensky.jpg" alt="추천_영화이미지_멋진세계">
+            </div>
+            <label for="chk_heart_undertheopensky" class="lab_heart lab_heart_undertheopensky">
+              <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">블랙팬서 : 와칸다 포에버</h6>
+            <p class="unit_date">2022.11.03 ~ 2022.12.15</p>
+            <div class="unit_image">
+              <img src="./images/recommend_movie_blackpanther.jpg" alt="추천_영화이미지_블랙팬서_와칸다포에버">
+            </div>
+            <label for="chk_heart_blackpanther" class="lab_heart lab_heart_blackpanther">
+              <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">더메뉴</h6>
+            <p class="unit_date">2022.11.05 ~ 2022.12.10</p>
+            <div class="unit_image">
+              <img src="./images/recommend_movie_themenu.jpg" alt="추천_영화이미지_더메뉴">
+            </div>
+            <label for="chk_heart_themenu" class="lab_heart lab_heart_themenu">
+                <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">카르멘</h6>
+            <p class="unit_date">2022.11.04 ~ 2022.12.06</p>
+            <div class="unit_image">
+              <img src="./images/recommend_movie_carmen.jpg" alt="추천_영화이미지_카르멘">
+            </div>
+            <label for="chk_heart_carmen" class="lab_heart lab_heart_carmen">
+                <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">폴 : 600미터</h6>
+            <p class="unit_date">2022.11.04 ~ 2022.12.06</p>
+            <div class="unit_image">
+              <img src="./images/recommend_movie_fall.jpg" alt="추천_영화이미지_폴600미터">
+            </div>
+            <label for="chk_heart_fall" class="lab_heart lab_heart_fall">
+                <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">보일링포인트</h6>
+            <p class="unit_date">2022.11.04 ~ 2022.12.04</p>
+            <div class="unit_image">
+              <img src="./images/recommend_movie_boilingpoint.jpg" alt="추천_영화이미지_보일링포인트">
+            </div>
+            <label for="chk_heart_boilingpoint" class="lab_heart lab_heart_boilingpoint">
+                <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">블랙아담</h6>
+            <p class="unit_date">2022.11.03 ~ 2022.12.12</p>
+            <div class="unit_image">
+              <img src="./images/recommend_movie_blackadam.jpg" alt="추천_영화이미지_블랙아담">
+            </div>
+            <label for="chk_heart_blackadam" class="lab_heart lab_heart_blackadam">
+                <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+        </div>
+      </div><!--recommend_sheet_movie-->
+
+      <div class="recommend_sheet_concert recommend_sheet">
+        <input type="checkbox" id="chk_heart_timeofshadow" />
+        <input type="checkbox" id="chk_heart_haenyeo" />
+        <input type="checkbox" id="chk_heart_matinee" />
+        <input type="checkbox" id="chk_heart_saturday" />
+        <input type="checkbox" id="chk_heart_11am" />
+        <input type="checkbox" id="chk_heart_hanszimmer" />
+
+        <div class="swiper-wrapper">
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">그림자의 시간</h6>
+            <p class="unit_date">2022.09.03 ~ 2022.12.31</p>
+            <div class="unit_image">
+              <img src="./images/recommend_concert_timeofshadow.jpg" alt="추천_공연이미지_그림자의시간">
+            </div>
+            <label for="chk_heart_timeofshadow" class="lab_heart lab_heart_timeofshadow">
+                <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">해녀</h6>
+            <p class="unit_date">2022.09.03 ~ 2022.09.04</p>
+            <div class="unit_image">
+              <img src="./images/recommend_concert_haenyeo.jpg" alt="추천_공연이미지_해녀">
+            </div>
+            <label for="chk_heart_haenyeo" class="lab_heart lab_heart_haenyeo">
+              <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">마티네콘서트</h6>
+            <p class="unit_date">2022.04.28 ~ 2022.12.29</p>
+            <div class="unit_image">
+              <img src="./images/recommend_concert_matinee.jpg" alt="추천_공연이미지_마티네콘서트">
+            </div>
+            <label for="chk_heart_matinee" class="lab_heart lab_heart_matinee">
+              <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">토요야외콘서트</h6>
+            <p class="unit_date">2022.05.08 ~ 2022.08.28</p>
+            <div class="unit_image">
+              <img src="./images/recommend_concert_saturday.jpg" alt="추천_공연이미지_토요야외콘서트">
+            </div>
+            <label for="chk_heart_saturday" class="lab_heart lab_heart_saturday">
+              <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">11시 음악회</h6>
+            <p class="unit_date">2022.05.25 ~ 2022.12.28</p>
+            <div class="unit_image">
+              <img src="./images/recommend_concert_11am.jpg" alt="추천_공연이미지_11시음악회">
+            </div>
+            <label for="chk_heart_11am" class="lab_heart lab_heart_11am">
+              <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">한스짐머 콘서트</h6>
+            <p class="unit_date">2022.07.23 ~ 2022.07.23</p>
+            <div class="unit_image">
+              <img src="./images/recommend_concert_hanszimmer.jpg" alt="추천_공연이미지_한스짐머콘서트">
+            </div>
+            <label for="chk_heart_hanszimmer" class="lab_heart lab_heart_hanszimmer">
+              <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+        </div>
+      </div>
+      <!--recommend_sheet_concert-->
+
+      <div class="recommend_sheet_exhibition recommend_sheet">
+        <input type="checkbox" id="chk_heart_metaverse" />
+        <input type="checkbox" id="chk_heart_science" />
+        <input type="checkbox" id="chk_heart_after10years" />
+        <input type="checkbox" id="chk_heart_magiclounge" />
+        <input type="checkbox" id="chk_heart_illusion" />
+
+        <div class="swiper-wrapper">
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">메타버스가 영화산업에 미치는 영향</h6>
+            <p class="unit_date">2022.05.20 ~ 2022.05.20</p>
+            <div class="unit_image">
+              <img src="./images/recommend_exhibition_metaverse.jpg" alt="추천_행사이미지_메타버스">
+            </div>
+            <label for="chk_heart_metaverse" class="lab_heart lab_heart_metaverse">
+                <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">부산과학축전</h6>
+            <p class="unit_date">2022.08.27 ~ 2022.08.28</p>
+            <div class="unit_image">
+              <img src="./images/recommend_exhibition_science.jpg" alt="추천_행사이미지_씨네사이언스">
+            </div>
+            <label for="chk_heart_science" class="lab_heart lab_heart_science">
+              <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">세미나 : 향후 10년의 비전과 과제</h6>
+            <p class="unit_date">2022.02.22 ~ 2022.02.22</p>
+            <div class="unit_image">
+              <img src="./images/recommend_exhibition_after10years.jpg" alt="추천_행사이미지_향후10년세미나">
+            </div>
+            <label for="chk_heart_after10years" class="lab_heart lab_heart_after10years">
+              <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">매직라운지</h6>
+            <p class="unit_date">2022.11.12 ~ 2022.11.13</p>
+            <div class="unit_image">
+              <img src="./images/recommend_exhibition_magiclounge.jpg" alt="추천_행사이미지_매직라운지">
+            </div>
+            <label for="chk_heart_magiclounge" class="lab_heart lab_heart_magiclounge">
+              <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+          <div class="swiper-slide recommend_sheet_unit">
+            <h6 class="unit_title">뮤지엄 오브 일루젼</h6>
+            <p class="unit_date">2022.12.10 ~ 2022.12.15</p>
+            <div class="unit_image">
+              <img src="./images/recommend_exhibition_illusion.jpg" alt="추천_행사이미지_뮤지엄오브일루젼">
+            </div>
+            <label for="chk_heart_illusion" class="lab_heart lab_heart_illusion">
+              <i class="fa-solid fa-heart"></i>
+            </label>
+            <div class="unit_btn_box">
+              <a href="#!" class="btn_reserve">예매</a>
+              <a href="#!" class="btn_details">자세히</a>
+            </div>
+          </div><!--recommend_sheet_unit-->
+        </div>
+      </div>
+      <!--recommend_sheet_exhibition-->
+
+      <div class="recommend_sheet_bg">
+        <div class="recommend_sheet_bg_movie"></div>
+        <div class="recommend_sheet_bg_concert"></div>
+        <div class="recommend_sheet_bg_exhibition"></div>
+      </div>
+    </div><!--recommend_sheet_box-->
+  </section>
+  <!--recommend-->
+
+
+  <section class="critic">
+    <h3 class="critic_title">영화 비평</h3>
+
+    <div class="critic_control_box">
+      <a href="#!" class="btn_detail control_unit">
+        <i class="fa-solid fa-plus"></i>
+      </a>
+      <div class="angle_left control_unit">
+        <i class="fa-solid fa-angle-left"></i>
+      </div>
+      <div class="angle_right control_unit">
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+    </div><!--critic_control_box-->
+
+    <div class="critic_slide_sheet">
+      <div class="swiper-wrapper">
+        <a href="#!" class="swiper-slide">
+          <div class="critic_image">
+            <img src="./images/critic_01.jpg" alt="영화비평이미지_01" />
+          </div>
+          <div class="critic_text">
+            <h6 class="critic_text_sub_title">영화[자백]</h6>
+            <p>회상과 상상이 뒤섞인 긴장감 그리고 서늘함</p>
+            <div>지난 10월 26일 개봉한 영화 <자백>(윤종석)에는 경찰이나 검찰이 용의자에게 요구하는 자백은 나오지 않는다. 대신 승률 100%인 변호사 양신애(김윤진)가 무죄를 주장하는 의뢰인 유민호(소지섭)에게 요구하는 자백만 나올 뿐이다. 수많은 범죄 영화나 드라마를 보아온 관객이라면 영화를 보며, 익숙한 상황들을 목격하게 되고, 일종의 추리 게임에 돌입하게 된다.</div>
+          </div>
+        </a><!--swiper-slide-->
+        <a href="#!" class="swiper-slide">
+          <div class="critic_image">
+            <img src="./images/critic_02.jpg" alt="영화비평이미지_02" />
+          </div>
+          <div class="critic_text">
+            <h6 class="critic_text_sub_title">[헤어질 결심]</h6>
+            <p>산에서 시작해서 바다에서 끝나는 영화</p>
+            <div>박찬욱 감독의 [헤어질 결심]을 관람하기 전 살짝 긴장됐다. 박찬욱 감독의 이전 영화를 보며, 여러 이유로 크고 작게 놀랐던 기억 때문이었다. 결론부터 말하자면, (개인차가 있겠지만) [헤어질 결심]을 보며 놀랄 일은 거의 없다. '15세 이상 관람가' 영화 답게, 이전 영화 대비 강한 충격을 주진 않는다. 그래서 마음 편하게 영화 관람을 마칠 수 있었다.</div>
+          </div>
+        </a><!--swiper-slide-->
+        <a href="#!" class="swiper-slide">
+          <div class="critic_image">
+            <img src="./images/critic_01.jpg" alt="영화비평이미지_01" />
+          </div>
+          <div class="critic_text">
+            <h6 class="critic_text_sub_title">영화[자백]</h6>
+            <p>회상과 상상이 뒤섞인 긴장감 그리고 서늘함</p>
+            <div>지난 10월 26일 개봉한 영화 <자백>(윤종석)에는 경찰이나 검찰이 용의자에게 요구하는 자백은 나오지 않는다. 대신 승률 100%인 변호사 양신애(김윤진)가 무죄를 주장하는 의뢰인 유민호(소지섭)에게 요구하는 자백만 나올 뿐이다. 수많은 범죄 영화나 드라마를 보아온 관객이라면 영화를 보며, 익숙한 상황들을 목격하게 되고, 일종의 추리 게임에 돌입하게 된다.</div>
+          </div>
+        </a><!--swiper-slide-->
+        <a href="#!" class="swiper-slide">
+          <div class="critic_image">
+            <img src="./images/critic_01.jpg" alt="영화비평이미지_01" />
+          </div>
+          <div class="critic_text">
+            <h6 class="critic_text_sub_title">영화[자백]</h6>
+            <p>회상과 상상이 뒤섞인 긴장감 그리고 서늘함</p>
+            <div>지난 10월 26일 개봉한 영화 <자백>(윤종석)에는 경찰이나 검찰이 용의자에게 요구하는 자백은 나오지 않는다. 대신 승률 100%인 변호사 양신애(김윤진)가 무죄를 주장하는 의뢰인 유민호(소지섭)에게 요구하는 자백만 나올 뿐이다. 수많은 범죄 영화나 드라마를 보아온 관객이라면 영화를 보며, 익숙한 상황들을 목격하게 되고, 일종의 추리 게임에 돌입하게 된다.</div>
+          </div>
+        </a><!--swiper-slide-->
+      </div><!--swiper-wrapper-->
+    </div>
+    <!--critic_slide_sheet-->
+
+    <div class="critic_static_sheet">
+      <a href="#!" class="critic_sheet_unit critic_confession">
+        <div class="critic_image">
+          <img src="./images/critic_01.jpg" alt="영화비평이미지_01" />
+        </div>
+        <div class="critic_text">
+          <h6 class="critic_text_sub_title">영화[자백]</h6>
+          <p>회상과 상상이 뒤섞인 긴장감 그리고 서늘함</p>
+          <div>지난 10월 26일 개봉한 영화 <자백>(윤종석)에는 경찰이나 검찰이 용의자에게 요구하는 자백은 나오지 않는다. 대신 승률 100%인 변호사 양신애(김윤진)가 무죄를 주장하는 의뢰인 유민호(소지섭)에게 요구하는 자백만 나올 뿐이다. 수많은 범죄 영화나 드라마를 보아온 관객이라면 영화를 보며, 익숙한 상황들을 목격하게 되고, 일종의 추리 게임에 돌입하게 된다.</div>
+        </div>
+      </a><!--critic_sheet_unit-->
+      <a href="#!" class="critic_sheet_unit critic_decision">
+        <div class="critic_image">
+          <img src="./images/critic_02.jpg" alt="영화비평이미지_02" />
+        </div>
+        <div class="critic_text">
+          <h6 class="critic_text_sub_title">[헤어질 결심]</h6>
+          <p>산에서 시작해서 바다에서 끝나는 영화</p>
+          <div>박찬욱 감독의 [헤어질 결심]을 관람하기 전 살짝 긴장됐다. 박찬욱 감독의 이전 영화를 보며, 여러 이유로 크고 작게 놀랐던 기억 때문이었다. 결론부터 말하자면, (개인차가 있겠지만) [헤어질 결심]을 보며 놀랄 일은 거의 없다. '15세 이상 관람가' 영화 답게, 이전 영화 대비 강한 충격을 주진 않는다. 그래서 마음 편하게 영화 관람을 마칠 수 있었다.</div>
+        </div>
+      </a><!--critic_sheet_unit-->
+      <a href="#!" class="critic_sheet_unit critic_homage">
+        <div class="critic_image">
+          <img src="./images/critic_02.jpg" alt="영화비평이미지_02" />
+        </div>
+        <div class="critic_text">
+          <h6 class="critic_text_sub_title">[헤어질 결심]</h6>
+          <p>산에서 시작해서 바다에서 끝나는 영화</p>
+          <div>박찬욱 감독의 [헤어질 결심]을 관람하기 전 살짝 긴장됐다. 박찬욱 감독의 이전 영화를 보며, 여러 이유로 크고 작게 놀랐던 기억 때문이었다. 결론부터 말하자면, (개인차가 있겠지만) [헤어질 결심]을 보며 놀랄 일은 거의 없다. '15세 이상 관람가' 영화 답게, 이전 영화 대비 강한 충격을 주진 않는다. 그래서 마음 편하게 영화 관람을 마칠 수 있었다.</div>
+        </div>
+      </a><!--critic_sheet_unit-->
+      <a href="#!" class="critic_sheet_unit critic_belgium">
+        <div class="critic_image">
+          <img src="./images/critic_02.jpg" alt="영화비평이미지_02" />
+        </div>
+        <div class="critic_text">
+          <h6 class="critic_text_sub_title">[헤어질 결심]</h6>
+          <p>산에서 시작해서 바다에서 끝나는 영화</p>
+          <div>박찬욱 감독의 [헤어질 결심]을 관람하기 전 살짝 긴장됐다. 박찬욱 감독의 이전 영화를 보며, 여러 이유로 크고 작게 놀랐던 기억 때문이었다. 결론부터 말하자면, (개인차가 있겠지만) [헤어질 결심]을 보며 놀랄 일은 거의 없다. '15세 이상 관람가' 영화 답게, 이전 영화 대비 강한 충격을 주진 않는다. 그래서 마음 편하게 영화 관람을 마칠 수 있었다.</div>
+        </div>
+      </a><!--critic_sheet_unit-->
+    </div>
+    <!--critic_static_sheet-->
+    <a href="#!" class="btn_critic_more">더보기</a>
+  </section>
+  <!--critic-->
+
+  <section class="event">
+    <h3 class="event_title">EVENT</h3>
+    <div class="event_control_box">
+      <a href="#!" class="btn_detail control_unit">
+        <i class="fa-solid fa-plus"></i>
+      </a>
+      <div class="angle_left control_unit">
+        <i class="fa-solid fa-angle-left"></i>
+      </div>
+      <div class="angle_right control_unit">
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+    </div><!--event_control_box-->
+
+    <div class="event_sheet">
+      <div class="swiper-wrapper">
+        <a href="#!" class="swiper-slide event_unit">
+          <div class="event_image">
+            <img src="./images/event_01.jpg" alt="이벤트이미지_01">
+          </div>
+          <h5 class="event_sheet_title">[수프와 이데올로기] 경품증정</h5>
+        </a>
+
+        <a href="#!" class="swiper-slide event_unit">
+          <div class="event_image">
+            <img src="./images/event_02.jpg" alt="이벤트이미지_02">
+          </div>
+          <h5 class="event_sheet_title">[파이오니아에서] 경품증정</h5>
+        </a>
+
+        <a href="#!" class="swiper-slide event_unit">
+          <div class="event_image">
+            <img src="./images/event_01.jpg" alt="이벤트이미지_01">
+          </div>
+          <h5 class="event_sheet_title">[수프와 이데올로기] 경품증정</h5>
+        </a>
+
+        <a href="#!" class="swiper-slide event_unit">
+          <div class="event_image">
+            <img src="./images/event_01.jpg" alt="이벤트이미지_01">
+          </div>
+          <h5 class="event_sheet_title">[수프와 이데올로기] 경품증정</h5>
+        </a>
+      </div><!--swiper-wrapper-->
+    </div><!--event_sheet-->
+  </section>
+  <!--event-->
+
+  <section class="sns">
+    <h3 class="sns_title">SNS</h3>
+    <div class="sns_sheet_outer_box">
+      <div class="sns_sheet_inner_box">
+        <div class="sns_sheet_01 sns_sheet">
+          <div>
+            <a href="#!" class="sns_icon_box">
+              <div class="sns_icon"></div>
+              <div class="sns_icon_text">@cinematheque</div>
+            </a>
+          </div>
+        </div>
+        <div class="sns_sheet_02 sns_sheet">
+          <div>
+            <a href="#!" class="sns_icon_box">
+              <div class="sns_icon"></div>
+              <div class="sns_icon_text">@bbcthelibrary</div>
+            </a>
+          </div>
+        </div>
+        <div class="sns_sheet_03 sns_sheet">
+          <div>
+            <a href="#!" class="sns_icon_box">
+              <div class="sns_icon"></div>
+              <div class="sns_icon_text">@dureraum</div>
+            </a>
+          </div>
+        </div>
+        <div class="sns_sheet_04 sns_sheet">
+          <div>
+            <a href="#!" class="sns_icon_box">
+              <div class="sns_icon"></div>
+              <div class="sns_icon_text">@dureraum</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--sns_sheet_inner_box-->
+      <div class="sns_sheet_05 sns_sheet">
+        <div>
+          <a href="#!" class="sns_icon_box">
+            <div class="sns_icon"></div>
+            <div class="sns_icon_text">@busanthecinema</div>
+          </a>
+        </div>
+      </div>
+      <div class="sns_sheet_06 sns_sheet">
+        <div>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/GKBMzChZBX0?mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="sns_sheet_07 sns_sheet">
+        <div>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/t70EDECfIEM?mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--sns_sheet_outer_box-->
+  </section>
+  <!--sns-->
+
+  <section class="map">
+    <input type="checkbox" id="chk_way_to_come" />
+
+    <div class="map_api">
+      <img src="./images/map.jpg" alt="로드맵이미지">
+    </div>
+    <label for="chk_way_to_come" class="lab_way_to_come">
+      <div class="lab_text">오시는길</div>
+      <div class="lab_icon"><i class="fa-solid fa-angle-down"></i></div>
+    </label>
+    <div class="way_to_come_sheet">
+      <h6>영화의전당으로 오시는길&nbsp;
+        <i class="fa-solid fa-angle-right"></i>
+        <i class="fa-solid fa-angle-right"></i>
+        <i class="fa-solid fa-angle-right"></i>
+      </h6>
+      <p>
+        지하철 & 버스 이용안내:<br />
+        2호선 센텀시티역 하차(12번, 6번출구), 도보로 5분 버스 : 5-1, 141, 155, 181, 1001(급행), 1002(급행)
+      </p>
+      <p>
+        항공 이용안내:<br />
+        인천국제공항, 김포공항 탑승 → 김해국제공항(50분) → 공항리무진버스 탑승 후 신세계백화점 하차(50분)
+      </p>
+      <p>
+        철도 이용안내:<br />
+        서울역 KTX 탑승<br />
+        부산역 하차(2시간 40분) → 부산역 앞 버스정류장에서 5-1, 40, 1001 → 신세계백화점 앞 하차 후 도보로 5분
+      </p>
+    </div>
+  </section>
+  <!--map-->
+
+  <div class="notice_box">
+    <section class="notice_hire">
+      <a href="#!" class="notice_hire_title">
+        <div class="notice_title_text">채용공고</div>
+        <div class="notice_title_icon">+</div>
+      </a>
+      <ul class="notice_hire_sheet">
+        <li><a href="#!">
+          <div class="notice_sub_title">(재)영화의 전당 제 5차 직원 채용 공고</div>
+          <div class="notice_date">22-11-07</div>
+        </a></li>
+        <li><a href="#!">
+          <div class="notice_sub_title">하반기 신규직원 채용 필기시험</div>
+          <div class="notice_date">22-11-02</div>
+        </a></li>
+        <li><a href="#!">
+          <div class="notice_sub_title">제5차 직원 채용 서류전형 합격</div>
+          <div class="notice_date">22-10-24</div>
+        </a></li>
+        <li><a href="#!">
+          <div class="notice_sub_title">영화의전당 기간제(휴직대체) 직원 채용</div>
+          <div class="notice_date">22-10-24</div>
+        </a></li>
+      </ul><!--notice_hire_sheet-->
+    </section>
+    <!--notice_hire-->
+
+    <section class="notice_press">
+      <a href="#!" class="notice_press_title">
+        <div class="notice_title_text">언론보도</div>
+        <div class="notice_title_icon">+</div>
+      </a>
+      <ul class="notice_press_sheet">
+        <li><a href="#!">
+          <div class="notice_sub_title">영화의 전당, 야외광장 활성화로</div>
+          <div class="notice_date">22-11-07</div>
+        </a></li>
+        <li><a href="#!">
+          <div class="notice_sub_title">성난 젊은이들의 날카로운 외침</div>
+          <div class="notice_date">22-11-07</div>
+        </a></li>
+        <li><a href="#!">
+          <div class="notice_sub_title">영화의전당, 문화예술 직업체험</div>
+          <div class="notice_date">22-11-01</div>
+        </a></li>
+        <li><a href="#!">
+          <div class="notice_sub_title">장애 장벽 없이 함께 즐기는 영화</div>
+          <div class="notice_date">22-10-24</div>
+        </a></li>
+      </ul><!--notice_press_sheet-->
+    </section>
+    <!--notice_press-->
+  </div>
+  <!--notice_box-->
+
+  <footer class="footer" id="footer">
+    <input type="checkbox" id="chk_additional_info" />
+
+    <div class="news_letter">
+      <div class="footer_unit_title">영화의 전당 뉴스레터</div>
+      <button>구독하기</button>
+    </div>
+    <!--news_letter-->
+    <label for="chk_additional_info" class="additional_info">
+      <div class="footer_unit_title">추가정보</div>
+      <div class="footer_unit_icon"><i class="fa-solid fa-angle-down"></i></div>
+    </label>
+    <!--additional_info-->
+    <ul class="additional_info_sheet">
+      <li><a href="#!">개인정보처리방침</a></li>
+      <li><a href="#!">정보공개</a></li>
+      <li><a href="#!">장애인 이용안내</a></li>
+      <li><a href="#!">고객참여</a></li>
+      <li><a href="#!">취소/환불 가이드</a></li>
+      <li><a href="#!">자유게시판</a></li>
+      <li><a href="#!">이용약관</a></li>
+    </ul>
+    <!--additional_info_sheet-->
+    <div class="related_institution">
+      <div class="footer_unit_title">유관기관</div>
+      <div class="related_institution_sheet">
+        <div class="related_institution_sheet_01">
+          <img src="./images/related_01.svg" alt="유관기관이미지_01">
+        </div>
+        <div class="related_institution_sheet_02">
+          <img src="./images/related_02.svg" alt="유관기관이미지_02">
+        </div>
+        <div class="related_institution_sheet_03">
+          <img src="./images/related_03.svg" alt="유관기관이미지_03">
+        </div>
+      </div>
+    </div>
+    <!--related_institution-->
+    <div class="mecenat">
+      <div class="footer_unit_title">2021년 메세나 기업</div>
+      <div class="mecenat_sheet">
+        <div>
+          <img src="./images/mecenat_01.svg" alt="메세나기업이미지_01">
+        </div>
+        <div>
+          <img src="./images/mecenat_02.svg" alt="메세나기업이미지_02">
+        </div>
+      </div>
+    </div>
+    <!--mecenat-->
+    <div class="footer_info">
+      <p>(우)48058 부산광역시 해운대구</p>
+      <p>수영강변대로 120 영화의전당(우동 1467번지)</p>
+      <p>TEL. 051-780-6000/6080 Fax.051-780-6019</p>
+      <p>(재)영화의전당 대표자 김진해 사업자번호 : 617-82-11427</p>
+      <p>통신판매업신고 : 부산해운 제0510호 사업자정보 확인</p>
+      <p>COPYRIGHT(C) BUSAN CINEMA CENTER. ALL RIGHTS RESERVED</p>
+    </div>
+    <!--footer_info-->
+    <div class="footer_logo_box">
+      <div class="footer_logo">
+        <img src="./images/footer_logo.svg" alt="푸터_로고이미지">
+      </div>
+      <div class="footer_logo_space_between"></div>
+      <div class="footer_other_logos">
+        <img src="./images/footer_other_logos.svg" alt="푸터_그외_로고이미지">
+      </div>
+    </div>
+    <!--footer_logo_box-->
+  </footer>
+  <!--footer-->
+
+  <aside class="quick_menu">
+    <a href="#!" class="btn_fast_reserve">빠른<br />예매</a>
+    <a href="#to_the_top_anchor_point" class="btn_to_top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    <a href="#footer" class="btn_to_bottom">
+      <i class="fa-solid fa-arrow-down"></i>
+    </a>
+  </aside>
+  <!--quick_menu-->
+  
+</body>
+</html>
