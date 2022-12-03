@@ -11,14 +11,9 @@
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
 
-li {
-  list-style: none;
-}
+li {list-style: none;}
 
-a {
-  color: black;
-  text-decoration: none;
-}
+a {color: black; text-decoration: none;}
 
 html {font-size: 16px;}
 
@@ -33,9 +28,7 @@ html {font-size: 16px;}
   z-index: 10;
 }
 
-.header {
-  width: 100%;
-}
+.header {width: 100%;}
 
 .header .gnb {
   width: 100%;
@@ -77,6 +70,7 @@ html {font-size: 16px;}
 
 .header .gnb .gnb_menu li label {cursor: pointer;}
 
+/*-------- pc_gnb_menu --------*/
 .header_box .header .gnb .pc_gnb_menu {
   display: none;
   width: 60%;
@@ -263,6 +257,7 @@ html {font-size: 16px;}
   position: absolute;
   top: 0;
   left: 0;
+  transition: all .15s;
 }
 
 .lnb_outer_box .lnb_inner_box .lnb {
@@ -291,11 +286,9 @@ html {font-size: 16px;}
   line-height: 40px;
 }
 
-.lnb .lnb_menu li a.lnb_underline {
-  position: relative;
-}
+.lnb .lnb_menu>li:hover .lnb_main_menu {position: relative;}
 
-.lnb .lnb_menu li a.lnb_underline::after {
+.lnb .lnb_menu>li:hover .lnb_main_menu::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -321,9 +314,11 @@ html {font-size: 16px;}
 }
 
 .lnb .lnb_menu li a {display: block; font-size: 0.625rem;}
+.lnb_outer_box .lnb_inner_box .lnb .lnb_menu>li ul {height: 281px; opacity: 0; visibility: hidden;}
 
-.lnb .lnb_menu>li ul {display: none;}
-.lnb .lnb_menu>li ul.on {height: 280px; background-color: #eee;}
+.lnb_outer_box .lnb_inner_box:hover {height: 321px;}
+.lnb_outer_box .lnb_inner_box:hover .lnb .lnb_menu>li ul {transition: opacity .15s .15s; opacity: 1; visibility: visible;}
+.lnb_outer_box .lnb_inner_box .lnb .lnb_menu>li:hover ul {background-color: #eee;}
 
 .lnb .lnb_menu>li li a:hover,
 .lnb .lnb_menu>li li a:focus {font-weight: 900;}
@@ -383,6 +378,7 @@ html {font-size: 16px;}
 
 
 /*-------- media_query (header) --------*/
+/*-------- all_and_769px ↑ --------*/
 @media all and (min-width:769px) {
   .header_box {position: relative; left: auto; top: auto; height: 40px;}
   .header_box .header .gnb {height: 40px;}
@@ -392,10 +388,9 @@ html {font-size: 16px;}
   .header_box .header .gnb .pc_gnb_menu {display: flex;}
 
   .lnb_outer_box_non_fixed {display: block;}
-
-  #to_the_top_anchor_point {display: none;}
  }
 
+ /*-------- all_and_1025px ↑ --------*/
 @media all and (min-width:1025px) {
   .header_box {display: flex; justify-content: center;}
   .header_box .header {max-width: 1360px;}
@@ -404,7 +399,8 @@ html {font-size: 16px;}
   .lnb .lnb_menu li a {display: block; font-size: 0.688rem;}
 }
 
-@media all and (min-width:1361px) {
+/*-------- all_and_1360px ↑ --------*/
+@media all and (min-width:1360px) {
   .header_box .header .gnb .pc_gnb_menu li a {font-size: 0.813rem;}
   .lnb .lnb_menu li a {display: block; font-size: 0.75rem;}
 }

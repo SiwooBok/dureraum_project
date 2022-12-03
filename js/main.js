@@ -7,7 +7,7 @@ let mainThumbnail = new Swiper(".thumbnail_innerbox", {
 let mainSheet = new Swiper(".main_visual_sheet", {
   effect: "fade",
   autoplay: {
-    delay: 4000,
+    delay: 10000,
     disableOnInteraction: false,
   },
   thumbs: {
@@ -360,12 +360,12 @@ let recommendMovie = new Swiper(".recommend_sheet_movie", {
     },
     768 : {
       slidesPerView: 4,
-      spaceBetween: 30,
+      spaceBetween: 29,
       allowTouchMove : false
     },
     1024 : {
       slidesPerView: 4,
-      spaceBetween: 60,
+      spaceBetween: 37,
       allowTouchMove : false
     }
   },
@@ -390,12 +390,12 @@ let recommendConcert = new Swiper(".recommend_sheet_concert", {
     },
     768 : {
       slidesPerView: 4,
-      spaceBetween: 30,
+      spaceBetween: 29,
       allowTouchMove : false
     },
     1024 : {
       slidesPerView: 4,
-      spaceBetween: 60,
+      spaceBetween: 37,
       allowTouchMove : false
     }
   },
@@ -420,12 +420,12 @@ let recommendExhbition = new Swiper(".recommend_sheet_exhibition", {
     },
     768 : {
       slidesPerView: 4,
-      spaceBetween: 30,
+      spaceBetween: 29,
       allowTouchMove : false
     },
     1024 : {
       slidesPerView: 4,
-      spaceBetween: 60,
+      spaceBetween: 37,
       allowTouchMove : false
     }
   },
@@ -435,14 +435,22 @@ let recommendExhbition = new Swiper(".recommend_sheet_exhibition", {
 let criticSlide = new Swiper(".critic_slide_sheet", {
   loop: true,
   slidesPerView: 2,
-  spaceBetween: 20,
+  allowTouchMove : false,
   navigation: {
     nextEl: ".critic_control_box .angle_right",
     prevEl: ".critic_control_box .angle_left",
   },
+  breakpoints: {
+    768 : {
+      spaceBetween: 29
+    },
+    1024 : {
+      spaceBetween: 37
+    }
+  }
 });
 
-// -------- critic --------
+// -------- event --------
 let eventSlide = new Swiper(".event_sheet", {
   loop: true,
   breakpoints: {
@@ -462,8 +470,8 @@ let eventSlide = new Swiper(".event_sheet", {
       allowTouchMove : false
     },
     1024 : {
-      slidesPerView: 2,
-      spaceBetween: 60,
+      slidesPerView: 2.01, // box-shadow를 보이게하기 위해서 2대신 입력
+      spaceBetween: 40,
       allowTouchMove : false
     }
   },
@@ -475,11 +483,11 @@ let eventSlide = new Swiper(".event_sheet", {
 
 
 // -------- map --------
-var naverMap = null;
+// var naverMap = null;
 
-function initMap() {
-    naverMap = new naver.maps.Map('map_api', {
-        center: new naver.maps.LatLng(37.3595704, 127.105399),
-        zoom: 10
-    });
-}
+// function initMap() {
+//     naverMap = new naver.maps.Map('map_api', {
+//         center: new naver.maps.LatLng(37.3595704, 127.105399),
+//         zoom: 10
+//     });
+// }

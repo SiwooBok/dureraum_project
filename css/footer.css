@@ -3,6 +3,12 @@
   width: 100%;
 }
 
+/*-------- footer_top --------*/
+.footer .footer_top_box {width: 100%;}
+
+.footer .footer_top_box .footer_top {width: 100%; max-width: 1360px; margin: 0 auto;}
+
+/*-------- footer_news_letter --------*/
 .footer .news_letter {
   height: 45px;
   padding: 0 4%;
@@ -27,13 +33,12 @@
   cursor: pointer;
 }
 
+/*-------- footer_additional_info --------*/
 .footer .additional_info {
   display: flex;
   height: 45px;
   padding: 0 4%;
   box-sizing: border-box;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
@@ -50,14 +55,11 @@
 }
 
 .footer .additional_info_sheet {
-  width: 100%;
-  max-height: 0;
+  /* width: 100%; */
   padding: 0 4%;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  transition: all .3s;
-  overflow: hidden;
 }
 
 .footer .additional_info_sheet li {
@@ -72,11 +74,10 @@
   line-height: 32px;
 }
 
-.footer .additional_info_sheet li:nth-child(1) a,
-.footer .additional_info_sheet li:nth-child(2) a {margin-top: 12px;}
+/*-------- footer_top_slide_box --------*/
+/* .footer_top_slide_box {width: 100%;} */
 
-.footer .additional_info_sheet li:nth-child(7) a {margin-bottom: 12px;}
-
+/*-------- footer_related_institution --------*/
 .footer .related_institution {
   display: flex;
   height: 45px;
@@ -88,18 +89,29 @@
   align-items: center;
 }
 
-.footer .related_institution .footer_unit_title {font-size: 0.813rem; width: 110px;}
+.footer .related_institution .footer_unit_title {display: flex; width: 90px;}
+.footer .related_institution .footer_unit_title .footer_unit_title_text {width: 100%; font-size: 0.813rem; font-weight: 400; line-height: 24px;}
+
+.footer .related_institution .btn_related_institution_box {width: 55px; display: none;}
+
+.footer .related_institution .btn_related_institution_box button {
+  width: 25px;
+  height: 25px;
+  color: #888;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
 
 .footer .related_institution .related_institution_sheet {
   width: 5%;
-  max-width: 281px;
+  max-width: 230px;
   flex-grow: 1;
-  display: flex;
-  justify-content: space-evenly;
+  overflow: hidden;
 }
 
-.footer .related_institution .related_institution_sheet>div {
-  width: 36%;
+.footer .related_institution .related_institution_sheet .swiper-wrapper .swiper-slide {
+  display: block;
   max-width: 94px;
 }
 
@@ -108,31 +120,40 @@
   width: 100%;
 }
 
-.footer .related_institution .related_institution_sheet .related_institution_sheet_03 {display: none;}
-
+/*-------- footer_mecenat --------*/
 .footer .mecenat {
   display: flex;
   height: 45px;
   padding: 0 4%;
   box-sizing: border-box;
-  border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer .mecenat .footer_unit_title {font-size: 0.813rem; width: 110px;}
+.footer .mecenat .footer_unit_title {display: flex; width: 150px;}
+.footer .mecenat .footer_unit_title .footer_unit_title_text {width: 100%; font-size: 0.75rem; font-weight: 400; line-height: 24px;}
+
+.footer .mecenat .btn_mecenat_box {width: 60px; display: none;}
+
+.footer .mecenat .btn_mecenat_box button {
+  width: 25px;
+  height: 25px;
+  color: #888;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
 
 .footer .mecenat .mecenat_sheet {
   width: 5%;
-  max-width: 281px;
+  max-width: 200px;
   flex-grow: 1;
-  display: flex;
-  justify-content: space-evenly;
+  overflow: hidden;
 }
 
-.footer .mecenat .mecenat_sheet>div {
-  width: 36%;
+.footer .mecenat .mecenat_sheet .swiper-wrapper .swiper-slide {
+  display: block;
   max-width: 94px;
 }
 
@@ -143,8 +164,10 @@
 
 #chk_additional_info {display: none;}
 
-#chk_additional_info:checked ~ .additional_info_sheet {max-height: 200px;}
-#chk_additional_info:checked ~ .additional_info .footer_unit_icon {transform: rotate(180deg);}
+/*-------- footer_bottom --------*/
+.footer .footer_bottom_box {width: 100%; padding-bottom: 30px;}
+
+.footer .footer_bottom_box .footer_bottom {width: 100%; max-width: 1360px; margin: 0 auto}
 
 /*-------- footer_info & footer_logo_box --------*/
 .footer .footer_info {
@@ -152,6 +175,8 @@
   box-sizing: border-box;
   font-size: 0.688rem;
 }
+
+.footer .footer_info .footer_info_br {display: none;}
 
 .footer .footer_logo_box {
   width: 100%;
@@ -239,15 +264,123 @@
 }
 
 /*-------- media_query (footer) --------*/
-@media all and (min-width:601px) {
-  .footer .related_institution .related_institution_sheet {max-width: 444px;}
-  .footer .related_institution .related_institution_sheet .related_institution_sheet_03 {display: block;}
+/*-------- screen_and_320_to_768px --------*/
+@media screen and (min-width:320px) and (max-width:768px) {
+  .footer .additional_info_sheet {
+    max-height: 0;
+    transition: all .3s;
+    overflow: hidden;
+  }
+  
+  #chk_additional_info:checked ~ .additional_info_sheet {max-height: 200px;}
+  #chk_additional_info:checked ~ .additional_info .footer_unit_icon {transform: rotate(180deg);}
 
-  .footer .mecenat {padding-right: 5.5%;}
-
-  .footer .footer_info {font-size: 0.813rem; text-align: center;}
+  .footer .additional_info_sheet li:nth-child(1) a,
+  .footer .additional_info_sheet li:nth-child(2) a {margin-top: 12px;}
+  
+  .footer .additional_info_sheet li:nth-child(7) a {margin-bottom: 12px;}
 }
 
+/*-------- all_and_601px ↑ --------*/
+@media all and (min-width:601px) {
+  .footer .news_letter {padding: 0 3%;}
+  .footer .additional_info {padding: 0 3%;}
+  .footer .related_institution {padding: 0 3%;}
+  .footer .mecenat {padding: 0 3%;}
+
+  .footer .related_institution .related_institution_sheet {max-width: 370px;}
+
+  .footer .footer_info {font-size: 0.813rem; text-align: center;}
+  .footer .footer_logo_box .footer_logo_space_between {width: 10%;}
+}
+
+/*-------- all_and_769px ↑ --------*/
 @media all and (min-width:769px) {
-  .quick_menu {display: none;}
+  .footer .footer_top_box .footer_top {
+    display: flex;
+    padding: 2%;
+    box-sizing: border-box;
+  }
+
+  .footer .news_letter {
+    width: 150px;
+    height: 100%;
+    order: 10;
+    border-top: none;
+    border-bottom: none;
+    padding: 20px 1%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+  .footer .news_letter .footer_unit_title {width: 100%; font-size: 0.688rem; text-align: center; margin-top: 10px; margin-bottom: 20px;}
+  .footer .news_letter button {padding: 6px 17px; font-size: 0.625rem;}
+
+  .footer .additional_info {display: none;}
+  .footer .additional_info_sheet {width: 250px; max-width: 350px; flex-grow: 1; padding: 0;}
+  .footer .additional_info_sheet li {border-right: 1px solid #eee; box-sizing: border-box;}
+  .footer .additional_info_sheet li a {height: 32px; line-height: 32px; text-indent: 15%; font-size: 0.688rem;}
+  .footer .additional_info_sheet li:nth-child(2n) a {text-indent: 23%;}
+
+  .footer_top_slide_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 10px 1%;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+  }
+  .footer .related_institution {border-top: none; border-bottom: none; margin-bottom: 15px;}
+  .footer .related_institution .footer_unit_title .footer_unit_title_text {font-size: 0.688rem;}
+  .footer .related_institution .btn_related_institution_box {display: block;}
+  .footer .related_institution .related_institution_sheet {max-width: 230px;}
+
+  .footer .mecenat {border-bottom: none;}
+  .footer .mecenat .footer_unit_title .footer_unit_title_text {font-size: 0.688rem;}
+  .footer .mecenat .btn_mecenat_box {display: block;}
+  .footer .mecenat .mecenat_sheet {max-width: 190px;}
+
+  .footer .footer_bottom_box {background-color: #eee;}
+  .footer .footer_info {font-size: 0.75rem;}
+  .footer .footer_info .footer_info_br {display: none;}
+
+  /* footer.js → 아래로 스크롤 했을시에만 퀵메뉴가 보이게 만듬. */
+  .quick_menu {display: none; right: 20px;}
+}
+
+/*-------- all_and_1025px ↑ --------*/
+@media all and (min-width:1025px) {
+  .footer .news_letter {width: 200px; max-width: 300px; flex-grow: 1;}
+  .footer .news_letter .footer_unit_title {font-size: 0.813rem; margin-top: 10px; margin-bottom: 20px;}
+  .footer .news_letter button {padding: 7px 22px; font-size: 0.813rem;}
+
+  .footer .additional_info_sheet {width: 250px; max-width: 360px; flex-grow: 1;}
+  .footer .additional_info_sheet li a {font-size: 0.75rem;}
+
+  .footer .related_institution .footer_unit_title {width: 100px;}
+  .footer .related_institution .footer_unit_title .footer_unit_title_text {font-size: 0.813rem;}
+  .footer .related_institution .related_institution_sheet .swiper-wrapper .swiper-slide {max-width: 100px;}
+
+  .footer .mecenat .footer_unit_title {width: 170px;}
+  .footer .mecenat .footer_unit_title .footer_unit_title_text {font-size: 0.813rem;}
+  .footer .mecenat .mecenat_sheet .swiper-wrapper .swiper-slide {max-width: 100px;}
+
+  .footer .footer_info {padding: 40px 4%;}
+}
+
+/*-------- all_and_1360px ↑ --------*/
+@media all and (min-width:1360px) {
+  .footer .news_letter .footer_unit_title {font-size: 0.938rem;}
+  .footer .news_letter button {padding: 10px 30px; font-size: 0.875rem;}
+
+  .footer .additional_info_sheet li a {font-size: 0.813rem;}
+
+  .footer .related_institution .related_institution_sheet {max-width: 370px;}
+  .footer .mecenat .mecenat_sheet {max-width: 340px;}
+
+  .footer .footer_bottom_box {padding-bottom: 40px;}
+  .footer .footer_info {padding: 50px 4%; font-size: 0.875rem;}
+  .footer .footer_logo_box .footer_logo {max-width: 280px;}
+  .footer .footer_logo_box .footer_other_logos {max-width: 280px;}
 }

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>영화의 전당 소개</title>
+
+  <!---------- css ( header & footer & sub_page_about ) ---------->
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="./css/sub_page_about.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+
+  <!---------- favicon ---------->
+  <link rel="icon" href="./images/square-gitlab.svg" />
+
+  <!---------- nanum_gothic_font ---------->
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet" />
+
+  <!-- font_awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+  <!-- Swiper JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!---------- jQuery ---------->
+  <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
+  <script src="../js/jquery-3.6.1.min.js"></script>
+
+  <!---------- jQuery_scroll_to_plugin ---------->
+  <script src="../js/jquery.scrollTo.min.js"></script>
+
+  <!---------- jQuery_throttle_debounce_plugin ---------->
+  <script src="../js/jquery.ba-throttle-debounce.min.js"></script>
+
+  <!---------- jQuery_mousewheel_plugin ---------->
+  <script src="../js/jquery.mousewheel.min.js"></script>
+
+  <!---------- jQuery_easing_plugin ---------->
+  <script src="../js/jquery.easing.min.js"></script>
+
+  <!---------- js ( header & footer & sub_page_about ) ---------->
+  <script src="../js/header.js" defer ></script>
+  <!-- <script src="./js/sub_page_about.js" defer ></script> -->
+  <script src="../js/footer.js" defer ></script>
+
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=zfd0fphs60" defer></script>
+
+</head>
+<body>
+
+  <div class="header_box">
+    <input type="checkbox" id="chk_ham" />
+    <header class="header">
+      <nav class="gnb">
+        <a href="../index.html" class="logo"></a>
+        <ul class="gnb_menu">
+          <li><a href="#!"><i class="fa-regular fa-user"></i></a></li>
+          <li><a href="#!"><i class="fa-regular fa-heart"></i></a></li>
+          <li><a href="#!"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+          <li><label for="chk_ham"><i class="fa-solid fa-bars"></i></label></li>
+        </ul>
+        <ul class="pc_gnb_menu">
+          <li><a href="#!">로그인</a></li>
+          <li><a href="#!">회원가입</a></li>
+          <li><a href="#!">고객센터</a></li>
+          <li><a href="#!">English</a></li>
+          <li class="pc_gnb_search">
+            <div class="search_margin_box"></div>
+            <div class="search_input_box">
+              <input type="text" />
+            </div>
+            <button class="search_icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </li>
+        </ul>
+        <!--pc_gnb_menu-->
+      </nav>
+      <!--gnb-->
+      <div class="ham_menu">
+        <div class="ham_menu_top">
+          <a href="#!" class="normal_menu">로그인</a>
+          <a href="#!" class="normal_menu">알림마당</a>
+          <a href="#!" class="normal_menu">고객센터</a>
+          <a href="#!" class="normal_menu menu_english">ENGLISH</a>
+          <a href="#!" class="screen_table">
+            <span>상영시간표</span>
+            <i class="fa-solid fa-calendar"></i>
+          </a>
+          <div class="ham_menu_sns">
+            <a href="#!"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#!"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#!"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div><!--ham_menu_top-->
+        <div class="ham_menu_bottom">
+          <input type="checkbox" id="chk_ham_bottom_movie" />
+          <input type="checkbox" id="chk_ham_bottom_concert" />
+          <input type="checkbox" id="chk_ham_bottom_edu" />
+          <input type="checkbox" id="chk_ham_bottom_library" />
+          <input type="checkbox" id="chk_ham_bottom_event" />
+          <input type="checkbox" id="chk_ham_bottom_partnership" />
+          <input type="checkbox" id="chk_ham_bottom_dureraum" />
+  
+          <label for="chk_ham_bottom_movie" class="lab_ham_bottom_movie">
+            <div class="ham_bottom_title">영화</div>
+            <div class="ham_bottom_angle"><i class="fa-solid fa-angle-down"></i></div>
+          </label>
+          <ul class="ham_bottom_sheet_movie ham_bottom_sheet">
+            <li><a href="#!">상영시간표</a></li>
+            <li><a href="#!">현재상영프로그램</a></li>
+            <li><a href="#!">상영예정프로그램</a></li>
+            <li><a href="#!">지난 프로그램</a></li>
+            <li><a href="#!">영화 + 비평</a></li>
+            <li><a href="#!">영화와 소통</a></li>
+            <li><a href="#!">시네마데크 소개</a></li>
+          </ul>
+          <label for="chk_ham_bottom_concert" class="lab_ham_bottom_concert">
+            <div class="ham_bottom_title">공연</div>
+            <div class="ham_bottom_angle"><i class="fa-solid fa-angle-down"></i></div>
+          </label>
+          <ul class="ham_bottom_sheet_concert ham_bottom_sheet">
+            <li><a href="#!">공연가이드</a></li>
+            <li><a href="#!">공연일정</a></li>
+            <li><a href="#!">예매안내</a></li>
+            <li><a href="#!">지난공연</a></li>
+            <li><a href="#!">객석나눔</a></li>
+          </ul>
+          <label for="chk_ham_bottom_edu" class="lab_ham_bottom_edu">
+            <div class="ham_bottom_title">영화·예술·교육</div>
+            <div class="ham_bottom_angle"><i class="fa-solid fa-angle-down"></i></div>
+          </label>
+          <ul class="ham_bottom_sheet_edu ham_bottom_sheet">
+            <li><a href="#!">아카데미 일정</a></li>
+            <li><a href="#!">영화 아카데미</a></li>
+            <li><a href="#!">예술 아카데미</a></li>
+            <li><a href="#!">어린이청소년</a></li>
+            <li><a href="#!">아카데미</a></li>
+            <li><a href="#!">시설/기자재</a></li>
+            <li><a href="#!">사용신청</a></li>
+          </ul>
+          <label for="chk_ham_bottom_library" class="lab_ham_bottom_library">
+            <div class="ham_bottom_title">영화 도서관</div>
+            <div class="ham_bottom_angle"><i class="fa-solid fa-angle-down"></i></div>
+          </label>
+          <ul class="ham_bottom_sheet_library ham_bottom_sheet">
+            <li><a href="#!">이용안내</a></li>
+            <li><a href="#!">자료검색</a></li>
+            <li><a href="#!">공지사항</a></li>
+            <li><a href="#!">행사안내</a></li>
+            <li><a href="#!">필름아카이브</a></li>
+          </ul>
+          <label for="chk_ham_bottom_event" class="lab_ham_bottom_event">
+            <div class="ham_bottom_title">전시 행사</div>
+            <div class="ham_bottom_angle"><i class="fa-solid fa-angle-down"></i></div>
+          </label>
+          <ul class="ham_bottom_sheet_event ham_bottom_sheet">
+            <li><a href="#!">전시·행사가이드</a></li>
+            <li><a href="#!">전시·행사일정</a></li>
+            <li><a href="#!">지난 전시·행사</a></li>
+            <li><a href="#!">행사장 배치도</a></li>
+          </ul>
+          <label for="chk_ham_bottom_partnership" class="lab_ham_bottom_partnership">
+            <div class="ham_bottom_title">이벤트 제휴</div>
+            <div class="ham_bottom_angle"><i class="fa-solid fa-angle-down"></i></div>
+          </label>
+          <ul class="ham_bottom_sheet_partnership ham_bottom_sheet">
+            <li><a href="#!">제휴</a></li>
+            <li><a href="#!">회원제안내</a></li>
+            <li><a href="#!">메세나 기업 모집</a></li>
+            <li><a href="#!">광고신청</a></li>
+            <li><a href="#!">촬영신청</a></li>
+          </ul>
+          <label for="chk_ham_bottom_dureraum" class="lab_ham_bottom_dureraum">
+            <div class="ham_bottom_title">영화의 전당</div>
+            <div class="ham_bottom_angle"><i class="fa-solid fa-angle-down"></i></div>
+          </label>
+          <ul class="ham_bottom_sheet_dureraum ham_bottom_sheet">
+            <li><a href="./sub_page_about.html">영화의 전당 소개</a></li>
+            <li><a href="#!">대관 및 배치도</a></li>
+            <li><a href="#!">시설소개</a></li>
+            <li><a href="#!">오시는 길</a></li>
+            <li><a href="#!">주차 안내</a></li>
+          </ul>
+        </div><!--ham_menu_bottom-->
+      </div><!--ham_menu-->
+    </header><!--header-->
+  </div>
+  <!--header_box-->
+
+  <div class="lnb_outer_box_non_fixed lnb_outer_box">
+    <div class="lnb_inner_box">
+      <nav class="lnb">
+        <ul class="lnb_menu">
+          <li class="lnb_movie"><a href="#!" class="lnb_main_menu">영화</a>
+            <ul>
+              <li><a href="#!">상영시간표</a></li>
+              <li><a href="#!">현재상영프로그램</a></li>
+              <li><a href="#!">상영예정프로그램</a></li>
+              <li><a href="#!">지난프로그램</a></li>
+              <li><a href="#!">영화 + 비평</a></li>
+              <li><a href="#!">영화와 소통</a></li>
+              <li><a href="#!">시네마데크 소개</a></li>
+            </ul>
+          </li>
+          <li class="lnb_concert"><a href="#!" class="lnb_main_menu">공연</a>
+            <ul>
+              <li><a href="#!">공연가이드</a></li>
+              <li><a href="#!">공연일정</a></li>
+              <li><a href="#!">예매안내</a></li>
+              <li><a href="#!">지난공연</a></li>
+              <li><a href="#!">객석나눔</a></li>
+            </ul>
+          </li>
+          <li class="lnb_edu"><a href="#!" class="lnb_main_menu">영화·예술·교육</a>
+            <ul>
+              <li><a href="#!">아카데미 일정</a></li>
+              <li><a href="#!">영화 아카데미</a></li>
+              <li><a href="#!">예술 아카데미</a></li>
+              <li><a href="#!">어린이청소년</a></li>
+              <li><a href="#!">아카데미</a></li>
+              <li><a href="#!">시설/기자재</a></li>
+              <li><a href="#!">사용신청</a></li>
+            </ul>
+          </li>
+          <li class="lnb_library"><a href="#!" class="lnb_main_menu">영화 도서관</a>
+            <ul>
+              <li><a href="#!">이용안내</a></li>
+              <li><a href="#!">자료검색</a></li>
+              <li><a href="#!">공지사항</a></li>
+              <li><a href="#!">행사안내</a></li>
+              <li><a href="#!">필름아카이브</a></li>
+            </ul>
+          </li>
+          <li class="lnb_event"><a href="#!" class="lnb_main_menu">전시 행사</a>
+            <ul>
+              <li><a href="#!">전시·행사가이드</a></li>
+              <li><a href="#!">전시·행사일정</a></li>
+              <li><a href="#!">지난 전시·행사</a></li>
+              <li><a href="#!">행사장 배치도</a></li>
+            </ul>
+          </li>
+          <li class="lnb_partnership"><a href="#!" class="lnb_main_menu">이벤트 제휴</a>
+            <ul>
+              <li><a href="#!">제휴</a></li>
+              <li><a href="#!">회원제안내</a></li>
+              <li><a href="#!">메세나 기업 모집</a></li>
+              <li><a href="#!">광고신청</a></li>
+              <li><a href="#!">촬영신청</a></li>
+            </ul>
+          </li>
+          <li class="lnb_dureraum"><a href="#!" class="lnb_main_menu">영화의 전당</a>
+            <ul>
+              <li><a href="./sub_page_about.html">영화의 전당 소개</a></li>
+              <li><a href="#!">대관 및 배치도</a></li>
+              <li><a href="#!">시설소개</a></li>
+              <li><a href="#!">오시는 길</a></li>
+              <li><a href="#!">주차 안내</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!--lnb-->
+    </div>
+   <!--lnb_inner_box-->
+  </div>
+  <!--lnb_outer_box-->
+
+  <div class="lnb_outer_box_fixed lnb_outer_box">
+    <div class="lnb_inner_box">
+      <nav class="lnb">
+        <a href="../index.html" class="lnb_logo"></a>
+        <ul class="lnb_menu">
+          <li class="lnb_movie"><a href="#!" class="lnb_main_menu">영화</a>
+            <ul>
+              <li><a href="#!">상영시간표</a></li>
+              <li><a href="#!">현재상영프로그램</a></li>
+              <li><a href="#!">상영예정프로그램</a></li>
+              <li><a href="#!">지난프로그램</a></li>
+              <li><a href="#!">영화 + 비평</a></li>
+              <li><a href="#!">영화와 소통</a></li>
+              <li><a href="#!">시네마데크 소개</a></li>
+            </ul>
+          </li>
+          <li class="lnb_concert"><a href="#!" class="lnb_main_menu">공연</a>
+            <ul>
+              <li><a href="#!">공연가이드</a></li>
+              <li><a href="#!">공연일정</a></li>
+              <li><a href="#!">예매안내</a></li>
+              <li><a href="#!">지난공연</a></li>
+              <li><a href="#!">객석나눔</a></li>
+            </ul>
+          </li>
+          <li class="lnb_edu"><a href="#!" class="lnb_main_menu">영화·예술·교육</a>
+            <ul>
+              <li><a href="#!">아카데미 일정</a></li>
+              <li><a href="#!">영화 아카데미</a></li>
+              <li><a href="#!">예술 아카데미</a></li>
+              <li><a href="#!">어린이청소년</a></li>
+              <li><a href="#!">아카데미</a></li>
+              <li><a href="#!">시설/기자재</a></li>
+              <li><a href="#!">사용신청</a></li>
+            </ul>
+          </li>
+          <li class="lnb_library"><a href="#!" class="lnb_main_menu">영화 도서관</a>
+            <ul>
+              <li><a href="#!">이용안내</a></li>
+              <li><a href="#!">자료검색</a></li>
+              <li><a href="#!">공지사항</a></li>
+              <li><a href="#!">행사안내</a></li>
+              <li><a href="#!">필름아카이브</a></li>
+            </ul>
+          </li>
+          <li class="lnb_event"><a href="#!" class="lnb_main_menu">전시 행사</a>
+            <ul>
+              <li><a href="#!">전시·행사가이드</a></li>
+              <li><a href="#!">전시·행사일정</a></li>
+              <li><a href="#!">지난 전시·행사</a></li>
+              <li><a href="#!">행사장 배치도</a></li>
+            </ul>
+          </li>
+          <li class="lnb_partnership"><a href="#!" class="lnb_main_menu">이벤트 제휴</a>
+            <ul>
+              <li><a href="#!">제휴</a></li>
+              <li><a href="#!">회원제안내</a></li>
+              <li><a href="#!">메세나 기업 모집</a></li>
+              <li><a href="#!">광고신청</a></li>
+              <li><a href="#!">촬영신청</a></li>
+            </ul>
+          </li>
+          <li class="lnb_dureraum"><a href="#!" class="lnb_main_menu">영화의 전당</a>
+            <ul>
+              <li><a href="./sub_page_about.html">영화의 전당 소개</a></li>
+              <li><a href="#!">대관 및 배치도</a></li>
+              <li><a href="#!">시설소개</a></li>
+              <li><a href="#!">오시는 길</a></li>
+              <li><a href="#!">주차 안내</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!--lnb-->
+    </div>
+   <!--lnb_inner_box-->
+  </div>
+  <!--lnb_outer_box_fixed-->
+
+  <section id="to_the_top_anchor_point"></section>
+
+  <section class="origin">
+    origin
+  </section>
+
+  <section class="history">
+    history
+  </section>
+
+  <footer class="footer" id="footer">
+
+    <div class="footer_top_box">
+      <div class="footer_top">
+        <input type="checkbox" id="chk_additional_info" />
+  
+        <div class="news_letter">
+          <div class="footer_unit_title">영화의 전당 뉴스레터</div>
+          <button>구독하기</button>
+        </div>
+        <!--news_letter-->
+        <label for="chk_additional_info" class="additional_info">
+          <div class="footer_unit_title">추가정보</div>
+          <div class="footer_unit_icon"><i class="fa-solid fa-angle-down"></i></div>
+        </label>
+        <!--additional_info-->
+        <ul class="additional_info_sheet">
+          <li><a href="#!">개인정보처리방침</a></li>
+          <li><a href="#!">정보공개</a></li>
+          <li><a href="#!">장애인 이용안내</a></li>
+          <li><a href="#!">고객참여</a></li>
+          <li><a href="#!">취소/환불 가이드</a></li>
+          <li><a href="#!">자유게시판</a></li>
+          <li><a href="#!">이용약관</a></li>
+          <li><a href="#!"></a></li>
+        </ul>
+        <!--additional_info_sheet-->
+  
+        <div class="footer_top_slide_box">
+          <div class="related_institution">
+            <div class="footer_unit_title">
+              <h6 class="footer_unit_title_text">유관기관</h6>
+              <div class="btn_related_institution_box">
+                <button>
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div><!--btn_related_institution_box-->           
+            </div><!--footer_unit_title-->
+            <div class="related_institution_sheet">
+              <div class="swiper-wrapper">
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="../images/related_01.svg" alt="유관기관이미지_01" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="../images/related_02.svg" alt="유관기관이미지_02" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="../images/related_03.svg" alt="유관기관이미지_03" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="../images/related_04.svg" alt="유관기관이미지_04" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="../images/related_05.svg" alt="유관기관이미지_05" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="../images/related_06.svg" alt="유관기관이미지_06" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="../images/related_07.svg" alt="유관기관이미지_07" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="../images/related_08.svg" alt="유관기관이미지_08" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="../images/related_09.svg" alt="유관기관이미지_09" />
+                </a>
+              </div>
+            </div><!--related_institution_sheet-->
+          </div>
+          <!--related_institution-->
+
+          <div class="mecenat">
+            <div class="footer_unit_title">
+              <h6 class="footer_unit_title_text">2021년 메세나 기업</h6>
+              <div class="btn_mecenat_box">
+                <button>
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div><!--btn_mecenat_box-->   
+            </div><!--footer_unit_title-->
+            <div class="mecenat_sheet">
+              <div class="swiper-wrapper">
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="../images/mecenat_01.svg" alt="메세나기업이미지_01" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="../images/mecenat_02.svg" alt="메세나기업이미지_02" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="../images/mecenat_03.svg" alt="메세나기업이미지_03" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="../images/mecenat_04.svg" alt="메세나기업이미지_04" />
+                </a>
+              </div>
+            </div><!--mecenat_sheet-->
+          </div>
+          <!--mecenat-->
+        </div>
+        <!--footer_top_slide_box-->
+        
+      </div>
+      <!--footer_top-->  
+    </div>
+    <!--footer_top_box-->
+   
+    <div class="footer_bottom_box">
+      <div class="footer_bottom">
+        <div class="footer_info">
+          <p>(우)48058 부산광역시 해운대구 <br class="footer_info_br" />수영강변대로 120 영화의전당(우동 1467번지)</p>
+          <p>TEL. 051-780-6000/6080 Fax.051-780-6019</p>
+          <p>(재)영화의전당 대표자 김진해 사업자번호 : 617-82-11427 <br class="footer_info_br" />통신판매업신고 : 부산해운 제0510호 사업자정보 확인</p>
+          <p>COPYRIGHT(C) BUSAN CINEMA CENTER. ALL RIGHTS RESERVED</p>
+        </div>
+        <!--footer_info-->
+        <div class="footer_logo_box">
+          <div class="footer_logo">
+            <img src="../images/footer_logo.svg" alt="푸터_로고이미지" />
+          </div>
+          <div class="footer_logo_space_between"></div>
+          <div class="footer_other_logos">
+            <img src="../images/footer_other_logos.svg" alt="푸터_그외_로고이미지" />
+          </div>
+        </div>
+        <!--footer_logo_box-->
+      </div>
+      <!--footer_bottom-->
+    </div>
+    <!--footer_bottom_box-->
+
+  </footer>
+  <!--footer-->
+
+  <aside class="quick_menu">
+    <a href="#!" class="btn_fast_reserve">빠른<br />예매</a>
+    <a href="#to_the_top_anchor_point" class="btn_to_top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    <a href="#footer" class="btn_to_bottom">
+      <i class="fa-solid fa-arrow-down"></i>
+    </a>
+  </aside>
+  <!--quick_menu-->
+  
+</body>
+</html>

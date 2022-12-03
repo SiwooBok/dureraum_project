@@ -1,0 +1,31 @@
+/*-------- to_the_top_anchor_point --------*/
+#to_the_top_anchor_point {height: 50px;}
+
+/*-------- origin --------*/
+.origin {
+  width: 100%;
+  height: 1000px;
+  background-color: #ccc;
+}
+
+
+
+
+
+/*-------- history --------*/
+.history {
+  width: 100%;
+  height: 1500px;
+  background-color: #aaa;
+}
+
+
+
+
+
+
+
+/*-------- media_query (sub_page_about) --------*/
+@media all and (min-width:769px) {
+  #to_the_top_anchor_point {display: none;}
+ }
