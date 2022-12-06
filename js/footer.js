@@ -41,29 +41,28 @@ let footerMecenatSlide = new Swiper(".mecenat_sheet", {
 });
 
 
+// 스크롤시 퀵메뉴 보이게 하는 섹션
+const quickMenu = document.querySelector('.quick_menu');
 
-
+window.addEventListener('scroll', _.throttle(function () {
+  if (window.scrollY > 500) {
+    // 퀵메뉴 보이기
+    gsap.to(quickMenu, .2, {
+      x: 0
+    });
+  } else {
+    // 퀵메뉴 숨기기
+    gsap.to(quickMenu, .2, {
+      x: 100
+    });
+  }
+}, 300));
 
 
 $(function(){
 
-  // 뷰포트 가로너비 769px부터 퀵메뉴 안보였다 보이는 기능 구현 섹션
-  $(window).scroll(function(){
-    if ($(window).innerWidth() > 768) {
-      if($(window).scrollTop() >= 260) {
-        $('.quick_menu').fadeIn(500);
-      } else {
-        $('.quick_menu').fadeOut(300);
-      }
-    } else {
-      $('.quick_menu').fadeIn(100);
-    }
-  });
-
-  // 퀵메뉴 이동 기능 섹션
   $('.btn_to_top').click(function(e){
     e.preventDefault;
-    // $('html, body').stop().animate({scrollTop: 0}, 1000);
     $(window).scrollTo(this.hash || 0, 1000);
   });
 

@@ -41,16 +41,53 @@
   <!---------- jQuery_easing_plugin ---------->
   <script src="./js/jquery.easing.min.js"></script>
 
+  <!---------- lodash ---------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!---------- ScrollMagic_js ---------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- GSAP & ScrollToPlugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js" integrity="sha512-9DDJWj17gkdeGHU0Zr76wc9jY2g0IwE7ZCIxakVYKyzlTiOWZDZJOTaVgAzNo+LB7+EbGXxwCXkOP+a5rgkuqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!---------- Naver_map ---------->
+  <!-- 바닐라 js에서 key를 숨기는 방법을 찾지못해 일단은 그냥 사용했다 (추후 변경 예정) -->
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=zfd0fphs60"></script>
+
   <!---------- js ( header & footer & main ) ---------->
   <script src="./js/header.js" defer ></script>
   <script src="./js/main.js" defer ></script>
   <script src="./js/footer.js" defer ></script>
 
-  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=zfd0fphs60" defer></script>
-
 </head>
 <body>
+  <!---------- fast_reserve ---------->
+  <input type="checkbox" id="chk_fast_reserve">
+  <div class="fast_reserve">
+    <div class="fast_reserve_sheet">
+      fast_sheet<br />
+      fast_sheet<br />
+      fast_sheet<br />
+      fast_sheet<br />
+      fast_sheet
+    </div>
+    <label for="chk_fast_reserve" class="out_of_area"></label>
+  </div>
+  <!--fast_reserve-->
 
+  <!---------- float_banner ---------->
+  <nav class="float_banner">
+    <a href="#!">
+      <img src="./images/float_banner01.jpg" alt="플로팅배너_이미지">
+    </a>
+    <div class="float_banner_hover">
+      <img src="./images/float banner02.jpg" alt="플로팅배너_호버이미지">
+    </div>
+  </nav>
+  <!--float_banner-->
+
+  <!---------- header_box ---------->
   <div class="header_box">
     <input type="checkbox" id="chk_ham" />
     <header class="header">
@@ -179,7 +216,8 @@
             <div class="ham_bottom_angle"><i class="fa-solid fa-angle-down"></i></div>
           </label>
           <ul class="ham_bottom_sheet_dureraum ham_bottom_sheet">
-            <li><a href="./sub_pages/sub_page_about.html">영화의 전당 소개</a></li>
+            <li><a href="./sub_pages/sub_page_about.html">연혁</a></li>
+            <li><a href="#!">영화의 전당 소개</a></li>
             <li><a href="#!">대관 및 배치도</a></li>
             <li><a href="#!">시설소개</a></li>
             <li><a href="#!">오시는 길</a></li>
@@ -191,6 +229,7 @@
   </div>
   <!--header_box-->
 
+  <!---------- lnb_outer_box ( non_fixed ) ---------->
   <div class="lnb_outer_box_non_fixed lnb_outer_box">
     <div class="lnb_inner_box">
       <nav class="lnb">
@@ -254,7 +293,8 @@
           </li>
           <li class="lnb_dureraum"><a href="#!" class="lnb_main_menu">영화의 전당</a>
             <ul>
-              <li><a href="./sub_pages/sub_page_about.html">영화의 전당 소개</a></li>
+              <li><a href="./sub_pages/sub_page_about.html">연혁</a></li>
+              <li><a href="#!">영화의 전당 소개</a></li>
               <li><a href="#!">대관 및 배치도</a></li>
               <li><a href="#!">시설소개</a></li>
               <li><a href="#!">오시는 길</a></li>
@@ -268,6 +308,7 @@
   </div>
   <!--lnb_outer_box-->
 
+  <!---------- lnb_outer_box ( fixed ) ---------->
   <div class="lnb_outer_box_fixed lnb_outer_box">
     <div class="lnb_inner_box">
       <nav class="lnb">
@@ -332,7 +373,8 @@
           </li>
           <li class="lnb_dureraum"><a href="#!" class="lnb_main_menu">영화의 전당</a>
             <ul>
-              <li><a href="./sub_pages/sub_page_about.html">영화의 전당 소개</a></li>
+              <li><a href="./sub_pages/sub_page_about.html">연혁</a></li>
+              <li><a href="#!">영화의 전당 소개</a></li>
               <li><a href="#!">대관 및 배치도</a></li>
               <li><a href="#!">시설소개</a></li>
               <li><a href="#!">오시는 길</a></li>
@@ -348,11 +390,12 @@
 
   <section id="to_the_top_anchor_point"></section>
 
+  <!---------- main_visual_box ---------->
   <section class="main_visual_box">
     <div class="main_visual">
       <div class="main_visual_sheet">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
+          <div class="swiper-slide visual_image_01">
             <a href="#">
               <picture>
                 <source media="(min-width:769px)" srcset="./images/visual_main_img01_pc.jpg" />
@@ -362,7 +405,7 @@
               </picture>
             </a>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide visual_image_02">
             <a href="#">
               <picture>
                 <source media="(min-width:769px)" srcset="./images/visual_main_img02_pc.jpg" />
@@ -372,7 +415,7 @@
               </picture>
             </a>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide visual_image_03">
             <a href="#">
               <picture>
                 <source media="(min-width:769px)" srcset="./images/visual_main_img03_pc.jpg" />
@@ -382,7 +425,7 @@
               </picture>
             </a>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide visual_image_04">
             <a href="#">
               <picture>
                 <source media="(min-width:769px)" srcset="./images/visual_main_img04_pc.jpg" />
@@ -448,6 +491,7 @@
   </section>
   <!--main_visual_box-->
 
+  <!---------- metaphor ---------->
   <section class="metaphor">
     <a href="#!" class="metaphor_movie">
       <div class="metaphor_icon_box">
@@ -1972,6 +2016,7 @@
   </section>
   <!--schedule-->
 
+  <!---------- trailer ---------->
   <section class="trailer">
     <div class="swiper-wrapper">
       <div class="swiper-slide trailer_keumsuna">
@@ -2078,6 +2123,7 @@
   </section>
   <!--trailer-->
 
+  <!---------- recommend ---------->
   <section class="recommend">
     <input type="radio" name="recommend" id="rad_recommend_movie" checked />
     <input type="radio" name="recommend" id="rad_recommend_concert" />
@@ -2430,7 +2476,7 @@
   </section>
   <!--recommend-->
 
-
+  <!---------- critic ---------->
   <section class="critic">
     <h3 class="critic_title">영화 비평</h3>
 
@@ -2559,6 +2605,7 @@
   </section>
   <!--critic-->
 
+  <!---------- event ---------->
   <section class="event">
     <h3 class="event_title">EVENT</h3>
     <div class="event_control_box">
@@ -2615,12 +2662,16 @@
   </section>
   <!--event-->
 
+  <!---------- sns ---------->
   <section class="sns">
     <h3 class="sns_title">SNS</h3>
     <div class="sns_sheet_outer_box">
       <div class="sns_sheet_inner_box">
         <div class="sns_sheet_01 sns_sheet">
           <div>
+            <a href="#!" class="sns_hover">
+              [포스터 증정 이벤트] 영원히 간직할 그 해 여름 이야기<br />#베를린국제영화제 황금곰상 #알카라스의여름 #영화사진진 #카를라시몬 #굿즈증정...
+            </a>
             <a href="#!" class="sns_icon_box">
               <div class="sns_icon"></div>
               <div class="sns_icon_text">@cinematheque</div>
@@ -2629,6 +2680,9 @@
         </div>
         <div class="sns_sheet_02 sns_sheet">
           <div>
+            <a href="#!" class="sns_hover">
+              <p>기예르모 델로토의 피노키오는 파시스트 시대의이탈리아를 배경으로<span class="short_text">...</span><span class="long_text"> 하는데요. 그래서인지 전쟁에 대한 풍자가 섞인 블랙코미디...</span></p>
+            </a>
             <a href="#!" class="sns_icon_box">
               <div class="sns_icon"></div>
               <div class="sns_icon_text">@bbcthelibrary</div>
@@ -2637,6 +2691,9 @@
         </div>
         <div class="sns_sheet_03 sns_sheet">
           <div>
+            <a href="#!" class="sns_hover">
+              <p>[라이브러리 이벤트] 이용자 만족도 조사<br />더 나은 라이브러리가<span class="short_text">...</span><span class="long_text"> 되기 위하여 이용자 만족도 조사를 실시...</span></p>
+            </a>
             <a href="#!" class="sns_icon_box">
               <div class="sns_icon"></div>
               <div class="sns_icon_text">@dureraum</div>
@@ -2645,6 +2702,9 @@
         </div>
         <div class="sns_sheet_04 sns_sheet">
           <div>
+            <a href="#!" class="sns_hover">
+              [영화의전당 12월 개봉작]<br />나랑 연말에 영화볼 사람? 대중, 예술, 독립 영화까지 다 있는 영화의 전당으로 가보자고! 요금...
+            </a>
             <a href="#!" class="sns_icon_box">
               <div class="sns_icon"></div>
               <div class="sns_icon_text">@dureraum</div>
@@ -2655,6 +2715,9 @@
       <!--sns_sheet_inner_box-->
       <div class="sns_sheet_05 sns_sheet">
         <div>
+          <a href="#!" class="sns_hover">
+            안녕하세요 영화의전당입니다. 벌써 12월입니다. 차가운 날씨와 함께 진짜 겨울이 시작된 것 같아요! 추운 겨울 사랑하는 가족, 연인과 함께 따뜻하게 보내시길 바랍니다. 참, 연말에는 #영화의전당 에서 영화와 공연 관람 어떠세요? 대중영화 뿐만 아니라...
+          </a>
           <a href="#!" class="sns_icon_box">
             <div class="sns_icon"></div>
             <div class="sns_icon_text">@busanthecinema</div>
@@ -2676,16 +2739,16 @@
   </section>
   <!--sns-->
 
+  <!---------- map_and_notice_box ---------->
   <div class="map_and_notice_box">
 
+    <!---------- map_box ---------->
     <div class="map_box">
       <section class="map">
         <input type="checkbox" id="chk_way_to_come" />
-    
         <div class="map_api_box">
-          <div class="map_api" id="map_api"></div>
-          <!-- <div id="map" style="width:100%; height:400px;"></div> -->
-          <!-- <img src="./images/map.jpg" alt="로드맵이미지"> -->
+          <div class="map_api"></div>
+          <div id="map" style="width: 100%; height:100%;"></div>
         </div>
         <!--map_api_box-->
         <label for="chk_way_to_come" class="lab_way_to_come">
@@ -2719,6 +2782,7 @@
     </div>
     <!--map_box-->
   
+    <!---------- notice_box ---------->
     <div class="notice_box">
       <section class="notice_hire">
         <a href="#!" class="notice_hire_title">
@@ -2776,13 +2840,11 @@
   </div>
   <!--map_and_notice_box-->
 
-
+  <!---------- footer ---------->
   <footer class="footer" id="footer">
-
     <div class="footer_top_box">
       <div class="footer_top">
         <input type="checkbox" id="chk_additional_info" />
-  
         <div class="news_letter">
           <div class="footer_unit_title">영화의 전당 뉴스레터</div>
           <button>구독하기</button>
@@ -2804,7 +2866,6 @@
           <li><a href="#!"></a></li>
         </ul>
         <!--additional_info_sheet-->
-  
         <div class="footer_top_slide_box">
           <div class="related_institution">
             <div class="footer_unit_title">
@@ -2848,7 +2909,6 @@
             </div><!--related_institution_sheet-->
           </div>
           <!--related_institution-->
-
           <div class="mecenat">
             <div class="footer_unit_title">
               <h6 class="footer_unit_title_text">2021년 메세나 기업</h6>
@@ -2878,12 +2938,10 @@
           <!--mecenat-->
         </div>
         <!--footer_top_slide_box-->
-        
       </div>
       <!--footer_top-->  
     </div>
     <!--footer_top_box-->
-   
     <div class="footer_bottom_box">
       <div class="footer_bottom">
         <div class="footer_info">
@@ -2907,12 +2965,12 @@
       <!--footer_bottom-->
     </div>
     <!--footer_bottom_box-->
-
   </footer>
   <!--footer-->
 
+  <!---------- quick_menu ---------->
   <aside class="quick_menu">
-    <a href="#!" class="btn_fast_reserve">빠른<br />예매</a>
+    <label for="chk_fast_reserve" class="btn_fast_reserve">빠른<br />예매</label>
     <a href="#to_the_top_anchor_point" class="btn_to_top">
       <i class="fa-solid fa-arrow-up"></i>
     </a>
@@ -2921,6 +2979,6 @@
     </a>
   </aside>
   <!--quick_menu-->
-  
+
 </body>
 </html>

@@ -483,11 +483,10 @@ let eventSlide = new Swiper(".event_sheet", {
 
 
 // -------- map --------
-// var naverMap = null;
+// 바닐라 js에서 key를 숨기는 방법을 찾지못해 일단은 그냥 사용했다 (추후 변경 예정)
+var mapOptions = {
+    center: new naver.maps.LatLng(35.1710632, 129.127096),
+    zoom: 12
+};
 
-// function initMap() {
-//     naverMap = new naver.maps.Map('map_api', {
-//         center: new naver.maps.LatLng(37.3595704, 127.105399),
-//         zoom: 10
-//     });
-// }
+var map = new naver.maps.Map('map', mapOptions);
