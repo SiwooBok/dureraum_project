@@ -10,13 +10,13 @@
   z-index: 10;
 }
 
-.float_banner a {
-  display: block;
+.float_banner .float_banner_floating {
   width: 180px;
   height: 180px;
   filter: drop-shadow(0 0 16px rgba(203, 205, 177, 0.6));
   border-radius: 50%;
   overflow: hidden;
+  cursor: pointer;
   animation-name: banner_floating;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -29,9 +29,10 @@
   100% {transform: translateY(0);}
 }
 
-.float_banner a img {display: block; width: 100%; transform: scale(1.02);}
+.float_banner .float_banner_floating img {display: block; width: 100%; transform: scale(1.02);}
 
 .float_banner .float_banner_hover {
+  display: block;
   width: 0;
   height: 314px;
   border-radius: 5px;
@@ -51,7 +52,6 @@
   width: 534px;
   height: 314px;
 }
-
 
 .float_banner:hover .float_banner_hover,
 .float_banner:focus .float_banner_hover {
@@ -369,10 +369,7 @@
   overflow-x: auto;
   overflow-y: hidden;
   float: left;
-  /* scrollbar-width: none; */
 }
-
-/* .schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet::-webkit-scrollbar {width: 0; height: 0;} */
 
 .schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet .schedule_monthly_sheet_unit {display: none; width: 180%;}
 .schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet .calendar_visible {display: flex;}
@@ -1237,42 +1234,6 @@
   cursor: pointer;
 }
 
-.sns_sheet_outer_box .sns_sheet>div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 7px;
-  overflow: hidden;
-}
-
-.sns_sheet_outer_box .sns_sheet>div .sns_hover {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  padding: 25%;
-  font-size: 0.813rem;
-  box-sizing: border-box;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  visibility: hidden;
-  transition: all .3s;
-  justify-content: center;
-  align-items: center;
-}
-
-.sns_sheet_outer_box .sns_sheet_02>div .sns_hover .short_text {display: inline;}
-.sns_sheet_outer_box .sns_sheet_02>div .sns_hover .long_text {display: none;}
-.sns_sheet_outer_box .sns_sheet_03>div .sns_hover .short_text {display: inline;}
-.sns_sheet_outer_box .sns_sheet_03>div .sns_hover .long_text {display: none;}
-
-/* .sns_sheet_outer_box .sns_sheet_02>div .sns_hover {font-size: 0.625rem;} */
-
 /* dynamic height(동적 높이)의 비율을 padding-top으로 맞춤 ex) 1:0.5426, 1:0.3008, ... */
 /* 원래는 비율을 맞춰줘야하지만 부모 속성 flex로 인해 높이가 같은줄의 박스높이에 자동으로 맞춰지는경우는 padding-top 생략가능 - 그래도 만일의 사태를 대비해 생략안했음 */
 .sns_sheet_outer_box .sns_sheet_01::before {display: block; content: ''; padding-top: 54.26%;}
@@ -1291,11 +1252,53 @@
 .sns_sheet_outer_box .sns_sheet_06 {width: 100%;}
 .sns_sheet_outer_box .sns_sheet_07 {width: 100%;}
 
-.sns_sheet_outer_box .sns_sheet_01>div {background-image: url("./images/sns_01.jpg");}
-.sns_sheet_outer_box .sns_sheet_02>div {background-image: url("./images/sns_02.jpg");}
-.sns_sheet_outer_box .sns_sheet_03>div {background-image: url("./images/sns_03.jpg");}
-.sns_sheet_outer_box .sns_sheet_04>div {background-image: url("./images/sns_04.jpg");}
-.sns_sheet_outer_box .sns_sheet_05>div {background-image: url("./images/sns_05.jpg");}
+.sns_sheet_outer_box .sns_sheet>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.sns_sheet_outer_box .sns_sheet>div .sns_image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sns_sheet_outer_box .sns_sheet_01>div .sns_image {background-image: url("./images/sns_01.jpg");}
+.sns_sheet_outer_box .sns_sheet_02>div .sns_image {background-image: url("./images/sns_02.jpg");}
+.sns_sheet_outer_box .sns_sheet_03>div .sns_image {background-image: url("./images/sns_03.jpg");}
+.sns_sheet_outer_box .sns_sheet_04>div .sns_image {background-image: url("./images/sns_04.jpg");}
+.sns_sheet_outer_box .sns_sheet_05>div .sns_image {background-image: url("./images/sns_05.jpg");}
+
+.sns_sheet_outer_box .sns_sheet>div .sns_hover {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 25%;
+  font-size: 0.813rem;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sns_sheet_outer_box .sns_sheet_02>div .sns_hover .short_text {display: inline;}
+.sns_sheet_outer_box .sns_sheet_02>div .sns_hover .long_text {display: none;}
+.sns_sheet_outer_box .sns_sheet_03>div .sns_hover .short_text {display: inline;}
+.sns_sheet_outer_box .sns_sheet_03>div .sns_hover .long_text {display: none;}
 
 /*-------- sns_icon_box --------*/
 .sns_sheet_outer_box .sns_sheet>div .sns_icon_box {
@@ -1725,7 +1728,6 @@
   .sns_sheet_outer_box .sns_sheet_02>div .sns_hover .long_text {display: inline;}
   .sns_sheet_outer_box .sns_sheet_03>div .sns_hover .short_text {display: none;}
   .sns_sheet_outer_box .sns_sheet_03>div .sns_hover .long_text {display: inline;}
-
 
   .map_and_notice_box {display: flex; padding: 0 2%; box-sizing: border-box; margin-bottom: calc(200px + 3%);}
   .map_and_notice_box .map_box {width: 60%; margin-bottom: 0;}

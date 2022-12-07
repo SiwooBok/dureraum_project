@@ -1,3 +1,39 @@
+/*-------- general_settings ( ".confirm_box" → in the fast_reserve section. ) --------*/
+.fast_reserve_contents .fast_reserve_sheet_box .confirm_box {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .confirm_box label,
+.fast_reserve_contents .fast_reserve_sheet_box .confirm_box .btn_previous,
+.fast_reserve_contents .fast_reserve_sheet_box .confirm_box .btn_next {
+  display: block;
+  width: 45%;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .confirm_box label,
+.fast_reserve_contents .fast_reserve_sheet_box .confirm_box .btn_previous {
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: transparent;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .confirm_box .btn_next {
+  color: #fff;
+  border: none;
+  background-color: #2E3192;
+}
+
 /*-------- footer --------*/
 .footer {width: 100%;}
 
@@ -279,23 +315,595 @@
   z-index: 9999;
 }
 
-.fast_reserve .fast_reserve_sheet {
-  width: 500px;
-  height: 500px;
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(8px);
-}
-
 .fast_reserve .out_of_area {
   width: 100%;
   height: 100%;
+  /* inset 그림자로 비네팅 효과를 주었다 - 필름같은 느낌 */
+  box-shadow: inset 0 0 64px rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#chk_fast_reserve {display: none;}
+#chk_fast_reserve:checked ~ .fast_reserve {opacity: 1; visibility: visible;}
+
+/*-------- fast_reserve_contents ( fast_reserve_pagination ) --------*/
+.fast_reserve .fast_reserve_contents {
+  width: 100%;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  /* filter: drop-shadow(0 0 16px rgba(45, 25, 118, 0.2)); */
+}
+
+.fast_reserve .fast_reserve_contents .fast_reserve_pagination {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(46, 49, 146, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.fast_reserve .fast_reserve_contents .fast_reserve_pagination>li {
+  font-size: 0.813rem;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
+}
+
+.fast_reserve .fast_reserve_contents .fast_reserve_pagination>li .angle_box {
+  width: 100px;
+  height: 100px;
+  transform: rotate(66.6deg) skewX(45deg);
+  position: absolute;
+  top: -5px;
+  right: -16px;
+  z-index: -1;
+}
+
+.fast_reserve .fast_reserve_contents .fast_reserve_pagination .pagination_theater {
+  width: 34%;
+  z-index: 3;
+}
+.fast_reserve .fast_reserve_contents .fast_reserve_pagination .pagination_theater .pagination_text {
+  color: #fff;
+  background-color: #276976;
+}
+.fast_reserve .fast_reserve_contents .fast_reserve_pagination .pagination_theater .angle_box {
+  background-color: #276976;
+}
+
+.fast_reserve .fast_reserve_contents .fast_reserve_pagination .pagination_seats {
+  width: 35%;
+  z-index: 2;
+}
+.fast_reserve .fast_reserve_contents .fast_reserve_pagination .pagination_seats .pagination_text {
+  color: #999;
+}
+.fast_reserve .fast_reserve_contents .fast_reserve_pagination .pagination_seats .angle_box {
+  background-color: transparent;
+}
+
+.fast_reserve .fast_reserve_contents .fast_reserve_pagination .pagination_seats.proceeding .pagination_text {
+  color: #fff;
+  background-color: #20225f;
+}
+.fast_reserve .fast_reserve_contents .fast_reserve_pagination .pagination_seats.proceeding .angle_box {
+  background-color: #20225f;
+}
+
+.fast_reserve .fast_reserve_contents .fast_reserve_pagination .pagination_pay {
+  width: 36%;
+  z-index: 1;
+}
+.fast_reserve .fast_reserve_contents .fast_reserve_pagination .pagination_pay .pagination_text {
+  color: #999;
+}
+
+.fast_reserve .fast_reserve_contents .fast_reserve_pagination .pagination_pay.proceeding .pagination_text {
+  color: #fff;
+  background-color: #dba80f;
+}
+
+
+
+/*-------- fast_reserve_contents ( fast_reserve_sheet_box ) --------*/
+.fast_reserve .fast_reserve_contents .fast_reserve_sheet_box {
+  width: 100%;
+  height: calc(100% - 50px);
+  overflow: scroll;
+  position: relative;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box li {
+  font-size: 0.813rem;
+  color: #fff;
+}
+
+/*-------- select_theater (search_box) --------*/
+.fast_reserve_contents .fast_reserve_sheet_box .select_theater {
+  /* display: none; */
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .select_theater .search_box {
+  display: flex;
+  width: 100%;
+  padding: 0 15%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .select_theater .search_box .search_title {
+  width: 80px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .select_theater .search_box .search_input {
+  width: 150px;
+  position: relative;
+  margin-right: 20px;
+}
+
+
+.fast_reserve_contents .fast_reserve_sheet_box .select_theater .search_box .search_input input {
+  width: 100%;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  outline: none;
+  text-indent: 10px;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .select_theater .search_box .search_icon {
+  width: 25px;
+  height: 25px;
+  color: #000;
+  font-size: 0.813rem;
+  text-align: center;
+  line-height: 25px;
+  position: absolute;
+  top: 0;
+  right: 3px;
+  cursor: pointer;
+}
+
+/*-------- select_theater (search_recommend) --------*/
+.fast_reserve_contents .fast_reserve_sheet_box .select_theater .search_recommend_box {
+  width: 92%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.fast_reserve_contents .select_theater .search_recommend_box .search_recommend_title {
+  height: 30px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.fast_reserve_contents .select_theater .search_recommend_box .search_recommend_sheet {
+  width: 100%;
+}
+
+.fast_reserve_contents .select_theater .search_recommend_box .search_recommend_sheet label {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.fast_reserve_contents .select_theater .search_recommend_box .search_recommend_sheet .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+#rad_search_turandot, #rad_search_carmen, #rad_search_blackpanther, #rad_search_blackadam {display: none;}
+
+#rad_search_turandot:checked ~ .search_recommend_box .search_recommend_sheet .swiper-wrapper .lab_search_turandot label {
+  border: 2px solid #dc143c;
+  box-sizing: border-box;
+}
+#rad_search_carmen:checked ~ .search_recommend_box .search_recommend_sheet .swiper-wrapper .lab_search_carmen label {
+  border: 2px solid #dc143c;
+  box-sizing: border-box;
+}
+#rad_search_blackpanther:checked ~ .search_recommend_box .search_recommend_sheet .swiper-wrapper .lab_search_blackpanther label {
+  border: 2px solid #dc143c;
+  box-sizing: border-box;
+}
+#rad_search_blackadam:checked ~ .search_recommend_box .search_recommend_sheet .swiper-wrapper .lab_search_blackadam label {
+  border: 2px solid #dc143c;
+  box-sizing: border-box;
+}
+
+#rad_search_turandot:checked ~ .detail_info .theater_schedule .theater_schedule_sheet_box .theater_schedule_sheet {display: block;}
+#rad_search_turandot:checked ~ .detail_info .theater_schedule .theater_schedule_sheet_box .schedule_not_found {display: none;}
+#rad_search_turandot:checked ~ .detail_info .theater_schedule .theater_schedule_available_box  {display: block;}
+
+#rad_search_carmen:checked ~ .detail_info .theater_schedule .theater_schedule_sheet_box .theater_schedule_sheet {display: none;}
+#rad_search_carmen:checked ~ .detail_info .theater_schedule .theater_schedule_sheet_box .schedule_not_found {display: flex;}
+#rad_search_carmen:checked ~ .detail_info .theater_schedule .theater_schedule_available_box {display: none;}
+
+#rad_search_blackpanther:checked ~ .detail_info .theater_schedule .theater_schedule_sheet_box .theater_schedule_sheet {display: none;}
+#rad_search_blackpanther:checked ~ .detail_info .theater_schedule .theater_schedule_sheet_box .schedule_not_found {display: flex;}
+#rad_search_blackpanther:checked ~ .detail_info .theater_schedule .theater_schedule_available_box {display: none;}
+
+#rad_search_blackadam:checked ~ .detail_info .theater_schedule .theater_schedule_sheet_box .theater_schedule_sheet {display: none;}
+#rad_search_blackadam:checked ~ .detail_info .theater_schedule .theater_schedule_sheet_box .schedule_not_found {display: flex;}
+#rad_search_blackadam:checked ~ .detail_info .theater_schedule .theater_schedule_available_box {display: none;}
+
+/*-------- select_theater (detail_info - theater_schedule_sheet_box) --------*/
+.fast_reserve_contents .select_theater .detail_info {
+  width: 100%;
+}
+
+.fast_reserve_contents .select_theater .detail_info .theater_schedule {
+  width: 100%;
+}
+
+.fast_reserve_contents .select_theater .detail_info .theater_schedule .theater_schedule_title {
+  width: 86%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.fast_reserve_contents .select_theater .detail_info .theater_schedule .theater_schedule_sheet_box {
+  width: 92%;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.fast_reserve_contents .select_theater .detail_info .theater_schedule .theater_schedule_sheet_box .theater_schedule_sheet {
+  width: 100%;
+}
+
+.fast_reserve_contents .select_theater .detail_info .theater_schedule .theater_schedule_sheet .swiper-slide {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.fast_reserve_contents .select_theater .theater_schedule_sheet .schedule_unit {
+  width: 82%;
+  padding: 5% 0;
+  margin: 0 auto;
+}
+
+.fast_reserve_contents .select_theater .theater_schedule_sheet .schedule_unit li,
+.fast_reserve_contents .select_theater .theater_schedule_sheet .schedule_unit li a {color: #fff;}
+
+.fast_reserve_contents .select_theater .theater_schedule_sheet .schedule_unit .schedule_unit_month {
+  padding-left: 5%;
+  margin-top: 10px;
+  margin-bottom: 32px;
+}
+
+.fast_reserve_contents .select_theater .theater_schedule_sheet .schedule_unit ul {
+  display: flex;
+  width: 100%;
+  height: 28px;
+  margin-bottom: 4%;
+}
+
+.fast_reserve_contents .select_theater .theater_schedule_sheet .schedule_unit .schedule_unit_day li {
+  width: 10%;
+  flex-grow: 1;
+  text-align: center;
+  line-height: 28px;
+}
+
+.fast_reserve_contents .select_theater .theater_schedule_sheet .schedule_unit .schedule_unit_day li:last-child {
+  color: #f05757;
+}
+
+.fast_reserve_contents .select_theater .theater_schedule_sheet .schedule_unit ul li {
+  width: 10%;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.fast_reserve_contents .select_theater .theater_schedule_sheet .schedule_unit ul li a {
+  display: block;
+  height: 100%;
+  line-height: 28px;
+}
+
+.fast_reserve_contents .select_theater .theater_schedule_sheet .schedule_unit ul li .theater_today {
+  color: #f4f4a7;
+}
+
+.fast_reserve_contents .select_theater .theater_schedule_sheet .schedule_unit ul li .schedule_sunday {
+  color: #f05757;
+}
+
+/*-------- select_theater (theater_schedule_sheet_box - fast_not_found) --------*/
+.fast_reserve_contents .select_theater .theater_schedule_sheet_box .schedule_not_found {
+  width: 100%;
+  height: 70px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/*-------- select_theater (detail_info - search_schedule_available) --------*/
+.fast_reserve_contents .select_theater .detail_info .theater_schedule_available_box {
+  width: 92%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5% 0;
+  margin: 0 auto;
+}
+
+.fast_reserve_contents .select_theater .detail_info .theater_schedule_available_box li {
+  width: 80%;
+  height: 36px;
+  margin: 0 auto;
+}
+
+.fast_reserve_contents .select_theater .detail_info .theater_schedule_available_box li a {
+  display: flex;
+  height: 100%;
+  color: #fff;
+  line-height: 36px;
+  justify-content: space-between;
+}
+
+.fast_reserve_contents .select_theater .detail_info .theater_schedule_available_box .theater_available_place {
+  width: 40%;
+}
+
+.fast_reserve_contents .select_theater .detail_info .theater_schedule_available_box .theater_available_time span {
+  color: #bccbf6;
+}
+
+/*-------- select_seats & pay --------*/
+/* select_seats */
+.fast_reserve_contents .fast_reserve_sheet_box .select_seats,
+.fast_reserve_contents .fast_reserve_sheet_box .pay {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-#chk_fast_reserve {display: none;}
-#chk_fast_reserve:checked ~ .fast_reserve {opacity: 1; visibility: visible;}
+.fast_reserve_contents .fast_reserve_sheet_box .select_seats {
+  display: none;
+  width: 100%;
+  z-index: 1;
+  /* background-color: rgba(245, 245, 124, 0.5); */
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .select_seats_title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .select_seats_box {
+  width: 88%;
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .select_seats_box .select_seat_display {
+  width: 100%;
+  cursor: pointer;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .select_seats_box .select_seat_display img {
+  display: block;
+  width: 100%;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .selected_seats_box {
+  width: 88%;
+  padding: 6% 0;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .selected_seats_box .selected_seats_title {
+  width: 80%;
+  height: 25px;
+  margin: 0 auto;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .selected_seats_box li {
+  width: 70%;
+  height: 25px;
+  font-size: 0.75rem;
+  margin: 0 auto;
+  line-height: 25px;
+}
+
+/*-------- select_seats ( choose_ticket_box ) --------*/
+.fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box {
+  width: 88%;
+  padding: 6% 0;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .choose_ticket_title {
+  width: 80%;
+  height: 25px;
+  line-height: 25px;
+  /* padding-left: 5%;
+  box-sizing: border-box; */
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .lab_refund_guide {
+  display: block;
+  width: 55%;
+  height: 25px;
+  font-size: 0.688rem;
+  color: #bccbf6;
+  line-height: 25px;
+  margin-left: 10%;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .morning_ticket,
+.fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .disabled_people_ticket,
+.fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .advance_ticket {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .morning_ticket,
+.fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .disabled_people_ticket {
+  margin-bottom: 20px;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .morning_ticket .ticket_name,
+.fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .disabled_people_ticket .ticket_name,
+.fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .advance_ticket .ticket_name {
+  height: 25px;
+  font-size: 0.75rem;
+  line-height: 25px;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .morning_ticket .ticket_number,
+.fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .disabled_people_ticket .ticket_number,
+.fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .advance_ticket .ticket_number {
+  width: 50%;
+  height: 25px;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .morning_ticket .ticket_number input,
+.fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .disabled_people_ticket .ticket_number input,
+.fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .advance_ticket .ticket_number input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 0.75rem;
+  text-indent: 7px;
+  border-radius: 2px;
+  outline: none;
+}
+
+/*-------- select_seats ( refund_guide_sheet ) --------*/
+.fast_reserve_contents .fast_reserve_sheet_box .refund_guide_box {
+  width: 80%;
+  height: 200px;
+  padding: 0 8%;
+  box-sizing: border-box;
+  background-color: #3a404e;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 490px;
+  left: 10%;
+  transition: all .3s;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .refund_guide_box .refund_guide_text {
+  display: block;
+  font-size: 0.75rem;
+  line-height: 25px;
+  margin-top: 20px;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .refund_guide_box .refund_guide_text .refund_guide_category {
+  margin-bottom: 10px;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .refund_guide_box .close_refund_guide {
+  width: 36px;
+  height: 36px;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 36px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+#chk_refund_guide {display: none;}
+#chk_refund_guide:checked ~ .refund_guide_box {opacity: 1; visibility: visible;}
+
+/*-------- select_seats_jQuery_function ( pesudo - classname 'chose' ) --------*/
+.fast_reserve_contents .fast_reserve_sheet_box .select_seats .selected_seats_box .selected_seats_empty {display: block;}
+.fast_reserve_contents .fast_reserve_sheet_box .select_seats .selected_seats_box .selected_seats_g16 {display: none;}
+.fast_reserve_contents .fast_reserve_sheet_box .select_seats .choose_ticket_box {display: none;}
+
+.fast_reserve_contents .fast_reserve_sheet_box .select_seats.chose .selected_seats_box .selected_seats_empty {display: none;}
+.fast_reserve_contents .fast_reserve_sheet_box .select_seats.chose .selected_seats_box .selected_seats_g16 {display: block;}
+.fast_reserve_contents .fast_reserve_sheet_box .select_seats.chose .choose_ticket_box {display: block;}
+
+/*-------- pay --------*/
+.fast_reserve_contents .fast_reserve_sheet_box .pay {
+  display: none;
+  width: 100%;
+  z-index: 2;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .pay .pay_title {
+  width: 100%;
+  height: 25px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .pay .pay_price {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .pay .pay_price .final_price {
+  font-size: 1.125rem;
+  color: #bccbf6;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .pay .pay_method {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-bottom: 86px;
+  flex-wrap: wrap;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .pay .pay_method li {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .pay .pay_method .pay_naver {
+  width: 100%;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .pay .pay_method .lab_pay_naver {color: #ddd;}
 
 /*-------- media_query (footer) --------*/
 /*-------- screen_and_320_to_768px --------*/
@@ -326,6 +934,9 @@
 
   .footer .footer_info {font-size: 0.813rem; text-align: center;}
   .footer .footer_logo_box .footer_logo_space_between {width: 10%;}
+
+  .fast_reserve .fast_reserve_contents {max-width: 500px;}
+  .fast_reserve_contents .fast_reserve_sheet_box .select_theater .search_box .search_input {width: 180px;}
 }
 
 /*-------- all_and_769px ↑ --------*/
@@ -385,9 +996,16 @@
   .quick_menu .btn_fast_reserve:focus {background-color: #f4b807;}
 
   /* footer.js → 최초화면과, 아래로 스크롤 했을시에만 퀵메뉴가 보이게 만듬. */
-  .quick_menu {
-    right: 20px;
-  }
+  .quick_menu {right: 20px;}
+
+  .fast_reserve .fast_reserve_contents {max-width: 600px; height: 600px;}
+  .fast_reserve_contents .fast_reserve_sheet_box .select_theater .search_box .search_input {width: 230px;}
+  .fast_reserve_contents .fast_reserve_sheet_box .pay .pay_title {margin-top: 50px; margin-bottom: 50px;}
+  .fast_reserve_contents .fast_reserve_sheet_box .pay .pay_price {margin-bottom: 120px;}
+  .fast_reserve_contents .fast_reserve_sheet_box .pay .pay_method {margin-bottom: 116px;}
+  /* .fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .morning_ticket .ticket_number,
+  .fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .disabled_people_ticket .ticket_number,
+  .fast_reserve_contents .fast_reserve_sheet_box .choose_ticket_box .advance_ticket .ticket_number {width: 200px;} */
 }
 
 /*-------- all_and_1025px ↑ --------*/
@@ -424,4 +1042,10 @@
   .footer .footer_info {padding: 50px 4%; font-size: 0.875rem;}
   .footer .footer_logo_box .footer_logo {max-width: 280px;}
   .footer .footer_logo_box .footer_other_logos {max-width: 280px;}
+
+  .fast_reserve .fast_reserve_contents {max-width: 700px; height: 700px;}
+  .fast_reserve_contents .fast_reserve_sheet_box .select_theater .search_box .search_input {width: 270px;}
+  .fast_reserve_contents .fast_reserve_sheet_box .pay .pay_title {margin-top: 60px; margin-bottom: 30px;}
+  .fast_reserve_contents .fast_reserve_sheet_box .pay .pay_price {margin-bottom: 170px;}
+  .fast_reserve_contents .fast_reserve_sheet_box .pay .pay_method {margin-bottom: 176px;}
 }

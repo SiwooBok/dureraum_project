@@ -1,4 +1,4 @@
-/*-------- default setting --------*/
+/*-------- default_setting --------*/
 @font-face {
   font-family: "Spoqa Han Sans Neo";
   src: url("./font/SpoqaHanSansNeo-Regular.ttf");
@@ -16,6 +16,22 @@ li {list-style: none;}
 a {color: black; text-decoration: none;}
 
 html {font-size: 16px;}
+
+/*-------- default_settings ( general_settings_rad_normal ) --------*/
+input.rad_normal {
+  appearance: none;
+  vertical-align: middle;
+  /* border: 1.5px solid #59cbac; */
+  border: 1.5px solid #bccbf6;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  transition: border 0.1s ease-in-out;
+}
+
+input.rad_normal:checked {
+  border: 5px solid #bccbf6;
+}
 
 /*-------- header & gnb --------*/
 .header_box {
