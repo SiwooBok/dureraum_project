@@ -64,6 +64,590 @@
 
   <!---------- wrap (history_sheet의 transform으로 인해 화면에출력되는 크기가 뷰포트 크기보다 커짐을 방지) ---------->
   <div class="wrap">
+    <!---------- fast_reserve ---------->
+    <input type="checkbox" id="chk_fast_reserve" />
+    <section class="fast_reserve">
+      <label for="chk_fast_reserve" class="out_of_area"></label>
+      <div class="fast_reserve_contents">
+        <ul class="fast_reserve_pagination">
+          <li class="pagination_theater">
+            <div class="pagination_text">작품/극장 선택</div>
+            <div class="angle_box"></div>
+          </li>
+          <li class="pagination_seats">
+            <div class="pagination_text">좌석 선택</div>
+            <div class="angle_box"></div>
+          </li>
+          <li class="pagination_pay">
+            <div class="pagination_text">결제하기</div>
+          </li>
+        </ul><!--fast_reserve_pagination-->
+        <div class="fast_reserve_sheet_box">
+          <div class="hidden_btn_next"></div>
+          <div class="hidden_btn_previous"></div>
+
+          <div class="swiper-wrapper">
+            <div class="swiper-slide select_theater">
+              <div class="resizing_box">
+                <input type="radio" name="select_recommends" id="rad_search_turandot" checked />
+                <input type="radio" name="select_recommends" id="rad_search_carmen" />
+                <input type="radio" name="select_recommends" id="rad_search_blackpanther" />
+                <input type="radio" name="select_recommends" id="rad_search_blackadam" />
+                <div class="search_box">
+                  <div class="search_title">
+                    검색하기
+                  </div>
+                  <div class="search_input">
+                    <input type="text" placeholder="작품검색" id="fast_reserve_search_input" />
+                    <div class="search_icon">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                  </div>
+                </div><!--search_box-->
+                <div class="search_recommend_box">
+                  <div class="search_recommend_title">추천 작품</div>
+                  <div class="search_recommend_sheet">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide lab_search_turandot">
+                        <label for="rad_search_turandot">
+                          <img src="../images/recommend_movie_turandot.jpg" alt="빠른예매_추천이미지_투란도트" />
+                        </label>
+                      </div>
+                      <div class="swiper-slide lab_search_carmen">
+                        <label for="rad_search_carmen">
+                          <img src="../images/recommend_movie_carmen.jpg" alt="빠른예매_추천이미지_카르멘" />
+                        </label>
+                      </div>
+                      <div class="swiper-slide lab_search_blackpanther">
+                        <label for="rad_search_blackpanther">
+                          <img src="../images/recommend_movie_blackpanther.jpg" alt="빠른예매_추천이미지_블랙팬서" />
+                        </label>
+                      </div>
+                      <div class="swiper-slide lab_search_blackadam">
+                        <label for="rad_search_blackadam">
+                          <img src="../images/recommend_movie_blackadam.jpg" alt="빠른예매_추천이미지_블랙아담" />
+                        </label>
+                      </div>
+                    </div>
+                  </div><!--search_recommend_sheet-->
+                </div><!--search_recommend_box-->
+                <div class="detail_info">
+                  <div class="product_info">
+                    <div class="product_info_title">작품 정보</div>
+                    <div class="product_info_sheet">
+                      <div class="product_info_unit">
+                        <div class="product_name">
+                          <div class="product_name_category">작품명</div>
+                          <div class="product_name_text">두란도트</div>
+                        </div>
+                        <div class="product_age">
+                          <div class="product_age_category">이용 가능 연령</div>
+                          <div class="product_age_text">12세</div>
+                        </div>
+                      </div><!--product_info_unit-->
+                      <div class="product_not_found">점검 중입니다.</div>
+                    </div><!--product_info_sheet-->
+
+                  </div><!--product_info-->
+                  <div class="theater_schedule">
+                    <div class="theater_schedule_title">날짜선택</div>
+                    <div class="theater_schedule_sheet_box">
+                      <div class="theater_schedule_sheet">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide fast_november">
+                            <div class="schedule_unit">
+                              <div class="schedule_unit_month">11월</div>
+                              <ul class="schedule_unit_day">
+                                <li>일</li><li>월</li><li>화</li><li>수</li><li>목</li><li>금</li><li>토</li>
+                              </ul>
+                              <ul>
+                                <li></li>
+                                <li></li>
+                                <li><a href="#!" id="btn_theater_durandot_221101">1</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221102">2</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221103">3</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221104">4</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221105">5</a></li>
+                              </ul>
+                              <ul>
+                                <li><a href="#!" id="btn_theater_durandot_221106" class="schedule_sunday">6</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221107">7</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221108">8</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221109">9</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221110">10</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221111">11</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221112">12</a></li>
+                              </ul>
+                              <ul>
+                                <li><a href="#!" id="btn_theater_durandot_221113" class="schedule_sunday">13</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221114">14</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221115">15</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221116">16</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221117">17</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221118">18</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221119">19</a></li>
+                              </ul>
+                              <ul>
+                                <li><a href="#!" id="btn_theater_durandot_221120" class="schedule_sunday">20</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221121" class="theater_today day_selected">21</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221122">22</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221123">23</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221124">24</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221125">25</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221126">26</a></li>
+                              </ul>
+                              <ul>
+                                <li><a href="#!" id="btn_theater_durandot_221127" class="schedule_sunday">27</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221128">28</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221129">29</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221130">30</a></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                              </ul>
+                            </div><!--schedule_unit-->
+                          </div><!--swiper-slide-->
+        
+                          <div class="swiper-slide fast_december">
+                            <div class="schedule_unit">
+                              <div class="schedule_unit_month">12월</div>
+                              <ul class="schedule_unit_day">
+                                <li>일</li><li>월</li><li>화</li><li>수</li><li>목</li><li>금</li><li>토</li>
+                              </ul>
+                              <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li><a href="#!" id="btn_theater_durandot_221201">1</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221202">2</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221203">3</a></li>
+                              </ul>
+                              <ul>
+                                <li><a href="#!" id="btn_theater_durandot_221204" class="schedule_sunday">4</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221205">5</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221206">6</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221207">7</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221208">8</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221209">9</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221210">10</a></li>
+                              </ul>
+                              <ul>
+                                <li><a href="#!" id="btn_theater_durandot_221211" class="schedule_sunday">11</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221212">12</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221213">13</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221214">14</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221215">15</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221216">16</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221217">17</a></li>
+                              </ul>
+                              <ul>
+                                <li><a href="#!" id="btn_theater_durandot_221218" class="schedule_sunday">18</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221218">19</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221220">20</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221221">21</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221222">22</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221223">23</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221224">24</a></li>
+                              </ul>
+                              <ul>
+                                <li><a href="#!" id="btn_theater_durandot_221225" class="schedule_sunday">25</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221226">26</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221227">27</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221228">28</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221229">29</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221230">30</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_221231">31</a></li>
+                              </ul>
+                            </div><!--schedule_unit-->
+                          </div><!--swiper-slide-->
+        
+                          <div class="swiper-slide fast_next_january">
+                            <div class="schedule_unit">
+                              <div class="schedule_unit_month">1월</div>
+                              <ul class="schedule_unit_day">
+                                <li>일</li><li>월</li><li>화</li><li>수</li><li>목</li><li>금</li><li>토</li>
+                              </ul>
+                              <ul>
+                                <li><a href="#!" id="btn_theater_durandot_230101" class="schedule_sunday">1</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230102">2</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230103">3</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230104">4</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230105">5</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230106">6</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230107">7</a></li>
+                              </ul>
+                              <ul>
+                                <li><a href="#!" id="btn_theater_durandot_230108" class="schedule_sunday">8</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230109">9</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230110">10</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230111">11</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230112">12</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230113">13</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230114">14</a></li>
+                              </ul>
+                              <ul>
+                                <li><a href="#!" id="btn_theater_durandot_230115" class="schedule_sunday">15</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230116">16</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230117">17</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230118">18</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230119">19</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230120">20</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230121">21</a></li>
+                              </ul>
+                              <ul>
+                                <li><a href="#!" id="btn_theater_durandot_230122" class="schedule_sunday">22</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230123">23</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230124">24</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230125">25</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230126">26</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230127">27</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230128">28</a></li>
+                              </ul>
+                              <ul>
+                                <li><a href="#!" id="btn_theater_durandot_230129" class="schedule_sunday">29</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230130">30</a></li>
+                                <li><a href="#!" id="btn_theater_durandot_230131">31</a></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                              </ul>
+                            </div><!--schedule_unit-->
+                          </div><!--swiper-slide-->
+                        </div><!--swiper-wrapper-->
+                      </div><!--theater_schedule_sheet-->
+                      <div class="schedule_not_found">
+                        점검중입니다.
+                      </div>
+                    </div><!--theater_schedule_sheet_box-->
+                    <div class="theater_schedule_available_box">
+
+                      <ul class="theater_available_unit available_sunday">
+                        <li class="now_available">
+                          <a href="#!">
+                            <div class="theater_available_place">소극장</div>
+                            <div class="theater_state">예약가능</div>
+                            <div class="theater_available_time"><span>08:50</span> 일 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="now_available">
+                          <a href="#!">
+                            <div class="theater_available_place">소극장</div>
+                            <div class="theater_state">예약가능</div>
+                            <div class="theater_available_time"><span>14:20</span> 일 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="unusable">
+                          <a href="#!">
+                            <div class="theater_available_place">시네마데크</div>
+                            <div class="theater_state">예약불가</div>
+                            <div class="theater_available_time"><span>16:30</span> 일 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="now_available">
+                          <a href="#!">
+                            <div class="theater_available_place">소극장</div>
+                            <div class="theater_state">예약가능</div>
+                            <div class="theater_available_time"><span>19:50</span> 일 2022/11/21</div>
+                          </a>
+                        </li>
+                      </ul><!--theater_available_unit-->
+
+                      <ul class="theater_available_unit available_monday selected_available">
+                        <li class="unusable">
+                          <a href="#!">
+                            <div class="theater_available_place">시네마데크</div>
+                            <div class="theater_state">예약불가</div>
+                            <div class="theater_available_time"><span>09:30</span> 월 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="unusable">
+                          <a href="#!">
+                            <div class="theater_available_place">시네마데크</div>
+                            <div class="theater_state">예약불가</div>
+                            <div class="theater_available_time"><span>13:30</span> 월 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="now_available">
+                          <a href="#!">
+                            <div class="theater_available_place">소극장</div>
+                            <div class="theater_state">예약가능</div>
+                            <div class="theater_available_time"><span>15:10</span> 월 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="unusable">
+                          <a href="#!">
+                            <div class="theater_available_place">중극장</div>
+                            <div class="theater_state">예약불가</div>
+                            <div class="theater_available_time"><span>17:20</span> 월 2022/11/21</div>
+                          </a>
+                        </li>
+                      </ul><!--theater_available_unit-->
+
+                      <ul class="theater_available_unit available_tuesday">
+                        <li class="unusable">
+                          <a href="#!">
+                            <div class="theater_available_place">중극장</div>
+                            <div class="theater_state">예약불가</div>
+                            <div class="theater_available_time"><span>09:10</span> 화 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="now_available">
+                          <a href="#!">
+                            <div class="theater_available_place">소극장</div>
+                            <div class="theater_state">예약가능</div>
+                            <div class="theater_available_time"><span>13:55</span> 화 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="unusable">
+                          <a href="#!">
+                            <div class="theater_available_place">시네마데크</div>
+                            <div class="theater_state">예약불가</div>
+                            <div class="theater_available_time"><span>14:10</span> 화 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="now_available">
+                          <a href="#!">
+                            <div class="theater_available_place">소극장</div>
+                            <div class="theater_state">예약가능</div>
+                            <div class="theater_available_time"><span>16:50</span> 화 2022/11/21</div>
+                          </a>
+                        </li>
+                      </ul><!--theater_available_unit-->
+
+                      <ul class="theater_available_unit available_wednesday">
+                        <li class="unusable">
+                          <a href="#!">
+                            <div class="theater_available_place">시네마데크</div>
+                            <div class="theater_state">예약불가</div>
+                            <div class="theater_available_time"><span>11:50</span> 수 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="unusable">
+                          <a href="#!">
+                            <div class="theater_available_place">중극장</div>
+                            <div class="theater_state">예약불가</div>
+                            <div class="theater_available_time"><span>13:20</span> 수 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="now_available">
+                          <a href="#!">
+                            <div class="theater_available_place">소극장</div>
+                            <div class="theater_state">예약가능</div>
+                            <div class="theater_available_time"><span>15:40</span> 수 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="unusable">
+                          <a href="#!">
+                            <div class="theater_available_place">중극장</div>
+                            <div class="theater_state">예약불가</div>
+                            <div class="theater_available_time"><span>18:20</span> 수 2022/11/21</div>
+                          </a>
+                        </li>
+                      </ul><!--theater_available_unit-->
+
+                      <ul class="theater_available_unit available_thursday">
+                        <li class="now_available">
+                          <a href="#!">
+                            <div class="theater_available_place">소극장</div>
+                            <div class="theater_state">예약가능</div>
+                            <div class="theater_available_time"><span>10:20</span> 목 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="unusable">
+                          <a href="#!">
+                            <div class="theater_available_place">중극장</div>
+                            <div class="theater_state">예약불가</div>
+                            <div class="theater_available_time"><span>11:50</span> 목 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="now_available">
+                          <a href="#!">
+                            <div class="theater_available_place">소극장</div>
+                            <div class="theater_state">예약가능</div>
+                            <div class="theater_available_time"><span>15:20</span> 목 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="unusable">
+                          <a href="#!">
+                            <div class="theater_available_place">시네마데크</div>
+                            <div class="theater_state">예약불가</div>
+                            <div class="theater_available_time"><span>18:10</span> 목 2022/11/21</div>
+                          </a>
+                        </li>
+                      </ul><!--theater_available_unit-->
+
+                      <ul class="theater_available_unit available_friday">
+                        <li class="unusable">
+                          <a href="#!">
+                            <div class="theater_available_place">중극장</div>
+                            <div class="theater_state">예약불가</div>
+                            <div class="theater_available_time"><span>09:40</span> 금 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="unusable">
+                          <a href="#!">
+                            <div class="theater_available_place">중극장</div>
+                            <div class="theater_state">예약불가</div>
+                            <div class="theater_available_time"><span>11:20</span> 금 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="unusable">
+                          <a href="#!">
+                            <div class="theater_available_place">시네마데크</div>
+                            <div class="theater_state">예약불가</div>
+                            <div class="theater_available_time"><span>17:20</span> 금 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="now_available">
+                          <a href="#!">
+                            <div class="theater_available_place">소극장</div>
+                            <div class="theater_state">예약가능</div>
+                            <div class="theater_available_time"><span>19:50</span> 금 2022/11/21</div>
+                          </a>
+                        </li>
+                      </ul><!--theater_available_unit-->
+
+                      <ul class="theater_available_unit available_saturday">
+                        <li class="unusable">
+                          <a href="#!">
+                            <div class="theater_available_place">시네마데크</div>
+                            <div class="theater_state">예약불가</div>
+                            <div class="theater_available_time"><span>10:50</span> 토 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="now_available">
+                          <a href="#!">
+                            <div class="theater_available_place">소극장</div>
+                            <div class="theater_state">예약가능</div>
+                            <div class="theater_available_time"><span>13:50</span> 토 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="now_available">
+                          <a href="#!">
+                            <div class="theater_available_place">소극장</div>
+                            <div class="theater_state">예약가능</div>
+                            <div class="theater_available_time"><span>14:20</span> 토 2022/11/21</div>
+                          </a>
+                        </li>
+                        <li class="now_available">
+                          <a href="#!">
+                            <div class="theater_available_place">소극장</div>
+                            <div class="theater_state">예약가능</div>
+                            <div class="theater_available_time"><span>18:50</span> 토 2022/11/21</div>
+                          </a>
+                        </li>
+                      </ul><!--theater_available_unit-->
+                    </div><!--theater_schedule_available-->
+                  </div><!--theater_schedule-->
+                  <div class="confirm_box">
+                    <label for="chk_fast_reserve">취소</label>
+                    <button class="btn_next">다음</button>
+                  </div><!--confirm_box-->
+                </div><!--detail_info-->
+              </div><!--resizing_box-->
+            </div><!--select_theater-->
+    
+            <div class="swiper-slide select_seats">
+              <div class="resizing_box">
+                <input type="checkbox" id="chk_refund_guide" />
+                <div class="select_seats_title">좌석 선택하기</div>
+                <div class="select_seats_box">
+                  <div class="select_seat_display">
+                    <img src="../images/theater_seats_01.jpg" alt="영화관_좌석이미지_01" />
+                  </div>
+                </div><!--select_seats_box-->
+                <div class="selected_seats_box">
+                  <div class="selected_seats_title">선택한 좌석</div>
+                  <ul class="selected_seats_list">
+                    <li class="selected_seats_empty">-</li>
+                    <li class="selected_seats_g16">1층 균일석 G열 16번</li>
+                  </ul>
+                </div><!--selected_seats_box-->
+                <div class="choose_ticket_box">
+                  <div class="choose_ticket_title">티켓의 종류를 선택하세요 <span class="number_limit">( 0/1 )</span></div>
+                  <label for="chk_refund_guide" class="lab_refund_guide">
+                    <i class="fa-regular fa-circle-question"></i>
+                    <span>취소/환불 가이드</span>
+                  </label>
+                  <div class="morning_ticket">
+                    <div class="ticket_name">조조50</div>
+                    <div class="ticket_number">
+                      <input type="number" id="ticket_morning" />
+                    </div>
+                  </div><!--morning_ticket-->
+                  <div class="disabled_people_ticket">
+                    <div class="ticket_name">장애인</div>
+                    <div class="ticket_number">
+                      <input type="number" id="ticket_disabled_people" />
+                    </div>
+                  </div><!--disabled_people_ticket-->
+                  <div class="advance_ticket">
+                    <div class="ticket_name">예매권 사용</div>
+                    <div class="ticket_number">
+                      <input type="number" id="ticket_advance" />
+                    </div>
+                  </div><!--advance_ticket-->
+                </div><!--choose_ticket_box-->
+                <div class="confirm_box">
+                  <button class="btn_previous">이전</button>
+                  <button class="btn_next">다음</button>
+                </div><!--confirm_box-->
+                <div class="refund_guide_box">
+                  <label for="chk_refund_guide" class="refund_guide_text">
+                    <p class="refund_guide_category">[공연]</p>
+                    <p>
+                      10일전 : 전액 환급<br />
+                      9일전 ~ 7일전 : 10% 공제 후 환급<br />
+                      6일전 ~ 3일전 : 20% 공제 후 환급<br />
+                      2일전 ~ 1일전 : 30% 공제 후 환급<br />
+                      당일 : 90% 공제 후 환급<br />
+                    </p>
+                  </label>
+                  <label for="chk_refund_guide" class="close_refund_guide">
+                    <i class="fa-solid fa-xmark"></i>
+                  </label>
+                </div><!--refund_guide_sheet-->
+              </div><!--resizing_box-->
+            </div><!--select_seats-->
+    
+            <div class="swiper-slide pay">
+              <div class="resizing_box">
+                <div class="pay_title">결제수단을 선택하세요</div>
+                <div class="pay_price">
+                  <span>최종결제금액 :</span><span class="final_price">5,000</span><span>원</span>
+                </div>
+                <ul class="pay_method">
+                  <li>
+                    <input type="radio" name="fast_pay_method" class="rad_normal" id="rad_pay_credit_card" checked />
+                    <label for="rad_pay_credit_card">&nbsp;신용카드</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="fast_pay_method" class="rad_normal" id="rad_pay_phone" />
+                    <label for="rad_pay_phone">&nbsp;휴대폰</label>
+                  </li>
+                  <li class="pay_naver">
+                    <input type="radio" name="fast_pay_method" class="rad_normal" id="rad_pay_naver" />
+                    <label for="rad_pay_naver" class="lab_pay_naver">&nbsp;네이버페이</label>
+                  </li>
+                  <li class="pay_naver">
+                    <input type="radio" name="fast_pay_method" class="rad_normal" id="rad_pay_paypal" />
+                    <label for="rad_pay_paypal" class="lab_pay_paypal">&nbsp;PayPal</label>
+                  </li>
+                </ul><!--pay_method-->
+                <div class="confirm_box">
+                  <button class="btn_previous">이전</button>
+                  <button class="btn_next">다음</button>
+                </div><!--confirm_box-->
+              </div><!--resizing_box-->
+            </div><!--pay-->
+          </div><!--swiper-wrapper-->
+        </div><!--fast_reserve_sheet_box-->
+      </div><!--fast_reserve_contents-->
+    </section>
+    <!--fast_reserve-->
+
     <!---------- header_box ---------->
     <div class="header_box">
       <input type="checkbox" id="chk_ham" />
@@ -893,19 +1477,17 @@
     </footer>
     <!--footer-->
   
-    <!---------- quick_menu ---------->
-    <aside class="quick_menu">
-      <a href="#!" class="btn_fast_reserve">빠른<br />예매</a>
-      <a href="#to_the_top_anchor_point" class="btn_to_top">
-        <i class="fa-solid fa-arrow-up"></i>
-      </a>
-      <a href="#footer" class="btn_to_bottom">
-        <i class="fa-solid fa-arrow-down"></i>
-      </a>
-    </aside>
-    <!--quick_menu-->
-  </div>
-  <!--wrap-->
+  <!---------- quick_menu ---------->
+  <aside class="quick_menu">
+    <label for="chk_fast_reserve" class="btn_fast_reserve">빠른<br />예매</label>
+    <a href="#to_the_top_anchor_point" class="btn_to_top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    <a href="#footer" class="btn_to_bottom">
+      <i class="fa-solid fa-arrow-down"></i>
+    </a>
+  </aside>
+  <!--quick_menu-->
 
   
 </body>

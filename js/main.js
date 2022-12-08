@@ -81,250 +81,66 @@ let scheduleWeeklyBanner = new Swiper(".schedule_banner", {
 // -------- ↓↓↓ jQuery --------
 $(function(){
   // -------- schedule_monthly --------
+  // -------- 날짜선택기능 ( 달력은 추후 자바스크립트를 이용한 무한달력으로 개편 예정 ) --------
   let btnScheduleAll = $('.schedule_shadow_box .schedule_calendar .schedule_calendar_sheet li a');
-  let allUnitOfSchedule = $('.schedule_shadow_box .schedule_monthly_sheet .schedule_monthly_sheet_unit');
+  let unitScheduleAll = $('.schedule_shadow_box .schedule_monthly_sheet .schedule_monthly_sheet_unit');
+
+  const unitScheduleSunday = $('.schedule_shadow_box .schedule_monthly_sheet .schedule_day_sunday');
+  const unitScheduleMonday = $('.schedule_shadow_box .schedule_monthly_sheet .schedule_day_monday');
+  const unitScheduleTuesday = $('.schedule_shadow_box .schedule_monthly_sheet .schedule_day_tuesday');
+  const unitScheduleWednesday = $('.schedule_shadow_box .schedule_monthly_sheet .schedule_day_wednesday');
+  const unitScheduleThursday = $('.schedule_shadow_box .schedule_monthly_sheet .schedule_day_thursday');
+  const unitScheduleFriday = $('.schedule_shadow_box .schedule_monthly_sheet .schedule_day_friday');
+  const unitScheduleSaturday = $('.schedule_shadow_box .schedule_monthly_sheet .schedule_day_saturday');
 
   // -------- 실제로 만들어진 시트 ( * 7개 : calendar_221120 ~ calendar_221126 ) --------
-  $('#btn_calendar_221120').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221120').addClass('calendar_visible');
-  });
+  function displayScheduleUnit (dayNum) {
+    let day = dayNum%7;
+    unitScheduleAll.removeClass('calendar_visible');
+    switch (day) {
+      case 0:
+        unitScheduleMonday.addClass('calendar_visible');
+        break;
+      case 1:
+        unitScheduleTuesday.addClass('calendar_visible');
+        break;
+      case 2:
+        unitScheduleWednesday.addClass('calendar_visible');
+        break;
+      case 3:
+        unitScheduleThursday.addClass('calendar_visible');
+        break;
+      case 4:
+        unitScheduleFriday.addClass('calendar_visible');
+        break;
+      case 5:
+        unitScheduleSaturday.addClass('calendar_visible');
+        break;
+      case 6:
+        unitScheduleSunday.addClass('calendar_visible');
+        break;
+    }
+  }
 
-  $('#btn_calendar_221121').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221121').addClass('calendar_visible');
-  });
+  // 선택된 날짜 변환 함수 (콜백함수 호출)
+  function changeScheduleDate(dateS) {
+  // 표시된 달력 날짜 변경
+  btnScheduleAll.removeClass('calendar_on');
+  dateS.addClass('calendar_on');
 
-  $('#btn_calendar_221122').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221122').addClass('calendar_visible');
-  });
+  // 월 계산 후 유닛 변경
+  let idValue = dateS.attr('id');
+  let whatDate = idValue.slice(idValue.length-2, idValue.length);
+  let dateValue = parseInt(whatDate);
+  
+  displayScheduleUnit(dateValue);
+  }
 
-  $('#btn_calendar_221123').click(function(e){
+  // 버튼 클릭시 함수 호출
+  btnScheduleAll.click(function(e) {
     e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221123').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221124').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221124').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221125').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221125').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221126').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221126').addClass('calendar_visible');
-  });
-
-  // -------- 더미 시트 (임시 시트) --------
-  $('#btn_calendar_221101').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221122').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221102').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221123').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221103').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221124').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221104').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221125').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221105').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221126').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221106').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221120').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221107').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221121').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221108').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221122').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221109').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221123').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221110').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221124').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221111').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221125').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221112').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221126').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221113').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221120').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221114').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221121').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221115').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221122').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221116').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221123').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221117').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221124').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221118').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221125').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221119').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221126').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221127').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221120').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221128').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221121').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221129').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221122').addClass('calendar_visible');
-  });
-
-  $('#btn_calendar_221130').click(function(e){
-    e.preventDefault;
-    btnScheduleAll.removeClass('calendar_on');
-    $(this).addClass('calendar_on');
-    allUnitOfSchedule.removeClass('calendar_visible');
-    $('.calendar_221123').addClass('calendar_visible');
-  });
+    changeScheduleDate($(this));
+  })
 
 })
 // -------- ↑↑↑ jQuery --------
@@ -353,17 +169,17 @@ let recommendMovie = new Swiper(".recommend_sheet_movie", {
       spaceBetween: 20,
       allowTouchMove : true
     },
-    600 : {
+    601 : {
       slidesPerView: 3,
       spaceBetween: 25,
       allowTouchMove : true
     },
-    768 : {
+    769 : {
       slidesPerView: 4,
       spaceBetween: 29,
       allowTouchMove : false
     },
-    1024 : {
+    1025 : {
       slidesPerView: 4,
       spaceBetween: 37,
       allowTouchMove : false
@@ -383,17 +199,17 @@ let recommendConcert = new Swiper(".recommend_sheet_concert", {
       spaceBetween: 20,
       allowTouchMove : true
     },
-    600 : {
+    601 : {
       slidesPerView: 3,
       spaceBetween: 25,
       allowTouchMove : true
     },
-    768 : {
+    769 : {
       slidesPerView: 4,
       spaceBetween: 29,
       allowTouchMove : false
     },
-    1024 : {
+    1025 : {
       slidesPerView: 4,
       spaceBetween: 37,
       allowTouchMove : false
@@ -413,17 +229,17 @@ let recommendExhbition = new Swiper(".recommend_sheet_exhibition", {
       spaceBetween: 20,
       allowTouchMove : true
     },
-    600 : {
+    601 : {
       slidesPerView: 3,
       spaceBetween: 25,
       allowTouchMove : true
     },
-    768 : {
+    769 : {
       slidesPerView: 4,
       spaceBetween: 29,
       allowTouchMove : false
     },
-    1024 : {
+    1025 : {
       slidesPerView: 4,
       spaceBetween: 37,
       allowTouchMove : false
@@ -441,10 +257,10 @@ let criticSlide = new Swiper(".critic_slide_sheet", {
     prevEl: ".critic_control_box .angle_left",
   },
   breakpoints: {
-    768 : {
+    769 : {
       spaceBetween: 29
     },
-    1024 : {
+    1025 : {
       spaceBetween: 37
     }
   }
@@ -459,17 +275,17 @@ let eventSlide = new Swiper(".event_sheet", {
       spaceBetween: 20,
       allowTouchMove : true
     },
-    600 : {
+    601 : {
       slidesPerView: 2,
       spaceBetween: 25,
       allowTouchMove : true
     },
-    768 : {
+    769 : {
       slidesPerView: 2,
       spaceBetween: 30,
       allowTouchMove : false
     },
-    1024 : {
+    1025 : {
       slidesPerView: 2.01, // box-shadow를 보이게하기 위해서 2대신 입력
       spaceBetween: 40,
       allowTouchMove : false
