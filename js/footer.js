@@ -230,7 +230,8 @@ $(function(){
   // Next 버튼
   btnNextInTheater.click(function() {
     if (stateTheater) {
-      paginationSeats.addClass('proceeding');
+      paginationSeats.addClass('proceeding'); // 오류 방지 위해 pagination 전체 설정. ( jQuery가 느려서 그런건지, paginationPay는 proceeding 클래스가 남아있는데 paginationSeats는 클래스가 남아있지않은 증상이 있어서, 버튼 클릭시마다 pagination 전체를 설정해주기로 했다. )
+      paginationPay.removeClass('proceeding');
       hiddenBtnNext.click();
     } else {
       alert('이용할 극장을 선택해주세요');
@@ -319,6 +320,7 @@ $(function(){
       sumOfValue = valueMorning + valueDisabledPeople + valueAdvance;
       if (sumOfValue == 1) {
         seatsNumberLimit.text(`( ${sumOfValue}/1 )`); // 텍스트변경
+        paginationSeats.addClass('proceeding'); // 오류 방지위해 pagination 전체를 설정해줌.
         paginationPay.addClass('proceeding');
         hiddenBtnNext.click();
       } else {
@@ -340,7 +342,8 @@ $(function(){
 
   // Previous 버튼
   btnPreviousInSeats.click(function() {
-    paginationSeats.removeClass('proceeding');
+    paginationSeats.removeClass('proceeding'); // 오류 방지위해 pagination 전체를 설정해줌.
+    paginationPay.removeClass('proceeding');
     hiddenBtnPrevious.click();
   });
 
@@ -352,6 +355,7 @@ $(function(){
 
   // Previous 버튼
   btnPreviousInPay.click(function() {
+    paginationSeats.addClass('proceeding'); // 오류 방지위해 pagination 전체를 설정해줌.
     paginationPay.removeClass('proceeding');
     hiddenBtnPrevious.click();
   });

@@ -1,3 +1,12 @@
+# 2022.12.09 dureraum_project 12번째 업로드
+
+### 빠른예매 pagination 수정
+footer.js에 있는 fast_reserve 섹션(빠른예매 섹션)의 상단 pagination이, 페이지에 맞게 되지않는 경우가,
+모바일 환경에서 netlify를 통해 관찰해보니 가끔씩 보여서 페이지가 넘어갈때마다 pagination 일부가 아니라 전체를 다 초기화 해주는 방법을 취하기로 해 이 부분만 수정해주었다.
+    - footer.js : 233 ~ 359줄 사이 수정
+
+------
+
 # 2022.12.09 dureraum_project 11번째 업로드
 
 sub_page_about.js에서 history 섹션 진입시 라벨제어하는 트리거 변수와, 푸터 진입시 라벨 제어하는 트리거 변수가
