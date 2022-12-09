@@ -1,6 +1,6 @@
 // history 섹션 진입시 라벨 제어 (ScrollMagic)
 const wrap = document.querySelector('.wrap');
-const isEnterHistory = document.querySelectorAll('.history.is_enter_history');
+const isEnterHistory = document.querySelector('.history.is_enter_history');
 let sceneLabelHistory = new ScrollMagic
     .Scene({
       triggerElement: isEnterHistory, // 트리거엘리먼트 : isEnterHistory
@@ -24,7 +24,7 @@ let sceneHistorySheets = scrollObservers.forEach(function (scrollObserver) {
 
 // 푸터 진입시 라벨 제어 (ScrollMagic)
 const footer = document.querySelector('.footer');
-const isEnterfooter = document.querySelectorAll('.footer.is_enter_footer');
+const isEnterfooter = document.querySelector('.footer.is_enter_footer');
 let sceneEnterFooter = new ScrollMagic
     .Scene({
       triggerElement: isEnterfooter, // 트리거엘리먼트 : isEnterfooter

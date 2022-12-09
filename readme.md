@@ -1,5 +1,11 @@
+# 2022.12.09 dureraum_project 11번째 업로드
 
-# 2022.12.09 dureraum_project 여덟번째, 아홉번째 업로드
+sub_page_about.js에서 history 섹션 진입시 라벨제어하는 트리거 변수와, 푸터 진입시 라벨 제어하는 트리거 변수가
+1개 밖에 없는데도 querySelectorAll을 사용하고있어, querySelector로 변경시켜줬다.
+
+------
+
+# 2022.12.09 dureraum_project 8,9,10번째 업로드
 
 마크다운 문서를 최신순이 위로 오도록 정렬하고 마크다운 문법도 수정했다.
 
