@@ -181,7 +181,7 @@ $(function(){
 
   // -------- 빠른예매 내부 페이지 이동 --------
   // 빠른예매 버튼
-  const btnFastReserve = $('.quick_menu .btn_fast_reserve');
+  // const btnFastReserve = $('.quick_menu .btn_fast_reserve');
 
   // 페이지 ( 총 3페이지 - select_theater, select_seats, pay )
   const selectTheater = $('.fast_reserve .fast_reserve_contents .fast_reserve_sheet_box .select_theater');
@@ -190,7 +190,7 @@ $(function(){
 
   // 검색하기 박스
   const btnSearch = $('.fast_reserve .fast_reserve_contents .fast_reserve_sheet_box .select_theater .search_icon');
-  const inputSearch = $('.fast_reserve .select_theater #fast_reserve_search_input');
+  // const inputSearch = $('.fast_reserve .select_theater #fast_reserve_search_input');
 
   // swiper 제어 버튼 (안보임)
   const hiddenBtnNext = $('.fast_reserve .fast_reserve_contents .fast_reserve_sheet_box .hidden_btn_next');
@@ -244,6 +244,8 @@ $(function(){
   const inputDisabledPeopleTicket = $('.fast_reserve .select_seats #ticket_disabled_people');
   const inputAdvanceTicket = $('.fast_reserve .select_seats #ticket_advance');
 
+  const seatsNumberLimit = $('.fast_reserve .fast_reserve_contents .select_seats .number_limit');
+
   let valueMorning = 0;
   let valueDisabledPeople = 0;
   let valueAdvance = 0;
@@ -256,34 +258,58 @@ $(function(){
     stateSeats = true;
   });
   
-  // 티켓 수량 판별 기능
+  // 티켓 수량 판별 기능 - 완벽하진않지만 간단하게 구조를 만들어보았다.
+  // 버튼클릭시 seatsNumberLimit의 텍스트가 변경된다. ( 1/1 ) → ( 0/1 ) or ( 0/1 ) → ( 1/1 )로.
   inputMorningTicket.change(function(){
-    if (parseInt(inputMorningTicket.val()) > 0 ) {
-      valueMorning = parseInt(inputMorningTicket.val());
-    } else {
+    if (inputMorningTicket.val().length == 0) {
+      valueMorning = 0;
+    } else if (parseInt(inputMorningTicket.val()) < 0) {
       alert('1 이상의 수를 입력해주세요');
+      seatsNumberLimit.text('( 0/1 )'); // seatsNumberLimit의 텍스트변경
       inputMorningTicket.val('');
-      inputMorningTicket.focus();
+      inputDisabledPeopleTicket.val('');
+      inputAdvanceTicket.val('');
+      valueMorning = 0; // 초기화 - seatsNumberLimit의 표기를 바꾸기 때문에 불가피하게 3개 전부 초기화했다. (현재 구조에서는)
+      valueDisabledPeople = 0; // 초기화
+      valueAdvance = 0; // 초기화
+      // inputMorningTicket.focus(); // 포커스가 정상적으로 작동하지않아 원인분석까지 주석처리해놓았다.
+    } else if (parseInt(inputMorningTicket.val()) > 0) {
+      valueMorning = parseInt(inputMorningTicket.val());
     }
   });
 
   inputDisabledPeopleTicket.change(function(){
-    if (parseInt(inputDisabledPeopleTicket.val()) > 0 ) {
-      valueDisabledPeople = parseInt(inputDisabledPeopleTicket.val());
-    } else {
+    if (inputDisabledPeopleTicket.val().length == 0) {
+      valueDisabledPeople = 0;
+    } else if (parseInt(inputDisabledPeopleTicket.val()) < 0) {
       alert('1 이상의 수를 입력해주세요');
+      seatsNumberLimit.text('( 0/1 )'); // seatsNumberLimit의 텍스트변경
+      inputMorningTicket.val('');
       inputDisabledPeopleTicket.val('');
-      inputDisabledPeopleTicket.focus();
+      inputAdvanceTicket.val('');
+      valueMorning = 0; // 초기화 - seatsNumberLimit의 표기를 바꾸기 때문에 불가피하게 3개 전부 초기화했다. (현재 구조에서는)
+      valueDisabledPeople = 0; // 초기화
+      valueAdvance = 0; // 초기화
+      // inputDisabledPeopleTicket.focus(); // 포커스가 정상적으로 작동하지않아 원인분석까지 주석처리해놓았다.
+    } else if (parseInt(inputDisabledPeopleTicket.val()) > 0) {
+      valueDisabledPeople = parseInt(inputDisabledPeopleTicket.val());
     }
   });
-
+  
   inputAdvanceTicket.change(function() {
-    if (parseInt(inputAdvanceTicket.val()) > 0) {
-      valueAdvance = parseInt(inputAdvanceTicket.val());
-    } else {
-      alert('1 이상의 수를 입력해주세요');
+    if (inputAdvanceTicket.val().length == 0) {
+      valueAdvance = 0;
+    } else if (parseInt(inputAdvanceTicket.val()) < 0) {
+      seatsNumberLimit.text('( 0/1 )'); // seatsNumberLimit의 텍스트변경
+      inputMorningTicket.val('');
+      inputDisabledPeopleTicket.val('');
       inputAdvanceTicket.val('');
-      inputAdvanceTicket.focus();
+      valueMorning = 0; // 초기화 - seatsNumberLimit의 표기를 바꾸기 때문에 불가피하게 3개 전부 초기화했다. (현재 구조에서는)
+      valueDisabledPeople = 0; // 초기화
+      valueAdvance = 0; // 초기화
+      // inputAdvanceTicket.focus(); // 포커스가 정상적으로 작동하지않아 원인분석까지 주석처리해놓았다.
+    } else if (parseInt(inputAdvanceTicket.val()) > 0) {
+      valueAdvance = parseInt(inputAdvanceTicket.val());
     }
   });
   
@@ -292,13 +318,19 @@ $(function(){
     if (stateSeats) {
       sumOfValue = valueMorning + valueDisabledPeople + valueAdvance;
       if (sumOfValue == 1) {
+        seatsNumberLimit.text(`( ${sumOfValue}/1 )`); // 텍스트변경
         paginationPay.addClass('proceeding');
         hiddenBtnNext.click();
       } else {
         alert('선택한 좌석수만큼 수량을 정확히 입력해주세요.');
+        sumOfValue = 0; // 초기화
+        seatsNumberLimit.text(`( ${sumOfValue}/1 )`); // 텍스트변경
         inputMorningTicket.val('');
         inputDisabledPeopleTicket.val('');
         inputAdvanceTicket.val('');
+        valueMorning = 0; // 초기화
+        valueDisabledPeople = 0; // 초기화
+        valueAdvance = 0; // 초기화
         inputMorningTicket.focus();
       }
     } else {

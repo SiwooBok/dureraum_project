@@ -371,6 +371,43 @@
   float: left;
 }
 
+/* 스크롤바 모양 설정 */
+.schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet::-webkit-scrollbar {
+  height: 17px;
+  background-color: transparent;
+}
+
+.schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet::-webkit-scrollbar-thumb {
+  background-color: rgba(175, 175, 175, 0.5);
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+.schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet::-webkit-scrollbar-track {
+  background-color: rgba(241, 241, 241, 0.5);
+  box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet::-webkit-scrollbar-button:horizontal:start,
+.schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet::-webkit-scrollbar-button:horizontal:end {
+  width: 17px;
+  height: 17px;
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(241, 241, 241, 0.5);
+}
+
+.schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet::-webkit-scrollbar-button:horizontal:start {
+  background-image: url("./images/scrollbar_caret_left.svg");
+}
+
+.schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet::-webkit-scrollbar-button:horizontal:end {
+  background-image: url("./images/scrollbar_caret_right.svg");
+}
+
+/* 다시 원래 흐름대로 schedule_monthly_sheet 구조 설정 영역 */
 .schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet .schedule_monthly_sheet_unit {display: none; width: 180%;}
 .schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet .calendar_visible {display: flex;}
 

@@ -420,7 +420,14 @@
 .fast_reserve_contents .fast_reserve_sheet_box .select_pay .resizing_box {
   /* height: 450px; */
   height: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+.fast_reserve_contents .fast_reserve_sheet_box .resizing_box::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 /*-------- select_theater (search_box) --------*/
@@ -995,6 +1002,28 @@
   .fast_reserve_contents .fast_reserve_sheet_box .pay .pay_title {margin-top: 50px; margin-bottom: 10px;}
   .fast_reserve_contents .fast_reserve_sheet_box .pay .pay_price {margin-bottom: 90px;}
   .fast_reserve_contents .fast_reserve_sheet_box .pay .pay_method {margin-bottom: 86px;}
+
+  /* 스크롤바 스타일 부여. - 600px부터 화면너비에 여유가 생기고 스크롤바가 있어도 지저분해보이지않음. */
+  .fast_reserve_contents .fast_reserve_sheet_box .resizing_box::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+  }
+  
+  .fast_reserve_contents .fast_reserve_sheet_box .resizing_box::-webkit-scrollbar-thumb {
+    background-color: rgba(175, 175, 175, 0.5);
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+  }
+  
+  .fast_reserve_contents .fast_reserve_sheet_box .resizing_box::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .fast_reserve_contents .fast_reserve_sheet_box .resizing_box::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
 }
 
 /*-------- all_and_769px ↑ --------*/
@@ -1068,6 +1097,12 @@
   .fast_reserve_contents .fast_reserve_sheet_box .pay .pay_title {margin-bottom: 30px;}
   .fast_reserve_contents .fast_reserve_sheet_box .pay .pay_price {margin-bottom: 120px;}
   .fast_reserve_contents .fast_reserve_sheet_box .pay .pay_method {margin-bottom: 116px;}
+
+
+  /* 스크롤바 굵기 조정 (8 → 10px) */
+  .fast_reserve_contents .fast_reserve_sheet_box .resizing_box::-webkit-scrollbar {
+    width: 10px;
+  }
 }
 
 /*-------- all_and_1025px ↑ --------*/
@@ -1102,6 +1137,11 @@
   .fast_reserve_contents .fast_reserve_sheet_box .pay .pay_title {margin-top: 60px;}
   .fast_reserve_contents .fast_reserve_sheet_box .pay .pay_price {margin-bottom: 160px;}
   .fast_reserve_contents .fast_reserve_sheet_box .pay .pay_method {margin-bottom: 166px;}
+
+  /* 스크롤바 굵기 조정 (10 → 12px) */
+  .fast_reserve_contents .fast_reserve_sheet_box .resizing_box::-webkit-scrollbar {
+    width: 12px;
+  }
 }
 
 /*-------- all_and_1360px ↑ --------*/
