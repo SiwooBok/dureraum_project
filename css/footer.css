@@ -241,7 +241,7 @@
   width: 100%;
 }
 
-/*-------- quick_menu --------*/
+/*-------- quick_menu & btn_fast_reserve --------*/
 .quick_menu {
   display: block;
   position: fixed;
@@ -251,20 +251,52 @@
 }
 
 .quick_menu .btn_fast_reserve {
-  display: flex;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.quick_menu .btn_fast_reserve .btn_coin {
   width: 40px;
   height: 40px;
   font-size: 0.625rem;
-  color: #fff;
-  background-color: #2E3192;
-  border-radius: 50%;
+  position: relative;
+  perspective: 45px;
+}
+
+/* 빠른예매 자동 회전 애니메이션은 main.css에 있음 ( 메인페이지에서만 자동 회전 애니메이션 적용 ) */
+.quick_menu .btn_fast_reserve .btn_coin_front,
+.quick_menu .btn_fast_reserve .btn_coin_back {
+  display: flex;
+  width: 40px;
+  height: 40px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 8px;
-  cursor: pointer;
+  border-radius: 50%;
+  backface-visibility: hidden;
   transition: all .3s;
 }
 
+.quick_menu .btn_fast_reserve .btn_coin_front {
+  color: #fff;
+  background-color: #2E3192;
+  transform: rotateY(0);
+}
+
+/* ↓ 컬러변경시 참고 : #d0ca30 */
+.quick_menu .btn_fast_reserve .btn_coin_back {
+  color: #fff;
+  background-color: #f4b807;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+}
+
+/*-------- quick_menu ( btn_to_top, btn_to_bottom ) --------*/
 .quick_menu .btn_to_top {
   display: block;
   width: 40px;
@@ -325,6 +357,9 @@
 
 #chk_fast_reserve {display: none;}
 #chk_fast_reserve:checked ~ .fast_reserve {opacity: 1; visibility: visible;}
+/* 빠른예매 기능 이용중일때는 애니메이션 정지 - main.css 참고 ( main.js의 jQuery섹션에서 이 기능을 대신 처리해주기때문에, 추후변동사항이 생길때를 대비해 주석처리함 ) */
+/* #chk_fast_reserve:checked ~ .quick_menu .btn_fast_reserve .btn_coin_front {transform: rotateY(0deg); animation: none;}
+#chk_fast_reserve:checked ~ .quick_menu .btn_fast_reserve .btn_coin_back {transform: rotateY(180deg); animation: none;} */
 
 /*-------- fast_reserve_contents ( fast_reserve_pagination ) --------*/
 .fast_reserve .fast_reserve_contents {
@@ -1079,11 +1114,17 @@
   .footer .footer_info {font-size: 0.75rem;}
   .footer .footer_info .footer_info_br {display: none;}
 
-  .quick_menu .btn_fast_reserve:hover,
-  .quick_menu .btn_fast_reserve:focus {background-color: #f4b807;}
-
-  /* footer.js → 최초화면과, 아래로 스크롤 했을시에만 퀵메뉴가 보이게 만듬. */
+  /* footer.js → 최초화면과, 아래로 스크롤 했을시에만 퀵메뉴가 보이도록 의도. */
   .quick_menu {right: 20px;}
+  /* 빠른예매 버튼 호버시 뒷면 보이도록 */
+  .quick_menu .btn_fast_reserve:hover .btn_coin_front {
+    transform: rotateY(180deg);
+    animation: none;
+  }
+  .quick_menu .btn_fast_reserve:hover .btn_coin_back {
+    transform: rotateY(360deg);
+    animation: none;
+  }
 
   .fast_reserve .fast_reserve_contents {max-width: 600px; height: 600px;}
   .fast_reserve_contents .fast_reserve_sheet_box .confirm_box {margin-top: 70px; margin-bottom: 50px;}

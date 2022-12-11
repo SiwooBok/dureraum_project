@@ -314,14 +314,18 @@
   margin-bottom: 19px;
 }
 
-.history .history_sheet_box .history_sheet .history_content_box {
-  padding: 28px 0;
+.history .history_sheet_box .history_sheet .history_content_outer_box {
   border-top: 1px dashed #000;
   border-bottom: 1px solid #000;
   box-sizing: border-box;
 }
 
-.history .history_sheet_box .history_sheet .history_content_box .history_content {
+.history .history_sheet_box .history_sheet .history_content_outer_box .history_content_inner_box {
+  padding: 28px 0;
+  box-sizing: border-box;
+}
+
+.history .history_sheet_box .history_sheet .history_content_outer_box .history_content {
   display: flex;
   width: 100%;
   padding: 0 10%;
@@ -329,7 +333,7 @@
   margin-bottom: 10px;
 }
 
-.history .history_sheet_box .history_sheet .history_content_box .history_content .history_icon {
+.history .history_sheet_box .history_sheet .history_content_outer_box .history_content .history_icon {
   width: 28px;
   min-width: 28px;
   height: 28px;
@@ -339,36 +343,48 @@
   margin-right: 20px;
 }
 
-.history .history_sheet_box .history_sheet .history_content_box .history_content .history_icon_january {background-image: url("./images/slate_01.svg");}
-.history .history_sheet_box .history_sheet .history_content_box .history_content .history_icon_february {background-image: url("./images/slate_02.svg");}
-.history .history_sheet_box .history_sheet .history_content_box .history_content .history_icon_march {background-image: url("./images/slate_03.svg");}
-.history .history_sheet_box .history_sheet .history_content_box .history_content .history_icon_april {background-image: url("./images/slate_04.svg");}
-.history .history_sheet_box .history_sheet .history_content_box .history_content .history_icon_may {background-image: url("./images/slate_05.svg");}
-.history .history_sheet_box .history_sheet .history_content_box .history_content .history_icon_june {background-image: url("./images/slate_06.svg");}
-.history .history_sheet_box .history_sheet .history_content_box .history_content .history_icon_july {background-image: url("./images/slate_07.svg");}
-.history .history_sheet_box .history_sheet .history_content_box .history_content .history_icon_august {background-image: url("./images/slate_08.svg");}
-.history .history_sheet_box .history_sheet .history_content_box .history_content .history_icon_september {background-image: url("./images/slate_09.svg");}
-.history .history_sheet_box .history_sheet .history_content_box .history_content .history_icon_october {background-image: url("./images/slate_10.svg");}
-.history .history_sheet_box .history_sheet .history_content_box .history_content .history_icon_november {background-image: url("./images/slate_11.svg");}
-.history .history_sheet_box .history_sheet .history_content_box .history_content .history_icon_december {background-image: url("./images/slate_12.svg");}
+.history .history_sheet_box .history_sheet .history_content_outer_box .history_content .history_icon_january {background-image: url("./images/slate_01.svg");}
+.history .history_sheet_box .history_sheet .history_content_outer_box .history_content .history_icon_february {background-image: url("./images/slate_02.svg");}
+.history .history_sheet_box .history_sheet .history_content_outer_box .history_content .history_icon_march {background-image: url("./images/slate_03.svg");}
+.history .history_sheet_box .history_sheet .history_content_outer_box .history_content .history_icon_april {background-image: url("./images/slate_04.svg");}
+.history .history_sheet_box .history_sheet .history_content_outer_box .history_content .history_icon_may {background-image: url("./images/slate_05.svg");}
+.history .history_sheet_box .history_sheet .history_content_outer_box .history_content .history_icon_june {background-image: url("./images/slate_06.svg");}
+.history .history_sheet_box .history_sheet .history_content_outer_box .history_content .history_icon_july {background-image: url("./images/slate_07.svg");}
+.history .history_sheet_box .history_sheet .history_content_outer_box .history_content .history_icon_august {background-image: url("./images/slate_08.svg");}
+.history .history_sheet_box .history_sheet .history_content_outer_box .history_content .history_icon_september {background-image: url("./images/slate_09.svg");}
+.history .history_sheet_box .history_sheet .history_content_outer_box .history_content .history_icon_october {background-image: url("./images/slate_10.svg");}
+.history .history_sheet_box .history_sheet .history_content_outer_box .history_content .history_icon_november {background-image: url("./images/slate_11.svg");}
+.history .history_sheet_box .history_sheet .history_content_outer_box .history_content .history_icon_december {background-image: url("./images/slate_12.svg");}
 
-.history .history_sheet_box .history_sheet .history_content_box .history_content .history_text {
+.history .history_sheet_box .history_sheet .history_content_outer_box .history_content .history_text {
   font-size: 0.688rem;
   line-height: 28px;
   margin-top: 7px;
 }
 
-.history .history_sheet_box .history_sheet_2021 .history_content_box,
-.history .history_sheet_box .history_sheet_2018 .history_content_box,
-.history .history_sheet_box .history_sheet_2012 .history_content_box {
+.history .history_sheet_box .history_sheet_2021 .history_content_outer_box,
+.history .history_sheet_box .history_sheet_2018 .history_content_outer_box,
+.history .history_sheet_box .history_sheet_2012 .history_content_outer_box {
+  position: relative;
+}
+
+.history .history_sheet_box .history_sheet_2021 .history_content_outer_box .background_image_mobile,
+.history .history_sheet_box .history_sheet_2018 .history_content_outer_box .background_image_mobile,
+.history .history_sheet_box .history_sheet_2012 .history_content_outer_box .background_image_mobile {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.history .history_sheet_box .history_sheet_2021 .history_content_box {background-image: url("./images/history01_600x340_op20_mobile.jpg");}
-.history .history_sheet_box .history_sheet_2018 .history_content_box {background-image: url("./images/history02_600x412_op20_mobile.jpg");}
-.history .history_sheet_box .history_sheet_2012 .history_content_box {background-image: url("./images/history03_600x309_op20_mobile.jpg");}
+.history .history_sheet_box .history_sheet_2021 .history_content_outer_box .background_image_mobile {background-image: url("./images/history01_600x340_op20_mobile.jpg");}
+.history .history_sheet_box .history_sheet_2018 .history_content_outer_box .background_image_mobile {background-image: url("./images/history02_600x412_op20_mobile.jpg");}
+.history .history_sheet_box .history_sheet_2012 .history_content_outer_box .background_image_mobile {background-image: url("./images/history03_600x309_op20_mobile.jpg");}
 
 /*-------- history_vertical_line --------*/
 .history .history_sheet_box .history_vertical_line {
@@ -442,6 +458,7 @@
 .moving_unit.to_left {transform: translateX(150px);}
 .exposed .moving_unit {opacity: 1; transform: translateX(0);}
 .exposed .moving_unit.delay_0 {transition-delay: 0s;}
+.exposed .moving_unit.delay_05 {transition-delay: 0.15s;}
 .exposed .moving_unit.delay_1 {transition-delay: .3s;}
 .exposed .moving_unit.delay_2 {transition-delay: .6s;}
 .exposed .moving_unit.delay_3 {transition-delay: .9s;}
@@ -514,11 +531,11 @@
   .history .history_sheet_box .history_sheet_2013 {flex-direction: row-reverse;}
   .history .history_sheet_box .history_sheet_2011 {flex-direction: row-reverse;}
   .history .history_sheet_box .history_sheet_2008 {flex-direction: row-reverse;}
-  .history .history_sheet_box .history_sheet_2021 .history_content_box,
-  .history .history_sheet_box .history_sheet_2018 .history_content_box,
-  .history .history_sheet_box .history_sheet_2012 .history_content_box {background-image: none;}
+  .history .history_sheet_box .history_sheet_2021 .history_content_outer_box .background_image_mobile,
+  .history .history_sheet_box .history_sheet_2018 .history_content_outer_box .background_image_mobile,
+  .history .history_sheet_box .history_sheet_2012 .history_content_outer_box .background_image_mobile {background-image: none;}
   .history .history_sheet_box .history_sheet .history_sheet_title {margin-bottom: 25px;}
-  .history .history_sheet_box .history_sheet .history_content_box .history_content .history_text {font-size: 0.75rem;}
+  .history .history_sheet_box .history_sheet .history_content_outer_box .history_content .history_text {font-size: 0.75rem;}
   .history .history_sheet_box .history_vertical_line {display: block;}
   .history .history_sheet_box .history_image {display: flex;}
 }

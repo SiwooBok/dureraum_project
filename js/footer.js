@@ -103,7 +103,6 @@ $(function(){
     $(window).scrollTo(this.hash || 5000, 1000);
   });
 
-
   // --------  빠른예매 섹션 --------
   // -------- 날짜 선택 기능 ( 달력은 추후 자바스크립트를 이용한 무한달력으로 개편 예정 ) --------
   const btnFastAll = $('.fast_reserve .fast_reserve_contents .select_theater .theater_schedule_sheet .schedule_unit ul li a');

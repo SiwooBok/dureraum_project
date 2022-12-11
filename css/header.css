@@ -42,7 +42,8 @@ input.rad_normal:checked {
   top: 0;
   left: 0;
   /* opacity: 1; */
-  z-index: 10;
+  /* 네이버지도 api 내부의 인디케이터가 z-index:100 인것을 확인해 그보다 높게 설정함 */
+  z-index: 200;
   transition: all .3s;
 }
 
@@ -263,7 +264,8 @@ input.rad_normal:checked {
   width: 100%;
   height: 40px;
   position: relative;
-  z-index: 10;
+  /* 네이버지도 api때문에 헤더박스의 z-index를 200으로 높게 설정했는데. lnb_outer_box_non_fixed의 z-index를 그에 맞게 높여주지않으면 메인비주얼이 침범당하는 증상을 발견하고 해결하기위해 z-index를 높게잡음  */
+  z-index: 200;
 }
 
 .lnb_outer_box .lnb_inner_box {
@@ -349,7 +351,8 @@ input.rad_normal:checked {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  /* 네이버지도 api 내부의 인디케이터가 z-index:100 인것을 확인해 그보다 높게 설정함 */
+  z-index: 200;
   opacity: 0;
   visibility: hidden;
   transition: all .3s;

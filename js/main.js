@@ -93,7 +93,7 @@ $(function(){
   const unitScheduleFriday = $('.schedule_shadow_box .schedule_monthly_sheet .schedule_day_friday');
   const unitScheduleSaturday = $('.schedule_shadow_box .schedule_monthly_sheet .schedule_day_saturday');
 
-  // -------- 실제로 만들어진 시트 ( * 7개 : calendar_221120 ~ calendar_221126 ) --------
+  // -------- 실제로 만들어진 시트 ( * 7개 : schedule_day_sunday ~ schedule_day_saturday ) --------
   function displayScheduleUnit (dayNum) {
     let day = dayNum%7;
     unitScheduleAll.removeClass('calendar_visible');
@@ -141,6 +141,22 @@ $(function(){
     e.preventDefault;
     changeScheduleDate($(this));
   })
+
+  // -------- 퀵메뉴 자동 회전 애니메이션(메인페이지 한정 - main.css) 정지 기능 --------
+  // 빠른예매 퀵메뉴버튼 클릭한 적이 1번이라도 있으면 자동 회전 애니메이션 정지
+  const chkFastReserve = $('#chk_fast_reserve');
+  const btnQuickMenuReserveFront = $('.quick_menu .btn_fast_reserve .btn_coin .btn_coin_front');
+  const btnQuickMenuReserveBack = $('.quick_menu .btn_fast_reserve .btn_coin .btn_coin_back');
+  let countClickFastReserve = 0;
+  chkFastReserve.change(function(){
+    if(chkFastReserve.prop("checked")) {
+      countClickFastReserve += 1;
+    }
+    if (countClickFastReserve >= 1) {
+      btnQuickMenuReserveFront.css('animation', 'none');
+      btnQuickMenuReserveBack.css('animation', 'none');
+    }
+  });
 
 })
 // -------- ↑↑↑ jQuery --------
@@ -306,3 +322,8 @@ var mapOptions = {
 };
 
 var map = new naver.maps.Map('map', mapOptions);
+
+var marker = new naver.maps.Marker({
+  position: new naver.maps.LatLng(35.1710632, 129.127096),
+  map: map
+});
