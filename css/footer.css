@@ -593,7 +593,7 @@
 
 /*-------- select_theater - detail_info ( product_info ) --------*/
 .fast_reserve_contents .select_theater .detail_info .product_info {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .fast_reserve_contents .select_theater .detail_info .product_info .product_info_title {
@@ -636,9 +636,41 @@
 }
 
 .fast_reserve_contents .select_theater .detail_info .theater_schedule .theater_schedule_title {
+  display: flex;
   width: 86%;
   margin: 0 auto;
   margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.fast_reserve_contents .select_theater .detail_info .theater_schedule .theater_schedule_title .theater_schedule_title_text {
+  width: 80px;
+  height: 25px;
+  line-height: 25px;
+}
+
+.fast_reserve_contents .select_theater .detail_info .theater_schedule .theater_schedule_control_box {
+  display: flex;
+  width: 52px;
+  height: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.fast_reserve_contents .select_theater .detail_info .theater_schedule .theater_schedule_control_box .icon_unit {
+  display: flex;
+  width: 26px;
+  font-size: 0.688rem;
+  color: #ccc;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fast_reserve_contents .select_theater .detail_info .theater_schedule .theater_schedule_control_box .icon_left {
+  border-right: 1px solid #ccc;
 }
 
 .fast_reserve_contents .select_theater .detail_info .theater_schedule .theater_schedule_sheet_box {

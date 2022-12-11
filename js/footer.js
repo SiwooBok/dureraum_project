@@ -59,6 +59,18 @@ let searchRecommendSlide = new Swiper(searchRecommendSheet, {
 const theaterScheduleSheet = document.querySelector('.fast_reserve .select_theater .detail_info .theater_schedule_sheet');
 let theaterScheduleSlide = new Swiper(theaterScheduleSheet, {
   slidesPerView: 1,
+  navigation: {
+    nextEl: ".fast_reserve .theater_schedule_control_box .icon_right",
+    prevEl: ".fast_reserve .theater_schedule_control_box .icon_left",
+  },
+  breakpoints: {
+    320 : {
+      allowTouchMove : true
+    },
+    769 : {
+      allowTouchMove : false
+    }
+  }
 });
 
 // -------- fast_reserve - fast_reserve_sheet_box --------
@@ -118,28 +130,28 @@ $(function(){
 
   // availableUnit 시트 변환 함수 - 요일에 맞게 변환 (최종 switch문에서 호출되는 함수)
   function displayAvailableUnit (dayNumber) {
-    let day = dayNumber%7;
+    let day = (dayNumber%7) + 1;
     unitFastAll.removeClass('selected_available');
     switch (day) {
-      case 0:
+      case 1:
         unitFastMonday.addClass('selected_available');
         break;
-      case 1:
+      case 2:
         unitFastTuesday.addClass('selected_available');
         break;
-      case 2:
+      case 3:
         unitFastWednesday.addClass('selected_available');
         break;
-      case 3:
+      case 4:
         unitFastThursday.addClass('selected_available');
         break;
-      case 4:
+      case 5:
         unitFastFriday.addClass('selected_available');
         break;
-      case 5:
+      case 6:
         unitFastSaturday.addClass('selected_available');
         break;
-      case 6:
+      case 7:
         unitFastSunday.addClass('selected_available');
         break;
     }

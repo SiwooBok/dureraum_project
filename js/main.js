@@ -95,28 +95,28 @@ $(function(){
 
   // -------- 실제로 만들어진 시트 ( * 7개 : schedule_day_sunday ~ schedule_day_saturday ) --------
   function displayScheduleUnit (dayNum) {
-    let day = dayNum%7;
+    let day = (dayNum%7) + 1;
     unitScheduleAll.removeClass('calendar_visible');
     switch (day) {
-      case 0:
+      case 1:
         unitScheduleMonday.addClass('calendar_visible');
         break;
-      case 1:
+      case 2:
         unitScheduleTuesday.addClass('calendar_visible');
         break;
-      case 2:
+      case 3:
         unitScheduleWednesday.addClass('calendar_visible');
         break;
-      case 3:
+      case 4:
         unitScheduleThursday.addClass('calendar_visible');
         break;
-      case 4:
+      case 5:
         unitScheduleFriday.addClass('calendar_visible');
         break;
-      case 5:
+      case 6:
         unitScheduleSaturday.addClass('calendar_visible');
         break;
-      case 6:
+      case 7:
         unitScheduleSunday.addClass('calendar_visible');
         break;
     }
