@@ -68,6 +68,33 @@
   100% {width: 534px;}
 }
 
+
+.float_banner .banner_close_icon {
+  display: block;
+  width: 45px;
+  height: 45px;
+  color: #eee;
+  font-size: 22px;
+  text-align: center;
+  line-height: 45px;
+  border: none;
+  background-color: transparent;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .02s;
+  position: absolute;
+  top: -65px;
+  right: -330px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.float_banner:hover .banner_close_icon {
+  transition: opacity .2s 1s;
+  visibility: visible;
+  opacity: 1;
+}
+
 /*-------- main_visual --------*/
 .main_visual_box {
   width: 100%;
@@ -108,6 +135,7 @@
 .main_visual_box .main_visual .thumbnail_outerbox {
   display: none;
   width: 100%;
+  /* backdrop-filter: blur(3px); */
   position: absolute;
   top: calc(100% - 110px);
   left: 0;
@@ -118,10 +146,19 @@
 .main_visual_box .main_visual .thumbnail_outerbox .swiper-slide {
   width: 25%;
   height: 100%;
+  border: 1px solid rgba(242, 246, 164, 0.4);
+  filter: drop-shadow(0 1px 6px rgba(242, 246, 164, 0.6));
+  border-radius: 3px;
+  overflow: hidden;
+  box-sizing: border-box;
   opacity: 0.4;
 }
 
-.main_visual_box .main_visual .thumbnail_outerbox .swiper-slide-thumb-active {opacity: 1;}
+.main_visual_box .main_visual .thumbnail_outerbox .swiper-slide-thumb-active {
+  opacity: 1;
+  border: 1px solid rgba(242, 246, 164, 0.4);
+  filter: drop-shadow(0 1px 6px rgba(242, 246, 164, 0.75));
+}
 
 .main_visual_box .main_visual .thumbnail_outerbox .swiper-slide img {
   display: block;
@@ -153,6 +190,29 @@
 
 .main_visual_box:hover .main_visual .bar_box,
 .main_visual_box:focus .main_visual .bar_box {top: calc(100% - 28px);}
+
+.main_visual_box .main_visual .bar_box .swiper-pagination-bullet {
+  background-color: #1c23e3;
+  opacity: 0.6;
+}
+
+.main_visual_box .main_visual .bar_box .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #b0e6fd;
+  filter: drop-shadow(0 1px 10px rgba(255, 255, 255, 0.9));
+  opacity: 1;
+  transition: background-color .3s;
+}
+
+.main_visual_box:hover .main_visual .bar_box .swiper-pagination-bullet {
+  background-color: #4e1697;
+  opacity: 0.4;
+}
+
+.main_visual_box:hover .main_visual .bar_box .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #f0faa1;
+  filter: drop-shadow(0 1px 10px rgba(255, 255, 255, 0.9));
+  opacity: 1;
+}
 
 .main_visual_box .main_visual .fraction_box {
   width: 50px;
@@ -328,7 +388,7 @@
 
 .schedule .schedule_monthly .schedule_shadow_box .schedule_calendar .schedule_calendar_sheet {
   height: calc(100% - 30px);
-  font-size: 0.688rem;
+  font-size: 0.75rem;
   padding: 2.5% 2.5%;
   box-sizing: border-box;
 }
@@ -445,7 +505,7 @@
   display: block;
   width: 100%;
   height: 32px;
-  font-size: 0.625rem;
+  font-size: 0.688rem;
   line-height: 40px;
   display: flex;
 }
@@ -1153,6 +1213,8 @@
   text-overflow: ellipsis;
 }
 
+.critic_slide_sheet .swiper-wrapper .swiper-slide .critic_text>div {font-size: 0.688rem;}
+
 .critic .btn_critic_more {
   display: block;
   width: 80px;
@@ -1652,9 +1714,21 @@
   #to_the_top_anchor_point {display: none;}
   
   .main_visual_box {margin-bottom: calc(30px + 8%);}
-  .main_visual_box .main_visual .thumbnail_outerbox {background-color: rgba(0, 0, 0, 0.5); top: 100%;}
+  .main_visual_box .main_visual .thumbnail_outerbox {
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 100%;
+    backdrop-filter: blur(6px);
+  }
   .main_visual_box:hover .main_visual .thumbnail_outerbox,
   .main_visual_box:focus .main_visual .thumbnail_outerbox {top: calc(80% - 40px);}
+  .main_visual_box .main_visual .thumbnail_outerbox .swiper-slide {
+    border: 1px solid rgba(242, 246, 164, 0.2);
+    filter: drop-shadow(0 1px 6px rgba(242, 246, 164, 0.4));
+  }
+  .main_visual_box .main_visual .thumbnail_outerbox .swiper-slide-thumb-active {
+    border: 1px solid rgba(242, 246, 164, 0.2);
+    filter: drop-shadow(0 1px 6px rgba(242, 246, 164, 0.4));
+  }
   .main_visual_box .main_visual .bar_box {display: block;}
   .main_visual_box .main_visual .fraction_box {display: none;}
 
@@ -1671,6 +1745,7 @@
   .metaphor a.metaphor_package:focus .metaphor_icon_box .metaphor_icon,
   .metaphor a.metaphor_member:hover .metaphor_icon_box .metaphor_icon,
   .metaphor a.metaphor_member:focus .metaphor_icon_box .metaphor_icon {filter: invert(100); border: 1px solid #fff;}
+  .metaphor a .metaphor_title {font-size: 0.875rem;}
 
   .schedule {margin-bottom: calc(130px + 3%);}
   .schedule .schedule_monthly {display: block;}
@@ -1684,8 +1759,9 @@
   .recommend .recommend_control_box .recommend_tab {margin: 0; position: absolute; top: 0; right: calc(2% + 85px);}
   .recommend .recommend_control_box .recommend_pagination {display: block;}
   .recommend_sheet_box .recommend_sheet_bg::before {padding-top: calc(80px + 25%);}
-  .recommend_sheet_box .recommend_sheet .recommend_sheet_unit .unit_title {margin-top: 10px;}
-  .recommend_sheet_box .recommend_sheet .recommend_sheet_unit .unit_date {margin-bottom: 20px;}
+
+  .recommend_sheet_box .recommend_sheet .recommend_sheet_unit .unit_title {font-size: 0.875rem; margin-top: 10px;}
+  .recommend_sheet_box .recommend_sheet .recommend_sheet_unit .unit_date {font-size: 0.75rem; margin-bottom: 20px;}
   .recommend_sheet_box .recommend_sheet .recommend_sheet_unit .unit_image {margin-bottom: 20px;}
   .recommend_sheet_box .recommend_sheet .recommend_sheet_unit .lab_heart {font-size: 1.125rem; top: 68px; right: 0;}
 
@@ -1743,14 +1819,17 @@
   .main_visual_box:hover .main_visual .bar_box,
   .main_visual_box:focus .main_visual .bar_box {top: calc(100% - 32px);}
 
+  .metaphor a .metaphor_title {font-size: 0.938rem;}
+
+  .schedule .schedule_monthly .monthly_title {font-size: 1.063rem; margin-bottom: 20px;}
   .schedule {margin-bottom: calc(180px + 3%);}
   .schedule .schedule_monthly .schedule_shadow_box .border_right_box {width: 18%;}
   .schedule .schedule_monthly .monthly_title {margin-bottom: 30px;}
   .schedule .schedule_monthly .schedule_shadow_box .schedule_calendar_box {width: 18%;}
-  .schedule .schedule_monthly .schedule_shadow_box .schedule_calendar .schedule_calendar_sheet {font-size: 0.75rem;}
+  .schedule .schedule_monthly .schedule_shadow_box .schedule_calendar .schedule_calendar_title {font-size: 0.813rem;}
   .schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet {width: 82%;}
   .schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet .schedule_monthly_sheet_unit {width: 140%;}
-  .schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet .schedule_monthly_sheet_unit>div .schedule_content a {font-size: 0.688rem;}
+  .schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet .schedule_monthly_sheet_unit>div .schedule_content a {font-size: 0.75rem;}
   .schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet .schedule_monthly_sheet_unit>div .schedule_content a .schedule_age {
     width: 34px;
     background-position: 10px 12.5px;
@@ -1765,21 +1844,26 @@
   .trailer .swiper-wrapper .swiper-slide .trailer_unit>div .trailer_description .trailer_text {font-size: 0.938rem;}
 
   .recommend {margin-bottom: calc(180px + 3%);}
+  .recommend .recommend_title {font-size: 1.063rem;}
   .recommend_sheet_box .recommend_sheet_bg::before {padding-top: calc(30% - 20px);}
+  .recommend_sheet_box .recommend_sheet .recommend_sheet_unit .unit_date {font-size: 0.813rem;}
   .recommend_sheet_box .recommend_sheet .recommend_sheet_unit .unit_image {margin-bottom: 25px;}
   .recommend_sheet_box .recommend_sheet .recommend_sheet_unit .lab_heart {font-size: 1.25rem; top: 68px; right: 0;}
 
   .event {margin-bottom: calc(180px + 3%);}
+  .event .event_title {font-size: 1.063rem;}
 
   .critic {padding: 0 3%; margin-bottom: calc(180px + 3%);}
+  .critic .critic_title {font-size: 1.063rem;}
   .critic .critic_control_box {right: calc(4% - 8px);}
   .critic_slide_sheet .swiper-wrapper .swiper-slide .critic_text p {margin-bottom: calc(50% - 80px);}
-  .critic_slide_sheet .swiper-wrapper .swiper-slide .critic_text>div {-webkit-line-clamp: 6; height: 90px;}
+  .critic_slide_sheet .swiper-wrapper .swiper-slide .critic_text>div {font-size: 0.75rem; -webkit-line-clamp: 6; height: 100px;}
 
   .event {margin-bottom: calc(180px + 3%);}
   .event_sheet .event_unit .event_image {margin-bottom: 20px;}
 
   .sns {margin-bottom: calc(180px + 3%);}
+  .sns .sns_title {font-size: 1.188rem; margin-bottom: 40px;}
   .sns_sheet_outer_box .sns_sheet {border-bottom: 12px solid #fff;}
   .sns_sheet_outer_box .sns_sheet_01, .sns_sheet_outer_box .sns_sheet_03,
   .sns_sheet_outer_box .sns_sheet_inner_box, .sns_sheet_outer_box .sns_sheet_06 {border-right: 6px solid #fff;}
@@ -1818,7 +1902,7 @@
 
   .schedule {margin-bottom: 240px;}
   .schedule .schedule_monthly .schedule_shadow_box .border_right_box {width: 15%;}
-  .schedule .schedule_monthly .monthly_title {margin-bottom: 35px;}
+  .schedule .schedule_monthly .monthly_title {font-size: 1.125rem; margin-bottom: 35px;}
   .schedule .schedule_monthly .schedule_shadow_box {width: 100%;}
   .schedule .schedule_monthly .schedule_shadow_box .schedule_calendar_box {width: 15%;}
   .schedule .schedule_monthly .schedule_shadow_box .schedule_calendar .schedule_calendar_title {height: 40px; line-height: 40px;}
@@ -1826,11 +1910,12 @@
   .schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet .schedule_monthly_sheet_unit {width: 100%;}
   .schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet .schedule_monthly_sheet_unit>div .schedule_subject {height: 40px; line-height: 40px;}
   .schedule .schedule_monthly .schedule_shadow_box .schedule_calendar .schedule_calendar_sheet {padding-top: 8%;}
-  .schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet .schedule_monthly_sheet_unit>div .schedule_content a {font-size: 0.75rem;}
+  /* .schedule .schedule_monthly .schedule_shadow_box .schedule_monthly_sheet .schedule_monthly_sheet_unit>div .schedule_content a {font-size: 0.813rem;} */
 
   .trailer {margin-bottom: 270px;}
 
   .recommend {margin-bottom: 250px;}
+  .recommend .recommend_title {font-size: 1.125rem;}
   .recommend .recommend_control_box .recommend_tab {right: 85px;}
   .recommend .recommend_control_box .recommend_pagination .pagination_unit {right: 0;}
   .recommend_sheet_box .recommend_sheet {padding: 0;}
@@ -1841,16 +1926,19 @@
   .recommend_sheet_box .recommend_sheet_bg::before {padding-top: 400px;}
 
   .critic {padding: 0; margin-bottom: 250px;}
+  .critic .critic_title {font-size: 1.125rem;}
   .critic .critic_control_box {right: 2px;}
   .critic_slide_sheet .swiper-wrapper .swiper-slide .critic_text .critic_text_sub_title {font-size: 1rem; margin-bottom: 5px;}
   .critic_slide_sheet .swiper-wrapper .swiper-slide .critic_text p {font-size: 0.875rem; margin-bottom: 40px;}
   .critic_slide_sheet .swiper-wrapper .swiper-slide .critic_text>div {-webkit-line-clamp: 8; height: 145px; font-size: 0.813rem;}
 
   .event {margin-bottom: 250px;}
+  .event .event_title {font-size: 1.125rem;}
   .event .event_control_box {right: 6px;}
   .event .event_sheet {padding: 0;}
 
   .sns {margin-bottom: 250px;}
+  .sns .sns_title {font-size: 1.25rem; margin-bottom: 50px;}
   .sns_sheet_outer_box {width: 100%; margin: 0;}
   .sns_sheet_outer_box .sns_sheet {border-bottom: 14px solid #fff;}
   .sns_sheet_outer_box .sns_sheet_01, .sns_sheet_outer_box .sns_sheet_03,

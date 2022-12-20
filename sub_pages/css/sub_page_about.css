@@ -543,7 +543,7 @@
 @media all and (min-width:769px) {
   #to_the_top_anchor_point {display: none;}
 
-  .category {position: absolute; top: 80px;}
+  .category {position: absolute; top: 90px;}
   .category .category_filter_box {backdrop-filter: blur(1px);}
   .category .category_sheet .category_sub_menu ul {backdrop-filter: blur(1px);}
   .category .category_sheet li>i {font-size: 0.75rem;}
@@ -561,6 +561,10 @@
 }
 
 @media all and (min-width:1025px) {
+  .category .category_sheet li>i {font-size: 0.813rem;}
+  .category .category_sheet li a {font-size: 0.813rem;}
+  .category .category_sheet .category_home a {font-size: 0.813rem;}
+
   .origin .origin_top_box .origin_top {height: 1080px;}
   .origin .origin_top_box .origin_bottom {height: 1080px;}
   

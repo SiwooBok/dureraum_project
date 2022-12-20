@@ -1,4 +1,11 @@
-// 퀵메뉴 섹션
+// 검색돋보기 아이콘
+const gnbSearchIcon = document.querySelector('.header_box .header .gnb .pc_gnb_menu li.pc_gnb_search .search_icon');
+
+gnbSearchIcon.addEventListener('click', () => {
+  alert('준비중인 기능입니다');
+})
+
+// lnb 섹션
 const lnbFixed = document.querySelector('.lnb_outer_box_fixed');
 
 window.addEventListener('scroll', _.throttle(function () {

@@ -1,3 +1,12 @@
+// floatbanner 닫기
+const floatBanner = document.querySelector('.float_banner');
+const btnFloatBannerClose = document.querySelector('.float_banner .banner_close_icon');
+btnFloatBannerClose.addEventListener('click', () => {
+  // const bodyTag = document.getElementsByTagName('body');
+  floatBanner.style.display = 'none';
+  // alert('클릭함');
+})
+
 // -------- main_visual_initialize_Swiper --------
 let mainThumbnail = new Swiper(".thumbnail_innerbox", {
   spaceBetween: 10,
