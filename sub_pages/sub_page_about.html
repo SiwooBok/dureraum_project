@@ -2,11 +2,18 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
+  <meta name="robots" content="noindex,nofollow" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="모두와 함께, 영화의전당" />
+  <meta property="og:description" content="영화의 재미를 찾아서, 영화의전당" />
+  <meta property="og:site_name" content="영화의 전당" />
+
   <title>영화의 전당 소개</title>
 
-  <!---------- css ( header & footer & sub_page_about ) ---------->
+  <!---------- stylesheets ---------->
   <link rel="stylesheet" href="../css/header.css" />
   <link rel="stylesheet" href="./css/sub_page_about.css" />
   <link rel="stylesheet" href="../css/footer.css" />
@@ -14,31 +21,20 @@
   <!---------- favicon ---------->
   <link rel="icon" href="./images/square-gitlab.svg" />
 
-  <!---------- nanum_gothic_font ---------->
+  <!---------- font ---------->
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet" />
-
-  <!-- font_awesome -->
+  <!---------- font_awesome ---------->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 
-  <!-- Swiper JS -->
+  <!---------- Swiper_JS ---------->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-  <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
   <!---------- jQuery ---------->
-  <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
   <script src="../js/plugin/jquery-3.6.1.min.js"></script>
-
-  <!---------- jQuery_scroll_to_plugin ---------->
   <script src="../js/plugin/jquery.scrollTo.min.js"></script>
-
-  <!---------- jQuery_throttle_debounce_plugin ---------->
   <script src="../js/plugin/jquery.ba-throttle-debounce.min.js"></script>
-
-  <!---------- jQuery_mousewheel_plugin ---------->
   <script src="../js/plugin/jquery.mousewheel.min.js"></script>
-
-  <!---------- jQuery_easing_plugin ---------->
   <script src="../js/plugin/jquery.easing.min.js"></script>
 
   <!---------- lodash ---------->
@@ -54,7 +50,7 @@
   <!---------- Naver_map ---------->
   <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=zfd0fphs60"></script>
 
-  <!---------- js ( header & footer & sub_page_about ) ---------->
+  <!---------- JavaScript_files ---------->
   <script src="../js/header.js" defer ></script>
   <script src="./js/sub_page_about.js" defer ></script>
   <script src="../js/footer.js" defer ></script>
@@ -1506,28 +1502,29 @@
     </footer>
     <!--footer-->
   
-  <!---------- quick_menu ---------->
-  <aside class="quick_menu">
-    <label for="chk_fast_reserve" class="btn_fast_reserve">
-      <div class="btn_coin">
-        <div class="btn_coin_front">
-          빠른<br />예매
+    <!---------- quick_menu ---------->
+    <aside class="quick_menu">
+      <label for="chk_fast_reserve" class="btn_fast_reserve">
+        <div class="btn_coin">
+          <div class="btn_coin_front">
+            빠른<br />예매
+          </div>
+          <div class="btn_coin_back">
+            빠른<br />예매
+          </div>
         </div>
-        <div class="btn_coin_back">
-          빠른<br />예매
-        </div>
-      </div>
-    </label>
-    <!--btn_fast_reserve-->
-    <a href="#to_the_top_anchor_point" class="btn_to_top">
-      <i class="fa-solid fa-arrow-up"></i>
-    </a>
-    <a href="#footer" class="btn_to_bottom">
-      <i class="fa-solid fa-arrow-down"></i>
-    </a>
-  </aside>
-  <!--quick_menu-->
+      </label>
+      <!--btn_fast_reserve-->
+      <a href="#to_the_top_anchor_point" class="btn_to_top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+      <a href="#footer" class="btn_to_bottom">
+        <i class="fa-solid fa-arrow-down"></i>
+      </a>
+    </aside>
+    <!--quick_menu-->
 
+  </div><!--wrap-->
   
 </body>
 </html>
